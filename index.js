@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var gen_functions = require('./inc/generation_functions.js');
 
 var app = express();
 app.use(bodyParser.json({ type: 'application/json' }));
@@ -19,16 +20,9 @@ app.use('/', router);
 router.get('/create', create_poem, function (req, res){});
 
 function create_poem(req,res,next){
-  c('hi');
-  var result = {
-    "poem_type": "normal",
-    "poem": "Hello there"
-  };
+  var type = "basic";
+  var result = gen_functions.generateBasic(type);
   res.send(result);
-}
-
-function c(varf){
-  console.log(varf);
 }
 
 module.exports = app;
