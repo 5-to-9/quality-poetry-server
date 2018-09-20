@@ -8,9 +8,16 @@ module.exports = {
 };
 
 var generatePoem = function (type) {
+  var dictionary = require("../src/dictionary");
+
   var result = {
-    "poem_type": "normal",
-    "poem": "Hello there"
+    "poem_type": type,
+    "line1": "hello there",
+    "line2": "this is a poem"
   };
   return result;
+}
+
+var readFiles = function (){
+
 }
