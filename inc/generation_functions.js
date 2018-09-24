@@ -12,36 +12,32 @@ module.exports = {
 };
 
 function generatePoem (type, callback) {
-  var dirPath = "./src/dictionary";
-  var phrasebook = dirPath + "/phrases.json";
-  var dictionary = dirPath + "/dictionary.json";
+  var poem = { "type":type };
+  var genderProb = Math.floor(Math.random() * 2) + 1;
 
-  fs.readFile(phrasebook, 'utf8', function(phraseErr, phrases) {
-    fs.readFile(dictionary, 'utf8', function(dictErr, words) {
-      // console.log(phrases);
-      // console.log(dictionary);
-      // return callback(phrases);
-      return callback(phrases);
+  var dirPath = "./src/dictionary";
+  var phrasesFile = dirPath + "/phrases.json";
+  var dictionaryFile = dirPath + "/dictionary.json";
+
+  fs.readFile(phrasesFile, 'utf8', function(phraseErr, phrases) {
+    fs.readFile(dictionaryFile, 'utf8', function(dictErr, words) {
+
+      var lineCount = getLineCount(Math.floor(Math.random() * 10) + 1);
+
+      for(var i=0; i<lineCount;++i){
+        poem["line" + i] = "line " + i;
+      }
+      return callback(poem);
     })
   });
+}
 
-  // console.log("here");
-  //
-  // let dictionary;
-  // try {
-  //   dictionary = fs.readFileSync('./src/dictionary/dictionary.json', 'utf-8');
-  // } catch (ex) {
-  //   console.log(ex)
-  // }
-  // console.log(dictionary);
-  //
-  // return dictionary;
-
-  // var result = {
-  //   "poem_type": type,
-  //   "line1": "hello there",
-  //   "line2": "this is a poem"
-  // };
-
-  // return result;
+function getLineCount(lineProb){
+  if(lineProb < 4){
+     return lineCount = 3;
+   } else if (lineProb < 8){
+     return lineCount = 4;
+   } else {
+     return lineCount = 5;
+   }
 }
