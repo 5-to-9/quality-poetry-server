@@ -1,5 +1,5 @@
 {
   "beginning" : ["noun?", "verb?"],
-  "middle" : ["noun verbs!", "verbing!"],
+  "middle" : ["pronoun_subjective verbs!", "verbing!"],
   "end" : ["noun.", "nouns verb."]
 }
