@@ -1,7 +1,5 @@
 var fs = require('fs');
-var readline = require('readline');
-const doAsync = require('doasync');
-
+var async = require('async');
 
 module.exports = {
   generateBasic: function (type) {
@@ -13,7 +11,15 @@ module.exports = {
 };
 
 var generatePoem = function (type) {
-  var dictionary = readFiles();
+  var dirPath = "./src/dictionary";
+  var sampleFile = dirPath + "/verb.json";
+  var sampleFileTwo = dirPath + "/noun.json";
+
+  var files = [sampleFile, sampleFileTwo];
+
+  async.map(files, readAsync, function(err, results) {
+    console.log(results);
+  });
 
   var result = {
     "poem_type": type,
@@ -21,41 +27,12 @@ var generatePoem = function (type) {
     "line2": "this is a poem"
   };
 
-  // doAsync(fs).readFile('./src/dictionary/verb.txt','utf8')
-  //   .then((data) => console.log(data))
-  //   .then((data) => dictionary = data)
-  //   .then((dictionary) => console.log(dictionary));
-
-  doAsync(fs).readdir("./src/dictionary")
-    .then((data) => console.log(data))
-    .then((data) => (result = data));
+  // doAsync(fs).readdir("./src/dictionary")
+  //   .then((data) => console.log(data)));
 
   return result;
 }
 
-function readFiles() {
-  var path = "./src/dictionary";
-  var dict = {};
-  var j=0;
-
-  var filename = path + "/verb.txt";
-
-  fs.readdir(path, function(err, items) {
-    for (var i = 0; i < items.length; ++i) {
-      var filename = path + '/' + items[i];
-      readline.createInterface({
-        input: fs.createReadStream(filename),
-        terminal: false
-      }).on('line', function(line) {
-        dict[j] = line;
-        ++j;
-      });
-    }
-  });
-
-  // console.log(dict);
-
-  // return dict;
-
-  // onReadComplete();
+function readAsync(file, callback) {
+  fs.readFile(file, 'utf8', callback);
 }
