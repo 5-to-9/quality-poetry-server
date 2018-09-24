@@ -1,38 +1,47 @@
 var fs = require('fs');
-var async = require('async');
 
 module.exports = {
-  generateBasic: function (type) {
-    return generatePoem(type);
+  generateBasic: function (type, callback) {
+    return generatePoem(type, function(data){
+      return callback(data);
+    });
   },
   c: function (var_to_print) {
     console.log(var_to_print);
   }
 };
 
-var generatePoem = function (type) {
+function generatePoem (type, callback) {
   var dirPath = "./src/dictionary";
-  var sampleFile = dirPath + "/verb.json";
-  var sampleFileTwo = dirPath + "/noun.json";
+  var phrasebook = dirPath + "/phrases.json";
+  var dictionary = dirPath + "/dictionary.json";
 
-  var files = [sampleFile, sampleFileTwo];
-
-  async.map(files, readAsync, function(err, results) {
-    console.log(results);
+  fs.readFile(phrasebook, 'utf8', function(phraseErr, phrases) {
+    fs.readFile(dictionary, 'utf8', function(dictErr, words) {
+      // console.log(phrases);
+      // console.log(dictionary);
+      // return callback(phrases);
+      return callback(phrases);
+    })
   });
 
-  var result = {
-    "poem_type": type,
-    "line1": "hello there",
-    "line2": "this is a poem"
-  };
+  // console.log("here");
+  //
+  // let dictionary;
+  // try {
+  //   dictionary = fs.readFileSync('./src/dictionary/dictionary.json', 'utf-8');
+  // } catch (ex) {
+  //   console.log(ex)
+  // }
+  // console.log(dictionary);
+  //
+  // return dictionary;
 
-  // doAsync(fs).readdir("./src/dictionary")
-  //   .then((data) => console.log(data)));
+  // var result = {
+  //   "poem_type": type,
+  //   "line1": "hello there",
+  //   "line2": "this is a poem"
+  // };
 
-  return result;
-}
-
-function readAsync(file, callback) {
-  fs.readFile(file, 'utf8', callback);
+  // return result;
 }

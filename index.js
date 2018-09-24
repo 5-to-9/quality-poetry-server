@@ -21,8 +21,9 @@ router.get('/create', create_poem, function (req, res){});
 
 function create_poem(req,res,next){
   var type = "basic";
-  var result = gen_functions.generateBasic(type);
-  res.send(result);
+  var result = gen_functions.generateBasic(type, function(result){
+    res.send(result);
+  });
 }
 
 module.exports = app;

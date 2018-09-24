@@ -1,0 +1,5 @@
+{
+  "beginning" : ["beginning1", "beginning2"],
+  "middle" : ["middle1", "middle2", "middle3"],
+  "end" : ["end1", "end2"]
+}
