@@ -21,25 +21,28 @@ function generatePoem (type, callback) {
   fs.readFile(phrasesFile, 'utf8', function(phraseErr, phrases) {
     fs.readFile(dictionaryFile, 'utf8', function(dictErr, dictionary) {
       var lineCount = getLineCount(Math.floor(Math.random() * 10) + 1);
-      var genderProb = Math.floor(Math.random() * 3) + 1;
+      var genderProb = Math.floor(Math.random() * 2) + 1;
       var phraseToGet;
 
       dictionary = JSON.parse(dictionary);
       phrases = JSON.parse(phrases);
 
       if(genderProb == 1){
-        dictionary.pronoun_subjective = "he";
-        dictionary.pronoun_objective = "him";
-        dictionary.pronoun_possessive = "his";
+        dictionary.pro_subjective = ["he"];
+        dictionary.pro_objective = ["him"];
+        dictionary.pro_possessive = ["his"];
       } else if(genderProb == 2){
-        dictionary.pronoun_subjective = "she";
-        dictionary.pronoun_objective = "her";
-        dictionary.pronoun_possessive = "her";
+        dictionary.pro_subjective = ["she"];
+        dictionary.pro_objective = ["her"];
+        dictionary.pro_possessive = ["her"];
       } else {
-        dictionary.pronoun_subjective = "they";
-        dictionary.pronoun_objective = "them";
-        dictionary.pronoun_possessive = "their";
+        dictionary.pro_subjective = ["they"];
+        dictionary.pro_objective = ["them"];
+        dictionary.pro_possessive = ["their"];
       }
+
+      var wordTypes = [];
+      for (var key in dictionary) wordTypes.push(key);
 
       for(var i = 1; i <= lineCount; ++i){
         if(i == 1){
@@ -50,7 +53,7 @@ function generatePoem (type, callback) {
           phraseToGet = "middle";
         }
 
-        poem["line" + i] = generateLine(phraseToGet, phrases, dictionary);
+        poem["line" + i] = generateLine(phraseToGet, phrases, dictionary, wordTypes);
       }
 
       return callback(poem);
@@ -58,8 +61,21 @@ function generatePoem (type, callback) {
   });
 }
 
-function generateLine(phraseToGet, phrases, dictionary){
+function generateLine(phraseToGet, phrases, dictionary, wordTypes){
   var basicLine = randomVal(phrases[phraseToGet]);
+  var currentType = "";
+
+  for(var wKey in wordTypes){
+    currentType = wordTypes[wKey];
+    var re = new RegExp(currentType,"g");
+    basicLine = basicLine.replace(re, function(res){
+      return randomVal(dictionary[currentType]);
+    });
+    /*
+    $line = preg_replace_callback('/'.preg_quote($keyword).'/',
+        function() use ($values){ return rtrim($values[array_rand($values)]); }, $line);
+    */
+  }
 
   return basicLine;
 }
