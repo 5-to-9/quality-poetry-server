@@ -1,7 +1,7 @@
 {
   "name": "quality-poetry-server",
   "version": "0.5.0",
-  "description": "API for Quality Poetry",
+  "description": "An API that serves randomly generated poetry, written in Node.",
   "main": "index.js",
   "scripts": {
     "start:dev": "PORT=3004 nodemon ./bin/www",

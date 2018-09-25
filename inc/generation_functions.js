@@ -71,10 +71,6 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes){
     basicLine = basicLine.replace(re, function(res){
       return randomVal(dictionary[currentType]);
     });
-    /*
-    $line = preg_replace_callback('/'.preg_quote($keyword).'/',
-        function() use ($values){ return rtrim($values[array_rand($values)]); }, $line);
-    */
   }
 
   return basicLine;
