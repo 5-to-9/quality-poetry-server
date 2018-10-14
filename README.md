@@ -1,4 +1,4 @@
-![5 to 9](/src/img/5to9_small.png?raw=true "5 to 9")
+![5 to 9](/img/5to9_small.png?raw=true "5 to 9")
 
 # Quality Poetry Server
 
