@@ -12,7 +12,7 @@ module.exports = {
   }
 };
 
-// Generates the poem. Takes in the type of poem to write - currently not doing anything.
+// Generates the poem. Takes in the type of poem to write - which currently doesn't do anything.
 function generatePoem (type, callback) {
   var poem = { "type":type };
 
@@ -31,6 +31,7 @@ function generatePoem (type, callback) {
       phrases = JSON.parse(phrases);
 
       // roles dice to decide which pronouns to use
+      // todo: clean this up by passing dictionary to a function.
       if(genderProb == 1){
         dictionary.pro_subjective = ["he"];
         dictionary.pro_objective = ["him"];
@@ -47,6 +48,8 @@ function generatePoem (type, callback) {
 
       var wordTypes = [];
       for (var key in dictionary) wordTypes.push(key);
+
+      poem["title"] = generateLine("title", phrases, dictionary, wordTypes);
 
       // writes the poem line by line
       for(var i = 1; i <= lineCount; ++i){
