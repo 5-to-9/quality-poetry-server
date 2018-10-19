@@ -4,10 +4,12 @@ Todo:
 * separate sounds into object-made and animal-made
 * phrases with body parts
 * fun verbs and sad verbs
-* reorganize phrases json so that a phrase can be added to beginning, middle, end or title but only written once. Perhaps every phrase is the parent, and has a child listing where they can be included?
-* return the poem in a better JSON
+* having a phrase as a title strips the punctuation
 * different types of poems
+* improve word replacement function in generation_functions to search line for replacements instead of looping through all word types
 
 Done:
 * let app generate titles
 * fill out title phrases
+* reorganize phrases.json so that phrases are only written once
+* return the poem in a better JSON

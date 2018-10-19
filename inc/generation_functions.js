@@ -14,7 +14,7 @@ module.exports = {
 
 // Generates the poem. Takes in the type of poem to write - which currently doesn't do anything.
 function generatePoem (type, callback) {
-  var poem = { "type":type };
+  var poem = { "type":type, "poem":{}};
 
   // loads dictionary
   var dirPath = "./src/dictionary";
@@ -49,7 +49,7 @@ function generatePoem (type, callback) {
       var wordTypes = [];
       for (var key in dictionary) wordTypes.push(key);
 
-      poem["title"] = generateLine("title", phrases, dictionary, wordTypes);
+      poem["poem"]["title"] = generateLine("title", phrases, dictionary, wordTypes);
 
       // writes the poem line by line
       for(var i = 1; i <= lineCount; ++i){
@@ -61,7 +61,7 @@ function generatePoem (type, callback) {
           phraseToGet = "middle";
         }
 
-        poem["line" + i] = generateLine(phraseToGet, phrases, dictionary, wordTypes);
+        poem["poem"]["line_" + i] = generateLine(phraseToGet, phrases, dictionary, wordTypes);
       }
 
       return callback(poem);
@@ -71,18 +71,32 @@ function generatePoem (type, callback) {
 
 // uses the phrase to madlibs in words
 function generateLine(phraseToGet, phrases, dictionary, wordTypes){
-  var basicLine = randomVal(phrases[phraseToGet]);
-  var currentType = "";
+  var lineGenerated = false;
+  var basePhrase = line = currentWordType = "";
 
-  for(var wKey in wordTypes){
-    currentType = wordTypes[wKey];
-    var re = new RegExp(currentType,"g");
-    basicLine = basicLine.replace(re, function(res){
-      return randomVal(dictionary[currentType]);
-    });
+  while(!lineGenerated){
+    // select a phrase at random
+    basePhrase = randVal2(phrases["phrases"])
+
+    // check if the phrase we randomly selected belongs in the place we're trying to place it
+    if(basePhrase["placement"].includes(phraseToGet)){
+      line = basePhrase["phrase"];
+
+      // for every type of word, see if the line has that type of word. If so, insert a word of that type.
+      // todo - instead of looping through every type of word, loop through the line and replace words as they come up. 
+      for(var wKey in wordTypes){
+        currentWordType = wordTypes[wKey];
+        var re = new RegExp(currentWordType,"g");
+        line = line.replace(re, function(res){
+          return randomVal(dictionary[currentWordType]);
+        });
+      }
+
+      lineGenerated = true;
+    }
   }
 
-  return basicLine;
+  return line;
 }
 
 // gets a random value from JSON
@@ -90,6 +104,11 @@ function randomVal (obj) {
     var keys = Object.keys(obj)
     return obj[keys[ keys.length * Math.random() << 0]];
 };
+
+function randVal2 (obj) {
+  var keys = Object.keys(obj)
+  return obj[keys[ keys.length * Math.random() << 0]];
+}
 
 // random number of lines for the poem
 function getLineCount(lineProb){
