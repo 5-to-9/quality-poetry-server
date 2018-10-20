@@ -1,5 +1,4 @@
 Todo:
-* phrases with body parts
 * stop words from being repeated in one phrase. IE don't allow something like "sorrow without pride is pride"
 * sort nouns into concrete and abstract
 * separate sounds into object-made and animal-made
@@ -9,6 +8,7 @@ Todo:
 * lop the "ly" off of adverbs to get phrases like "simple and often" instead of "simply and often"
 * different types of poems
 * targets for poems. IE "I", "you", "s/he"
+* verbs have a trailing "e" removed if placed in "verbing"
 
 Done:
 * return the poem in a better JSON
@@ -17,3 +17,4 @@ Done:
 * phrases with feelings
 * let app generate titles
 * fill out title phrases
+* phrases with body parts
