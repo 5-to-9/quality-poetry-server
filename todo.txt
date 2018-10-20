@@ -1,16 +1,19 @@
 Todo:
-* sort nouns into concrete and abstract
-* add feelings
-* separate sounds into object-made and animal-made
 * phrases with body parts
+* stop words from being repeated in one phrase. IE don't allow something like "sorrow without pride is pride"
+* sort nouns into concrete and abstract
+* separate sounds into object-made and animal-made
 * fun verbs and sad verbs
-* different types of poems
+* endpoint for a specific line to be generated. IE qp.com/line?piece=middle
 * improve word replacement function in generation_functions to search line for replacements instead of looping through all word types
-* lop the "ly" off of adverbs for phrases like "simple and often".
+* lop the "ly" off of adverbs to get phrases like "simple and often" instead of "simply and often"
+* different types of poems
+* targets for poems. IE "I", "you", "s/he"
 
 Done:
+* return the poem in a better JSON
+* reorganize phrases.json so that phrases are only written once
+* having a phrase as a title strips the punctuation
+* phrases with feelings
 * let app generate titles
 * fill out title phrases
-* reorganize phrases.json so that phrases are only written once
-* return the poem in a better JSON
-* having a phrase as a title strips the punctuation
