@@ -1,5 +1,4 @@
 Todo:
-* stop words from being repeated in one phrase. IE don't allow something like "sorrow without pride is pride"
 * separate sounds into object-made and animal-made
 * fun verbs and sad verbs
 * endpoint for a specific line to be generated. IE qp.com/line?piece=middle
@@ -18,3 +17,4 @@ Done:
 * fill out title phrases
 * phrases with body parts
 * sort nouns into concrete and abstract
+* stop words from being repeated in one phrase. IE don't allow something like "sorrow without pride is pride"

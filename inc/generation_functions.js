@@ -14,7 +14,7 @@ module.exports = {
 
 // Generates the poem. Takes in the type of poem to write - which currently doesn't do anything.
 function generatePoem (type, callback) {
-  var poem = { "type":type, "poem":{}};
+  var poem = { "poem":{"type":type, "title":"","lines":[]}};
 
   // loads dictionary
   var dirPath = "./src/dictionary";
@@ -61,7 +61,9 @@ function generatePoem (type, callback) {
           phraseToGet = "middle";
         }
 
-        poem["poem"]["line_" + i] = generateLine(phraseToGet, phrases, dictionary, wordTypes);
+        // poem["poem"]["lines"].push(i);
+        var lineToPush = {"type": type, "text": generateLine(phraseToGet, phrases, dictionary, wordTypes)}
+        poem["poem"]["lines"].push(lineToPush);
       }
 
       return callback(poem);
@@ -72,7 +74,7 @@ function generatePoem (type, callback) {
 // uses the phrase to madlibs in words
 function generateLine(phraseToGet, phrases, dictionary, wordTypes){
   var lineGenerated = false;
-  var basePhrase = line = currentWordType = "";
+  var basePhrase = line = currentWordType = randomWord = lastWordUsed = "";
 
   while(!lineGenerated){
     // select a phrase at random
@@ -88,7 +90,13 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes){
         currentWordType = wordTypes[wKey];
         var re = new RegExp(currentWordType,"g");
         line = line.replace(re, function(res){
-          return randomVal(dictionary[currentWordType]);
+          // make sure that the same word isn't returned sequentially.
+          randomWord = randomVal(dictionary[currentWordType]);
+          while(randomWord == lastWordUsed){
+            randomWord = randomVal(dictionary[currentWordType]);
+          }
+          lastWordUsed = randomWord;
+          return randomWord;
         });
       }
 
@@ -96,7 +104,7 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes){
     }
   }
 
-  // strip punctuation from titles
+  // strip punctuation from title
   if(phraseToGet == "title"){
     line = line.replace(/[^A-Za-z0-9\s]/g,"");
   }
