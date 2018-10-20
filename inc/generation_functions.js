@@ -83,7 +83,7 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes){
       line = basePhrase["phrase"];
 
       // for every type of word, see if the line has that type of word. If so, insert a word of that type.
-      // todo - instead of looping through every type of word, loop through the line and replace words as they come up. 
+      // todo - instead of looping through every type of word, loop through the line and replace words as they come up.
       for(var wKey in wordTypes){
         currentWordType = wordTypes[wKey];
         var re = new RegExp(currentWordType,"g");
@@ -94,6 +94,11 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes){
 
       lineGenerated = true;
     }
+  }
+
+  // strip punctuation from titles
+  if(phraseToGet == "title"){
+    line = line.replace(/[^A-Za-z0-9\s]/g,"");
   }
 
   return line;

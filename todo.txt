@@ -4,12 +4,13 @@ Todo:
 * separate sounds into object-made and animal-made
 * phrases with body parts
 * fun verbs and sad verbs
-* having a phrase as a title strips the punctuation
 * different types of poems
 * improve word replacement function in generation_functions to search line for replacements instead of looping through all word types
+* lop the "ly" off of adverbs for phrases like "simple and often".
 
 Done:
 * let app generate titles
 * fill out title phrases
 * reorganize phrases.json so that phrases are only written once
 * return the poem in a better JSON
+* having a phrase as a title strips the punctuation

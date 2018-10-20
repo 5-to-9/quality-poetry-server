@@ -3,7 +3,8 @@
 		{"phrase": "a onomatopoeia!", "placement": ["beginning"]},
 		{"phrase": "adjective. adjective. adjective.", "placement": ["middle", "end"]},
 		{"phrase": "adjective noun.", "placement": ["middle"]},
-		{"phrase": "adv. adv.", "placement": ["middle", "end"]},
+		{"phrase": "adv. adv.", "placement": ["end"]},
+		{"phrase": "adv and adv.", "placement": ["end"]},
 		{"phrase": "ah, noun!", "placement": ["beginning"]},
 		{"phrase": "ah, adjective noun!", "placement": ["beginning", "end"]},
 		{"phrase": "ah, the noun of people!", "placement": ["beginning", "end"]},
@@ -26,7 +27,7 @@
 		{"phrase": "noun without noun is noun.", "placement": ["beginning", "end"]},
 		{"phrase": "oh, to verb with people!", "placement": ["beginning"]},
 		{"phrase": "onomatopoeia.", "placement": ["title"]},
-		{"phrase": "onomatopoeias ring out.", "placement": ["end"]},
+		{"phrase": "onomatopoeias ring out.", "placement": ["beginning","end"]},
 		{"phrase": "people.", "placement": ["title"]},
 		{"phrase": "people and people.", "placement": ["middle"]},
 		{"phrase": "people and their people.", "placement": ["beginning", "end"]},
@@ -45,6 +46,6 @@
 		{"phrase": "verb.", "placement": ["title", "beginning"]},
 		{"phrase": "verbing.", "placement": ["title", "beginning"]},
 		{"phrase": "why I verb.", "placement": ["title", "beginning"]},
-		{"phrase": "why pro_subjective verbs.", "placement": ["title", "beginning"]}
+		{"phrase": "why pro_subjective verbs.", "placement": ["title"]}
 	]
 }
