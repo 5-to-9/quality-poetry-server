@@ -20,11 +20,18 @@ app.use('/', router);
 
 // Fetches a new poem
 router.get('/create', create_poem, function (req, res){});
+// router.get('/line', create_poem, function (req, res){});
 
 // helper function for the /create route.
 function create_poem(req,res,next){
   var type = "basic";
-  var result = gen_functions.generateBasic(type, function(result){
+  var result = gen_functions.returnPoem(type, function(result){
+    res.send(result);
+  });
+}
+
+function create_line(req,res,next){
+  var result = gen_functions.returnLine(type, function(result){
     res.send(result);
   });
 }

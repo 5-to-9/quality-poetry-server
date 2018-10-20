@@ -1,11 +1,11 @@
 Todo:
+* targets for poems. IE "I", "you", "s/he"
+* endpoint for a specific line to be generated. IE qp.com/line?piece=middle
 * separate sounds into object-made and animal-made
 * fun verbs and sad verbs
-* endpoint for a specific line to be generated. IE qp.com/line?piece=middle
 * improve word replacement function in generation_functions to search line for replacements instead of looping through all word types
 * lop the "ly" off of adverbs to get phrases like "simple and often" instead of "simply and often"
 * different types of poems
-* targets for poems. IE "I", "you", "s/he"
 * verbs have a trailing "e" removed if placed in "verbing"
 
 Done:

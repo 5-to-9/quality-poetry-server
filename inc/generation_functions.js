@@ -2,15 +2,25 @@ var fs = require('fs');
 
 // Provides the functions used for poem generation
 module.exports = {
-  generateBasic: function (type, callback) {
+  returnPoem: function (type, callback) {
     return generatePoem(type, function(data){
       return callback(data);
     });
+  },
+  returnLine: function (type, callback) {
+    // return generatePoem(type, function(data){
+    //   return callback(data);
+    // });
   },
   c: function (var_to_print) {
     console.log(var_to_print);
   }
 };
+
+// function loadDictionary(){
+//   var dirPath = "./src/dictionary";
+//   var dictionaryFile = dirPath + "/dictionary.json";
+// }
 
 // Generates the poem. Takes in the type of poem to write - which currently doesn't do anything.
 function generatePoem (type, callback) {
@@ -46,6 +56,8 @@ function generatePoem (type, callback) {
         dictionary.pro_possessive = ["their"];
       }
 
+      var pronouns = getPoemTarget();
+
       var wordTypes = [];
       for (var key in dictionary) wordTypes.push(key);
 
@@ -71,6 +83,51 @@ function generatePoem (type, callback) {
   });
 }
 
+// function to randomly decide who the poem is targetting.
+// the author (I), the reader (you), him, her, us (we), or them (both singular and plural)
+function getPoemTarget(){
+  var target = Math.floor(Math.random() * 6) + 1;
+  pronouns = {"target":""};
+  pronouns2 =
+    [{
+  	   "target": "the author"
+    }, {
+    	"target": "the reader"
+    }, {
+    	"target": "the man"
+    }, {
+    	"target": "the woman"
+    }, {
+    	"target": "us"
+    }, {
+    	"target": "them, singular"
+    }, {
+    	"target": "them, plural"
+    }];
+
+  if(target == 1){
+
+  }
+
+  // if(genderProb == 1){
+  //   dictionary.pro_subjective = ["he"];
+  //   dictionary.pro_objective = ["him"];
+  //   dictionary.pro_possessive = ["his"];
+  // } else if(genderProb == 2){
+  //   dictionary.pro_subjective = ["she"];
+  //   dictionary.pro_objective = ["her"];
+  //   dictionary.pro_possessive = ["her"];
+  // } else {
+  //   dictionary.pro_subjective = ["they"];
+  //   dictionary.pro_objective = ["them"];
+  //   dictionary.pro_possessive = ["their"];
+  // }
+
+  console.log(pronouns2[target]);
+
+  return pronouns;
+}
+
 // uses the phrase to madlibs in words
 function generateLine(phraseToGet, phrases, dictionary, wordTypes){
   var lineGenerated = false;
@@ -91,9 +148,13 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes){
         var re = new RegExp(currentWordType,"g");
         line = line.replace(re, function(res){
           // make sure that the same word isn't returned sequentially.
+          var tries = 0;
           randomWord = randomVal(dictionary[currentWordType]);
-          while(randomWord == lastWordUsed){
+          // if the random word is the last one used, try to make a new one.
+          // the tries var is for an occasional infinite hang that hasn't been solved yet.
+          while(randomWord == lastWordUsed && tries < 10){
             randomWord = randomVal(dictionary[currentWordType]);
+            ++tries;
           }
           lastWordUsed = randomWord;
           return randomWord;
