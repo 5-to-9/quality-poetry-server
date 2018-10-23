@@ -17,14 +17,9 @@ module.exports = {
   }
 };
 
-// function loadDictionary(){
-//   var dirPath = "./src/dictionary";
-//   var dictionaryFile = dirPath + "/dictionary.json";
-// }
-
 // Generates the poem. Takes in the type of poem to write - which currently doesn't do anything.
 function generatePoem (type, callback) {
-  var poem = { "poem":{"type":type, "title":"","lines":[]}};
+  var poem = { "poem" : { "type" : type, "title" : "", "lines" : [] } };
 
   // loads dictionary
   var dirPath = "./src/dictionary";
@@ -37,26 +32,16 @@ function generatePoem (type, callback) {
       var genderProb = Math.floor(Math.random() * 2) + 1;
       var phraseToGet;
 
+      // initialize dictionary and phrasebook
       dictionary = JSON.parse(dictionary);
       phrases = JSON.parse(phrases);
-
-      // roles dice to decide which pronouns to use
-      // todo: clean this up by passing dictionary to a function.
-      if(genderProb == 1){
-        dictionary.pro_subjective = ["he"];
-        dictionary.pro_objective = ["him"];
-        dictionary.pro_possessive = ["his"];
-      } else if(genderProb == 2){
-        dictionary.pro_subjective = ["she"];
-        dictionary.pro_objective = ["her"];
-        dictionary.pro_possessive = ["her"];
-      } else {
-        dictionary.pro_subjective = ["they"];
-        dictionary.pro_objective = ["them"];
-        dictionary.pro_possessive = ["their"];
-      }
-
       var pronouns = getPoemTarget();
+
+      dictionary.pro_subjective = pronouns["pro_subjective"];
+      dictionary.pro_objective = pronouns["pro_objective"];
+      dictionary.pro_possessive = pronouns["pro_possessive"];
+      dictionary.poem_target = pronouns["poem_target"];
+      dictionary.verb_ending = pronouns["verb_ending"];
 
       var wordTypes = [];
       for (var key in dictionary) wordTypes.push(key);
@@ -73,7 +58,6 @@ function generatePoem (type, callback) {
           phraseToGet = "middle";
         }
 
-        // poem["poem"]["lines"].push(i);
         var lineToPush = {"type": type, "text": generateLine(phraseToGet, phrases, dictionary, wordTypes)}
         poem["poem"]["lines"].push(lineToPush);
       }
@@ -87,51 +71,62 @@ function generatePoem (type, callback) {
 // the author (I), the reader (you), him, her, us (we), or them (both singular and plural)
 function getPoemTarget(){
   var target = Math.floor(Math.random() * 6) + 1;
-  pronouns = {"target":""};
-  pronouns2 =
+  pronouns =
     [{
-  	   "target": "the author"
+       // the author
+  	   "poem_target" : "myself",
+       "pro_subjective" : "I",
+       "pro_objective" : "me",
+       "pro_possessive" : "my",
+       "verb_ending" : ""
     }, {
-    	"target": "the reader"
+    	"poem_target" : "the reader",
+      "pro_subjective" : "you",
+      "pro_objective" : "you",
+      "pro_possessive" : "your",
+      "verb_ending" : ""
     }, {
-    	"target": "the man"
+    	"poem_target" : "the man",
+      "pro_subjective" : "he",
+      "pro_objective" : "him",
+      "pro_possessive" : "his",
+      "verb_ending" : "s"
     }, {
-    	"target": "the woman"
+    	"poem_target" : "the woman",
+      "pro_subjective" : "she",
+      "pro_objective" : "her",
+      "pro_possessive" : "her",
+      "verb_ending" : "s"
     }, {
-    	"target": "us"
+    	"poem_target" : "us",
+      "pro_subjective" : "we",
+      "pro_objective" : "us",
+      "pro_possessive" : "our",
+      "verb_ending" : ""
     }, {
-    	"target": "them, singular"
+      // them, singular
+    	"poem_target" : "them",
+      "pro_subjective" : "they",
+      "pro_objective" : "them",
+      "pro_possessive" : "their",
+      "verb_ending" : ""
     }, {
-    	"target": "them, plural"
+      // them, plural
+    	"poem_target" : "them",
+      "pro_subjective" : "they",
+      "pro_objective" : "them",
+      "pro_possessive" : "their",
+      "verb_ending" : ""
     }];
 
-  if(target == 1){
-
-  }
-
-  // if(genderProb == 1){
-  //   dictionary.pro_subjective = ["he"];
-  //   dictionary.pro_objective = ["him"];
-  //   dictionary.pro_possessive = ["his"];
-  // } else if(genderProb == 2){
-  //   dictionary.pro_subjective = ["she"];
-  //   dictionary.pro_objective = ["her"];
-  //   dictionary.pro_possessive = ["her"];
-  // } else {
-  //   dictionary.pro_subjective = ["they"];
-  //   dictionary.pro_objective = ["them"];
-  //   dictionary.pro_possessive = ["their"];
-  // }
-
-  console.log(pronouns2[target]);
-
-  return pronouns;
+  return pronouns[target];
 }
 
 // uses the phrase to madlibs in words
 function generateLine(phraseToGet, phrases, dictionary, wordTypes){
   var lineGenerated = false;
   var basePhrase = line = currentWordType = randomWord = lastWordUsed = "";
+  var escapeWords = ["poem_target", "pro_subjective", "pro_objective", "pro_possessive", "verb_ending"];
 
   while(!lineGenerated){
     // select a phrase at random
@@ -147,17 +142,22 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes){
         currentWordType = wordTypes[wKey];
         var re = new RegExp(currentWordType,"g");
         line = line.replace(re, function(res){
-          // make sure that the same word isn't returned sequentially.
-          var tries = 0;
-          randomWord = randomVal(dictionary[currentWordType]);
-          // if the random word is the last one used, try to make a new one.
-          // the tries var is for an occasional infinite hang that hasn't been solved yet.
-          while(randomWord == lastWordUsed && tries < 10){
+          // if(!currentWordType){
+          if(!escapeWords.includes(currentWordType)){
+            // make sure that the same word isn't returned sequentially.
+            var tries = 0;
             randomWord = randomVal(dictionary[currentWordType]);
-            ++tries;
+            // if the random word is the last one used, try to make a new one.
+            // the tries var is for an occasional infinite hang that hasn't been solved yet.
+            while(randomWord == lastWordUsed && tries < 10){
+              randomWord = randomVal(dictionary[currentWordType]);
+              ++tries;
+            }
+            lastWordUsed = randomWord;
+            return randomWord;
+          } else {
+            return dictionary[currentWordType];
           }
-          lastWordUsed = randomWord;
-          return randomWord;
         });
       }
 
