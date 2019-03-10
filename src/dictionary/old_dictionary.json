@@ -1,0 +1,11 @@
+{
+	"concrete_noun": ["dagger","poem","wound","smile"],
+	"abstract_noun": ["darkness","light","ego","shadow","destiny","crime","intellect","violence","triumph","foolishness","nature","victory","information","failure","work","wealth","ruin","history","peace","integrity","knowledge","wisdom","mystery","justice","death","murder","romance","struggle","toil","warmth","judgement"],
+	"feeling": ["loneliness", "dignity","love","pride","pain","lust","gluttony","wrath","envy","hate","fury","happiness","sorrow","gratitude","hunger","fear","kindness","hope","joy","loyalty","hatred","torment"],
+	"verb": ["sink", "die", "fall", "live", "love", "weep", "break", "shatter", "smash", "crack", "snap", "fracture", "scream", "screech", "fragment", "splinter", "burst", "collapse", "burn", "dance", "ignite", "fade", "whimper", "breathe", "conquer", "kill", "live", "laugh", "shriek", "clash"],
+	"people": ["societies","men","angels","nations","devils","gods","lovers","demons","heroes","villains","monsters","kings","queens","legends","women","children","conquerors","emperors","armies","soldiers"],
+	"adjective": ["dark","pure","clear","vast","deep","shallow","calm","light","bright","sparkling","gloomy","red","dim","impure","quiet","defiant","depressed","scattered","mysterious","scary","sad","rotten","fresh","empty","tender","tense","tough","evil","good","just","faithful","faithless","colossal","puny","proud","weak","weary","vast","holy","untamed","profound"],
+	"adv": ["silently","normally","roughly","quickly","effortlessly","stealthily","boldly","deftly","elegantly","gracefully","lazily","perfectly","blindly","angrily","villainously","seldom","wearily","jealously","softly"],
+	"bodypart": ["eye","chest","heart","mind","brain","soul"],
+	"onomatopoeia": ["boom","bang","crack","crash","smash","groan","screech","thud","gasp","crunch","wham","clatter"]
+}
