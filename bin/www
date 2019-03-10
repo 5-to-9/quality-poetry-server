@@ -3,7 +3,7 @@
 var app = require('../index');
 
 // Which port to listen on
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3004);
 
 // Start listening for HTTP requests
 var server = app.listen(app.get('port'), function() {
