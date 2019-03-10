@@ -4,7 +4,7 @@ var fs = require('fs');
 module.exports = {
   returnPoem: function (type, callback) {
     return generatePoem(type, function(data){
-      return callback(data);
+      return callback(data)
     });
   },
   returnLine: function (type, callback) {
@@ -13,7 +13,7 @@ module.exports = {
     // });
   },
   c: function (var_to_print) {
-    console.log(var_to_print);
+    console.log(var_to_print)
   }
 };
 
@@ -22,9 +22,9 @@ function generatePoem (type, callback) {
   var poem = { "poem" : { "type" : type, "title" : "", "lines" : [] } };
 
   // loads dictionary
-  var dirPath = "./src/dictionary";
-  var phrasesFile = dirPath + "/phrases.json";
-  var dictionaryFile = dirPath + "/dictionary.json";
+  var dirPath = "./src/dictionary"
+  var phrasesFile = dirPath + "/phrases.json"
+  var dictionaryFile = dirPath + "/dictionary.json"
 
   fs.readFile(phrasesFile, 'utf8', function(phraseErr, phrases) {
     fs.readFile(dictionaryFile, 'utf8', function(dictErr, dictionary) {
@@ -69,8 +69,8 @@ function generatePoem (type, callback) {
 
 // function to randomly decide who the poem is targetting.
 // the author (I), the reader (you), him, her, us (we), or them (both singular and plural)
-function getPoemTarget(){
-  var target = Math.floor(Math.random() * 6) + 1;
+function getPoemTarget() {
+  var target = Math.floor(Math.random() * 6) + 1
   pronouns =
     [{
        // the author
@@ -123,27 +123,27 @@ function getPoemTarget(){
 }
 
 // uses the phrase to madlibs in words
-function generateLine(phraseToGet, phrases, dictionary, wordTypes){
-  var lineGenerated = false;
-  var basePhrase = line = currentWordType = randomWord = lastWordUsed = "";
-  var escapeWords = ["poem_target", "pro_subjective", "pro_objective", "pro_possessive", "verb_ending"];
+function generateLine (phraseToGet, phrases, dictionary, wordTypes) {
+  var lineGenerated = false
+  var basePhrase = line = currentWordType = randomWord = lastWordUsed = ""
+  var escapeWords = ["poem_target", "pro_subjective", "pro_objective", "pro_possessive", "verb_ending"]
 
-  while(!lineGenerated){
+  while (!lineGenerated) {
     // select a phrase at random
     basePhrase = randVal2(phrases["phrases"])
 
     // check if the phrase we randomly selected belongs in the place we're trying to place it
-    if(basePhrase["placement"].includes(phraseToGet)){
+    if (basePhrase["placement"].includes(phraseToGet)) {
       line = basePhrase["phrase"];
 
       // for every type of word, see if the line has that type of word. If so, insert a word of that type.
       // todo - instead of looping through every type of word, loop through the line and replace words as they come up.
-      for(var wKey in wordTypes){
+      for (var wKey in wordTypes) {
         currentWordType = wordTypes[wKey];
         var re = new RegExp(currentWordType,"g");
         line = line.replace(re, function(res){
           // if(!currentWordType){
-          if(!escapeWords.includes(currentWordType)){
+          if (!escapeWords.includes(currentWordType)) {
             // make sure that the same word isn't returned sequentially.
             var tries = 0;
             randomWord = randomVal(dictionary[currentWordType]);
@@ -185,12 +185,12 @@ function randVal2 (obj) {
 }
 
 // random number of lines for the poem
-function getLineCount(lineProb){
-  if(lineProb < 4){
-     return lineCount = 3;
-   } else if (lineProb < 8){
-     return lineCount = 4;
+function getLineCount(lineProb) {
+  if (lineProb < 4) {
+     return lineCount = 3
+   } else if (lineProb < 8) {
+     return lineCount = 4
    } else {
-     return lineCount = 5;
+     return lineCount = 5
    }
 }
