@@ -71,11 +71,10 @@
 		"tender": ["basic"],
 		"tense": ["basic"],
 		"tough": ["basic"],
+		"untamed": ["basic"],
 		"vast": ["basic"],
 		"weak": ["basic"],
-		"weary": ["basic"],
-		"untamed": ["basic"],
-		"vast": ["basic"]
+		"weary": ["basic"]
 	},
 	"adv": {
 		"angrily": ["basic"],
