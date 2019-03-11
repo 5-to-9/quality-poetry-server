@@ -49,7 +49,7 @@ function generatePoem (type, callback) {
         wordTypes.push(key)
       }
 
-      var poemTitle = generateLine("title", phrases, dictionary, wordTypes)
+      var poemTitle = generateLine("title", phrases, dictionary, wordTypes, type)
       poem["poem"]["title"] = poemTitle
 
       // write the poem line by line
@@ -64,7 +64,7 @@ function generatePoem (type, callback) {
 
         var newLine = {
           "type": type,
-          "text": generateLine(phraseToGet, phrases, dictionary, wordTypes)
+          "text": generateLine(phraseToGet, phrases, dictionary, wordTypes, type)
         }
 
         poem["poem"]["lines"].push(newLine)
@@ -129,9 +129,10 @@ function getPoemTarget() {
 }
 
 // uses the phrase to generate a line madlibs-style
-function generateLine (phraseToGet, phrases, dictionary, wordTypes) {
+function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
   var isLineGenerated = false
-  var basePhrase = line = currentWordType = randomWord = lastWordUsed = ""
+  var tries = 0
+  var basePhrase = line = currentWordType = randWord = lastWordUsed = ""
 
   // don't go to the dictionary for the following words - we already know them
   var fixedWords = [
@@ -144,14 +145,14 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes) {
 
   while (!isLineGenerated) {
     // select a phrase at random
-    basePhrase = randomVal(phrases["phrases"])
+    basePhrase = randomPhrase(phrases["phrases"])
 
     // check if the phrase we randomly selected belongs in the place we're trying to place it
     if (basePhrase["placement"].includes(phraseToGet)) {
       line = basePhrase["phrase"];
 
       // for every type of word, see if the line has that type of word. If so, insert a word of that type.
-      // todo - instead of looping through every type of word, loop through the line and replace words as they come up.
+      // TODO: instead of looping through every type of word, loop through the line and replace words as they come up.
       for (var wKey in wordTypes) {
         currentWordType = wordTypes[wKey]
         var re = new RegExp(currentWordType,"g")
@@ -159,18 +160,21 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes) {
         line = line.replace(re, function(res) {
           if (!fixedWords.includes(currentWordType)) {
             // make sure that the same word isn't returned sequentially.
-            var tries = 0;
-            randomWord = randomVal(dictionary[currentWordType]);
+            randWord = randomWord(dictionary[currentWordType], type);
+
             // if the random word is the last one used, try to make a new one.
-            // the tries var is for an occasional infinite hang that hasn't been solved yet.
-            while (randomWord == lastWordUsed && tries < 10) {
-              randomWord = randomVal(dictionary[currentWordType]);
-              ++tries;
+            // "tries" is because this loop occasionally hangs for some reason.
+            // TODO: Find out why that is.
+            tries = 0
+            while (randWord == lastWordUsed && tries < 10) {
+              randWord = randomWord(dictionary[currentWordType], type)
+              ++tries
             }
-            lastWordUsed = randomWord;
-            return randomWord;
+
+            lastWordUsed = randWord
+            return randWord
           } else {
-            return dictionary[currentWordType];
+            return dictionary[currentWordType]
           }
         });
       }
@@ -187,8 +191,27 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes) {
   return line;
 }
 
+// gets a random key from JSON
+function randomWord (obj, type) {
+    // console.log(obj)
+    var isWordCorrectType = false
+    // var index = Math.floor(Math.random() * (Object.keys(obj).length - 0));
+    var index = 0
+
+    while (!isWordCorrectType) {
+      index = Math.floor(Math.random() * Object.keys(obj).length)
+      word = Object.keys(obj)[index]
+
+      if (Object.values(obj)[index].includes(type)) {
+        isWordCorrectType = true;
+      }
+    }
+
+    return word
+}
+
 // gets a random value from JSON
-function randomVal (obj) {
+function randomPhrase (obj) {
     var keys = Object.keys(obj)
     return obj[keys[ keys.length * Math.random() << 0]];
 }

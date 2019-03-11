@@ -46,9 +46,9 @@
 		{"phrase": "people verb adv after verbing adv.", "placement": ["middle"]},
 		{"phrase": "pro_possessive abstract_noun is adjective.", "placement": ["beginning"]},
 		{"phrase": "pro_possessive bodypart is adjective.", "placement": ["beginning"]},
+		{"phrase": "pro_possessive bodypart verbs concrete_noun.", "placement": ["beginning"]},
     {"phrase": "pro_subjective needs feeling.", "placement": ["beginning","middle"]},
 		{"phrase": "suddenly, a onomatopoeia.", "placement": ["middle"]},
-		{"phrase": "the adjectiveest abstract_noun!", "placement": ["beginning", "middle", "end"]},
 		{"phrase": "the abstract_noun of people is adjective.", "placement": ["beginning", "middle", "end"]},
 		{"phrase": "there is no abstract_noun without abstract_noun.", "placement": ["middle", "end"]},
 		{"phrase": "this is for pro_objective.", "placement": ["beginning"]},
@@ -65,6 +65,7 @@
     {"phrase": "adjective. adjective. adjective.", "placement": ["middle", "end"]},
     {"phrase": "abstract_noun is the key to abstract_noun.", "placement": ["middle", "end"]},
     {"phrase": "abstract_noun leads to abstract_noun.", "placement": ["beginning"]},
+		{"phrase": "the adjectiveest abstract_noun!", "placement": ["beginning", "middle", "end"]},
     {"phrase": "pro_subjective is the one.", "placement": ["title", "beginning"]}
   ]
 }
