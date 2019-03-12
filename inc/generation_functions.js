@@ -131,8 +131,7 @@ function getPoemTarget() {
 // uses the phrase to generate a line madlibs-style
 function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
   var isLineGenerated = false
-  var tries = 0
-  var basePhrase = line = currentWordType = randWord = lastWordUsed = ""
+  var basePhrase = line = currentWordType = word = lastWordUsed = ""
 
   // don't go to the dictionary for the following words - we already know them
   var fixedWords = [
@@ -149,7 +148,7 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
 
     // check if the phrase we randomly selected belongs in the place we're trying to place it
     if (basePhrase["placement"].includes(phraseToGet)) {
-      line = basePhrase["phrase"];
+      line = basePhrase["phrase"]
 
       // for every type of word, see if the line has that type of word. If so, insert a word of that type.
       // TODO: instead of looping through every type of word, loop through the line and replace words as they come up.
@@ -160,19 +159,9 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
         line = line.replace(re, function(res) {
           if (!fixedWords.includes(currentWordType)) {
             // make sure that the same word isn't returned sequentially.
-            randWord = randomWord(dictionary[currentWordType], type);
-
-            // if the random word is the last one used, try to make a new one.
-            // "tries" is because this loop occasionally hangs for some reason.
-            // TODO: Find out why that is.
-            tries = 0
-            while (randWord == lastWordUsed && tries < 10) {
-              randWord = randomWord(dictionary[currentWordType], type)
-              ++tries
-            }
-
-            lastWordUsed = randWord
-            return randWord
+            word = randomWord(dictionary[currentWordType], lastWordUsed, type);
+            lastWordUsed = word
+            return word
           } else {
             return dictionary[currentWordType]
           }
@@ -192,28 +181,30 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
 }
 
 // gets a random key from JSON
-function randomWord (obj, type) {
-    // console.log(obj)
-    var isWordCorrectType = false
-    // var index = Math.floor(Math.random() * (Object.keys(obj).length - 0));
-    var index = 0
+function randomWord (dictionary, lastWordUsed, type) {
+  var isWordAcceptable = false
+  var index = 0
+  var word = ''
 
-    while (!isWordCorrectType) {
-      index = Math.floor(Math.random() * Object.keys(obj).length)
-      word = Object.keys(obj)[index]
+  while (!isWordAcceptable) {
+    // grab a random word from the dictionary
+    index = Math.floor(Math.random() * Object.keys(dictionary).length)
+    word = Object.keys(dictionary)[index]
 
-      if (Object.values(obj)[index].includes(type)) {
-        isWordCorrectType = true;
+    if (Object.values(dictionary)[index].includes(type)) {
+      if (word !== lastWordUsed) {
+        isWordAcceptable = true;
       }
     }
+  }
 
-    return word
+  return word
 }
 
 // gets a random value from JSON
 function randomPhrase (obj) {
-    var keys = Object.keys(obj)
-    return obj[keys[ keys.length * Math.random() << 0]];
+  var keys = Object.keys(obj)
+  return obj[keys[ keys.length * Math.random() << 0]];
 }
 
 // random number of lines for the poem
