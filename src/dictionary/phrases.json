@@ -7,8 +7,8 @@
 		{"phrase": "adjective abstract_noun.", "placement": ["middle"]},
 		{"phrase": "adjective concrete_noun.", "placement": ["middle"]},
 		{"phrase": "adjective bodypart.", "placement": ["title", "beginning", "middle", "end"]},
-		{"phrase": "adv. adv.", "placement": ["end"]},
-		{"phrase": "adv and adv.", "placement": ["end"]},
+		{"phrase": "adv. adv.", "placement": ["beginning"]},
+		{"phrase": "adv and adv.", "placement": ["beginning"]},
 		{"phrase": "ah, abstract_noun!", "placement": ["beginning"]},
 		{"phrase": "ah, adjective abstract_noun!", "placement": ["beginning", "end"]},
 		{"phrase": "all that's left is abstract_noun.", "placement": ["end"]},
@@ -18,6 +18,7 @@
 		{"phrase": "feeling washes over bodyparts.", "placement": ["beginning","middle"]},
 		{"phrase": "I am adjective.", "placement": ["beginning", "middle", "end"]},
 		{"phrase": "I verb.", "placement": ["middle"]},
+		{"phrase": "I verb alone.", "placement": ["middle"]},
 		{"phrase": "I verb adv.", "placement": ["middle", "end"]},
 		{"phrase": "I verb and verb.", "placement": ["middle"]},
 		{"phrase": "It verbs through pro_possessive bodypart and pro_possessive bodypart.", "placement": ["middle"]},
@@ -52,7 +53,7 @@
 		{"phrase": "the abstract_noun of people is adjective.", "placement": ["beginning", "middle", "end"]},
 		{"phrase": "there is no abstract_noun without abstract_noun.", "placement": ["middle", "end"]},
 		{"phrase": "this is for pro_objective.", "placement": ["beginning"]},
-		{"phrase": "~ a poem for pro_objective.", "placement": ["end"]},
+		{"phrase": "together we verb.", "placement": ["beginning", "end"]},
 		{"phrase": "verb.", "placement": ["title", "beginning"]},
 		{"phrase": "verbing.", "placement": ["title", "beginning"]},
 		{"phrase": "why I verb.", "placement": ["title", "beginning"]},
@@ -66,6 +67,7 @@
     {"phrase": "abstract_noun is the key to abstract_noun.", "placement": ["middle", "end"]},
     {"phrase": "abstract_noun leads to abstract_noun.", "placement": ["beginning"]},
 		{"phrase": "the adjectiveest abstract_noun!", "placement": ["beginning", "middle", "end"]},
+		{"phrase": "~ a poem for pro_objective.", "placement": ["end"]},
     {"phrase": "pro_subjective is the one.", "placement": ["title", "beginning"]}
   ]
 }
