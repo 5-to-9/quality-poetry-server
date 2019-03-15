@@ -9,7 +9,6 @@
 		"foolishness": ["basic"],
 		"history": ["basic"],
 		"intellect": ["basic"],
-		"information": ["basic"],
 		"integrity": ["basic", "love"],
 		"justice": ["basic"],
 		"judgement": ["basic"],
@@ -120,6 +119,18 @@
 		"skin": ["basic", "love"],
 		"soul": ["basic", "love"]
 	},
+	"color": {
+		"black": ["basic", "angst"],
+		"blue": ["basic"],
+		"gray": ["basic", "angst"],
+		"green": ["basic"],
+		"orange": ["basic"],
+		"pink": ["love"],
+		"red": ["basic", "love"],
+		"white": ["basic"],
+		"yellow": ["basic"]
+
+	},
 	"concrete_noun": {
 		"dagger": ["basic"],
 		"frown": ["basic"],
@@ -167,6 +178,15 @@
 		"thud": ["basic", "love"],
 		"wham": ["basic"]
 	},
+	"person": {
+		"demon": ["angst"],
+		"king": ["basic", "love"],
+		"man": ["basic", "love"],
+		"monster": ["basic", "angst"],
+		"soldier": ["basic"],
+		"queen": ["basic", "love"],
+		"woman": ["basic", "love"]
+	},
 	"people": {
 		"angels": ["basic", "love"],
 		"armies": ["basic"],
@@ -189,7 +209,7 @@
 		"villains": ["basic"],
 		"women": ["basic", "love"]
 	},
-	"verb": {
+	"infinitive_verb": {
 		"break": ["basic"],
 		"breathe": ["basic"],
 		"burn": ["basic"],
