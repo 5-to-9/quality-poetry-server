@@ -174,7 +174,7 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
 
   // strip punctuation from title
   if (phraseToGet == "title") {
-    line = line.replace(/[^A-Za-z0-9\s]/g,"");
+    line = line.replace(/[^A-Za-z0-9\'?\s]/g,"");
   }
 
   return line;
