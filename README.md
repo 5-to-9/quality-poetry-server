@@ -6,7 +6,7 @@ Ever wanted your own endless supply of terrible poetry? Well, now you can get it
 
 ## Getting Started
 
-Give the repo a download, install your dependancies, and gimme a pull request if you'd like to make any improvements.
+Give the repo a download, install your dependancies, and give us a pull request if you'd like to make any changes.
 
 ### Prerequisites
 
@@ -28,3 +28,4 @@ Give the repo a download, install your dependancies, and gimme a pull request if
 ## Authors
 
 * **Daniel Siegel** - *Original site* - [MrDanielMax](https://github.com/mrdanielmax)
+* **Nik Sawtschuk** - *Ideation, code review* - [NikSawtschuk](https://github.com/niksawtschuk)
