@@ -68,10 +68,21 @@ function generatePoem (type, callback) {
 
         var newLine = {
           "type": type,
-          "text": generateLine(phraseToGet, phrases, dictionary, wordTypes, type)
+          "text": generateLine(phraseToGet, phrases, dictionary, wordTypes, type),
+          "style": getLineStyle(phraseToGet, type)
         }
 
         poem["poem"]["lines"].push(newLine)
+      }
+
+      if (type == 'rupiKaur') {
+        var rupiKaurSignature = {
+          "type": type,
+          "text": '- rupi kaur',
+          "style": getLineStyle(phraseToGet, type)
+        }
+
+        poem["poem"]["lines"].push(rupiKaurSignature)
       }
 
       return callback(poem)
@@ -184,6 +195,18 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
   return line;
 }
 
+function getLineStyle(phrase, type) {
+  if (type == 'rupiKaur') {
+    if (phrase == 'title') {
+      return 'hidden'
+    }
+
+    return 'italic'
+  }
+
+  return ''
+}
+
 // gets a random key from JSON
 function randomWord (dictionary, lastWordUsed, type) {
   var isWordAcceptable = false
@@ -206,7 +229,7 @@ function randomWord (dictionary, lastWordUsed, type) {
 }
 
 function validatePoemType(poemType) {
-  var validPoemTypes = ['basic', 'love', 'angst'];
+  var validPoemTypes = ['basic', 'love', 'angst', 'rupiKaur'];
   return validPoemTypes.includes(poemType);
 }
 

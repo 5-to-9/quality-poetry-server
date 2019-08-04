@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var app = require('../index')
 
 // Which port to listen on
