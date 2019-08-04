@@ -22,15 +22,18 @@ app.use('/', router);
 router.get('/create', create_poem, function (req, res){});
 // router.get('/line', create_poem, function (req, res){});
 
+router.get('/favicon.ico', (req, res) => res.status(204));
+
 // helper function for the /create route.
-function create_poem(req,res,next){
-  var type = "basic";
-  var result = gen_functions.returnPoem(type, function(result){
+function create_poem(req,res,next) {
+  var poemType = req.query.poemType;
+
+  var result = gen_functions.returnPoem(poemType, function(result){
     res.send(result);
   });
 }
 
-function create_line(req,res,next){
+function create_line(req,res,next) {
   var result = gen_functions.returnLine(type, function(result){
     res.send(result);
   });

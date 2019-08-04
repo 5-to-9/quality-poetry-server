@@ -20,6 +20,10 @@ module.exports = {
 // Generates the poem. Takes in the type of poem to write, which informs
 // which words are selected from the dictionary.
 function generatePoem (type, callback) {
+  if (!validatePoemType(type)){
+    return callback({ "error" : "that poem type is not valid"});
+  }
+
   var poem = { "poem" : { "type" : type, "title" : "", "lines" : [] } }
 
   // load the dictionary
@@ -174,7 +178,7 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
 
   // strip punctuation from title
   if (phraseToGet == "title") {
-    line = line.replace(/[^A-Za-z0-9\s]/g,"");
+    line = line.replace(/[^A-Za-z0-9\'?\s]/g,"");
   }
 
   return line;
@@ -199,6 +203,11 @@ function randomWord (dictionary, lastWordUsed, type) {
   }
 
   return word
+}
+
+function validatePoemType(poemType) {
+  var validPoemTypes = ['basic', 'love', 'angst'];
+  return validPoemTypes.includes(poemType);
 }
 
 // gets a random value from JSON
