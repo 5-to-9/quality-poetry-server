@@ -26,14 +26,8 @@ router.get('/favicon.ico', (req, res) => res.status(204));
 
 // helper function for the /create route.
 function create_poem(req,res,next) {
-  var poemType = '';
-  var validPoemTypes = ['basic', 'love', 'angst'];
+  var poemType = req.query.poemType;
 
-  if (validPoemTypes.includes(req.query.poemType)) {
-    poemType = req.query.poemType;
-  } else {
-    poemType = 'basic';
-  }
   var result = gen_functions.returnPoem(poemType, function(result){
     res.send(result);
   });
