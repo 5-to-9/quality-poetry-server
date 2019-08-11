@@ -75,14 +75,10 @@ function generatePoem (type, callback) {
         poem["poem"]["lines"].push(newLine)
       }
 
-      if (type == 'rupiKaur') {
-        var rupiKaurSignature = {
-          "type": type,
-          "text": '- rupi kaur',
-          "style": getLineStyle(phraseToGet, type)
-        }
+      var signature = generateSignature(type);
 
-        poem["poem"]["lines"].push(rupiKaurSignature)
+      if (signature) {
+        poem["poem"]["lines"].push(signature)
       }
 
       return callback(poem)
@@ -196,15 +192,25 @@ function generateLine (phraseToGet, phrases, dictionary, wordTypes, type) {
 }
 
 function getLineStyle(phrase, type) {
-  if (type == 'rupiKaur') {
-    if (phrase == 'title') {
-      return 'hidden'
-    }
-
+  if (type == 'rupiKaur' && (Math.floor(Math.random() * 5) + 1) < 3) {
     return 'italic'
   }
 
   return ''
+}
+
+function generateSignature(poemType) {
+  if (poemType == 'rupiKaur') {
+    var rupiKaurSignature = {
+      "type": poemType,
+      "text": '- rupi kaur',
+      "style": ''
+    }
+
+    return rupiKaurSignature;
+  }
+
+  return null;
 }
 
 // gets a random key from JSON

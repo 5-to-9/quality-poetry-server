@@ -137,6 +137,7 @@
 
 	},
 	"concrete_noun": {
+		"battleground": ["angst", "rupiKaur"],
 		"dagger": ["angst"],
 		"frown": ["basic", "angst", "rupiKaur"],
 		"gun": ["rupiKaur"],
@@ -238,11 +239,15 @@
 		"fall": ["basic"],
 		"fracture": ["basic"],
 		"fragment": ["basic"],
+		"hold": ["basic", "love", "rupiKaur"],
+		"hug": ["basic", "love", "rupiKaur"],
 		"ignite": ["basic", "angst"],
 		"kill": ["basic", "angst"],
+		"kiss": ["love", "rupiKaur"],
 		"laugh": ["basic"],
 		"live": ["basic", "love", "rupiKaur"],
 		"love": ["basic", "love"],
+		"need": ["basic", "love", "rupiKaur"],
 		"shatter": ["basic"],
 		"sing": ["love"],
 		"smash": ["basic", "angst"],
