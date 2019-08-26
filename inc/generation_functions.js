@@ -2,8 +2,8 @@ var fs = require('fs')
 
 // Provides the functions used for poem generation
 module.exports = {
-  returnPoem: function (type, callback) {
-    return generatePoem(type, function(data) {
+  returnPoem: function (author, mood, callback) {
+    return generatePoem(author, mood, function(data) {
       return callback(data)
     });
   },
@@ -19,9 +19,13 @@ module.exports = {
 
 // Generates the poem. Takes in the type of poem to write, which informs
 // which words are selected from the dictionary.
-function generatePoem (type, callback) {
-  if (!validatePoemType(type)){
-    return callback({ "error" : "that poem type is not valid"});
+function generatePoem (author, mood, callback) {
+  if (!validatePoemAuthor(author)){
+    return callback({ "error" : "that author is not valid"});
+  }
+
+  if (!validatePoemMood(mood)){
+    return callback({ "error" : "that mood is not valid"});
   }
 
   var poem = { "poem" : { "type" : type, "title" : "", "lines" : [] } }
@@ -234,9 +238,14 @@ function randomWord (dictionary, lastWordUsed, type) {
   return word
 }
 
-function validatePoemType(poemType) {
-  var validPoemTypes = ['basic', 'love', 'angst', 'rupiKaur'];
-  return validPoemTypes.includes(poemType);
+function validatePoemAuthor(author) {
+  var validPoemAuthors = ['default', 'rupiKaur'];
+  return validPoemAuthors.includes(author);
+}
+
+function validatePoemMood(mood) {
+  var validPoemMoods = ['basic', 'love', 'angst'];
+  return validPoemMoods.includes(mood);
 }
 
 // gets a random value from JSON
