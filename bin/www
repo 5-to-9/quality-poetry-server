@@ -6,6 +6,6 @@ app.set('port', process.env.PORT || 3004)
 
 // Start listening for HTTP requests
 var server = app.listen(app.get('port'), function() {
-  var host = server.address().address
-  var port = server.address().port
+    var host = server.address().address
+    var port = server.address().port
 });
