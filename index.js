@@ -25,7 +25,7 @@ router.get('/create', generatePoem, function (req, res){});
 // Fetches the line of a poem
 // router.get('/line', generateLine, function (req, res){});
 
-// Precents favicon 404 noise in the error log
+// Prevents favicon 404 noise in the error log
 router.get('/favicon.ico', (req, res) => res.status(204));
 
 // helper function for the /create route.
