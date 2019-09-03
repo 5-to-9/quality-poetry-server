@@ -1,4 +1,5 @@
 var fs = require('fs')
+var path = require('path')
 
 // Provides the functions used for poem generation
 module.exports = {
@@ -31,12 +32,16 @@ function generatePoem(author, mood, callback) {
     var poem = { "poem" : { "author" : author, "mood" : mood, "title" : "", "lines" : [] } }
 
     // load the dictionary
-    var directoryPath = "./src/dictionary"
-    var phrasesFile = directoryPath + "/phrases.json"
-    var dictionaryFile = directoryPath + "/dictionary.json"
+    var dirname = path.join(__dirname, '..', 'src', 'dictionary')
+    var phrasesFile = dirname + '/phrases.json'
+    var dictionaryFile = dirname + '/dictionary.json'
 
     fs.readFile(phrasesFile, 'utf8', function(phraseErr, phrases) {
         fs.readFile(dictionaryFile, 'utf8', function(dictErr, dictionary) {
+            if (typeof phrases == 'undefined' || typeof dictionary == 'undefined') {
+                return callback({ "error" : "could not load JSON." });
+            }
+
             var lineCount = getLineCount(Math.floor(Math.random() * 10) + 1)
             var genderProb = Math.floor(Math.random() * 2) + 1
             var phraseToGet = ''
