@@ -95,7 +95,9 @@
     },
     "concrete_noun": {
       "dagger": ["angst"],
+      "flaws": ["basic", "angst"],
       "frown": ["basic", "angst"],
+      "ghost": ["basic", "angst"]
       "gun": ["angst"],
       "poem": ["basic", "love"],
       "smile": ["basic", "love"],
@@ -138,6 +140,7 @@
       "laugh": ["basic"],
       "live": ["basic", "love"],
       "love": ["basic", "love"],
+      "ramble": ["basic", "love"],
       "sing": ["love"],
       "smash": ["basic", "angst"],
       "scream": ["basic", "angst"],
@@ -222,7 +225,7 @@
       "hungry": ["love"],
       "loyal": ["basic", "love"]
     },
-      "infinitive_verb": {
+    "infinitive_verb": {
       "carry": ["love"],
       "want": ["basic", "love", "angst"],
       "whisper": ["basic", "love", "angst"]
@@ -266,6 +269,7 @@
       "weary": ["basic", "angst"]
     },
     "adv": {
+      "deliberately": ["basic", "love", "angst"],
       "lazily": ["basic"],
       "hungrily": ["basic", "angst"],
       "promptly": ["basic"],
@@ -283,9 +287,11 @@
       "gray": ["basic", "angst"]
     },
     "concrete_noun": {
-      "battleground": ["angst"]
+      "battleground": ["angst"],
+      "cigarette": ["angst"]
     },
     "feeling": {
+      "emotional": ["basic", "love", "angst"],
       "hungry": ["basic", "angst"],
       "pained": ["angst"],
       "prideful": ["angst"],
