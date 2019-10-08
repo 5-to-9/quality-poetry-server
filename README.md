@@ -29,3 +29,4 @@ Give the repo a download, install your dependancies, and give us a pull request 
 
 * **Daniel Siegel** - *Original site* - [MrDanielMax](https://github.com/mrdanielmax)
 * **Nik Sawtschuk** - *Ideation, code review* - [NikSawtschuk](https://github.com/niksawtschuk)
+* **Vlad Popa** - *Code review* - [Vlardez](https://github.com/vlardez)
