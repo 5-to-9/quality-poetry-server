@@ -81,8 +81,10 @@
       "eye": ["basic", "angst"],
       "head": ["love"],
       "heart": ["basic", "love"],
+      "lips": ["romantic"],
       "mind": ["basic", "love"],
-      "soul": ["basic", "love", "angst"]
+      "soul": ["basic", "love", "angst"],
+      "throat": ["love", "angst"]
     },
     "color": {
       "black": ["basic", "angst"],
@@ -97,7 +99,7 @@
       "dagger": ["angst"],
       "flaws": ["basic", "angst"],
       "frown": ["basic", "angst"],
-      "ghost": ["basic", "angst"]
+      "ghost": ["basic", "angst"],
       "gun": ["angst"],
       "poem": ["basic", "love"],
       "smile": ["basic", "love"],
@@ -105,6 +107,7 @@
       "wound": ["basic", "angst"]
     },
     "feeling": {
+      "angry": ["basic", "angst"],
       "depressed": ["basic", "angst"],
       "dignified": ["basic"],
       "envious": ["basic", "angst"],
@@ -131,6 +134,7 @@
       "conquer": ["basic"],
       "dance": ["love"],
       "fall": ["basic"],
+      "flinch": ["basic", "angst"],
       "fracture": ["basic"],
       "fragment": ["basic"],
       "hold": ["basic", "love"],
@@ -193,7 +197,8 @@
   },
   "rupiKaur": {
     "abstract_noun": {
-      "ego": ["basic"]
+      "ego": ["basic"],
+      "toxicity": ["angst"]
     },
     "adjective": {
       "bright": ["basic", "love"],
@@ -211,30 +216,38 @@
       "wildly": ["basic", "love", "angst"]
     },
     "bodypart": {
-      "body": ["basic", "love", "angst"]
+      "body": ["basic", "love", "angst"],
+      "veins": ["basic", "love", "angst"],
+      "voice": ["basic", "love", "angst"]
     },
     "color": {
       "pink": ["basic", "love"]
     },
     "concrete_noun": {
+      "confession": ["basic", "love", "angst"],
       "honey": ["basic", "love"],
       "milk": ["basic", "love"],
       "sugar": ["basic", "love"]
     },
     "feeling": {
       "hungry": ["love"],
+      "numb": ["basic", "angst"],
       "loyal": ["basic", "love"]
     },
     "infinitive_verb": {
       "carry": ["love"],
+      "forget": ["basic", "angst"],
       "want": ["basic", "love", "angst"],
-      "whisper": ["basic", "love", "angst"]
+      "whisper": ["basic", "love", "angst"],
+      "yell": ["angst"]
     },
     "onomatopoeia": {
       "moan": ["basic", "love", "angst"],
       "whisper": ["basic", "love", "angst"]
     },
     "person": {
+      "father": ["basic", "love", "angst"],
+      "mother": ["basic", "love", "angst"],
       "queen": ["basic", "love", "angst"]
     },
     "people": {
@@ -293,6 +306,7 @@
     "feeling": {
       "emotional": ["basic", "love", "angst"],
       "hungry": ["basic", "angst"],
+      "numb": ["basic", "angst"],
       "pained": ["angst"],
       "prideful": ["angst"],
       "wrathful": ["basic", "angst"]
