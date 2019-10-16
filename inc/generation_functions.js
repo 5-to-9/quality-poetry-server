@@ -13,8 +13,8 @@ module.exports = {
     //   return callback(data);
     // });
   },
-  c: function (var_to_print) {
-    console.log(var_to_print)
+  c: function (varToPrint) {
+    console.log(varToPrint)
   }
 };
 
@@ -201,7 +201,9 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes, author, mood)
         "subjectivePronoun",
         "objectivePronoun",
         "possessivePronoun",
-        "verbEnding"
+        "verbEnding",
+        "toBeConjugation",
+        "possessiveConjugation"
     ]
 
     while (!isLineGenerated) {
