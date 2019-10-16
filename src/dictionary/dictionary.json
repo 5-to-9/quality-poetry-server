@@ -81,18 +81,18 @@
       "eye": ["basic", "angst"],
       "head": ["love"],
       "hip": ["basic", "love"],
-      "lips": ["romantic"],
+      "lips": ["love"],
       "mind": ["basic", "love"],
       "soul": ["basic", "love", "angst"],
       "throat": ["love", "angst"]
     },
     "color": {
       "black": ["basic", "angst"],
-      "blue": ["basic"],
-      "green": ["basic"],
+      "blue": ["basic", "love"],
+      "green": ["basic", "love"],
       "orange": ["basic"],
       "red": ["basic", "love"],
-      "white": ["basic"],
+      "white": ["basic", "angst"],
       "yellow": ["basic"]
     },
     "concreteNoun": {
@@ -311,7 +311,7 @@
       "skin": ["basic", "love"]
     },
     "color": {
-      "gray": ["basic", "angst"]
+      "purple": ["basic", "angst"]
     },
     "concreteNoun": {
       "battleground": ["angst"],
