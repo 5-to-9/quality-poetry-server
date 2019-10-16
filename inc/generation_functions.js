@@ -193,7 +193,6 @@ function getPoemTarget() {
 // uses the phrase to generate a line madlibs-style
 function generateLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
   var isLineGenerated = false
-  var tries = 0
   var basePhrase = line = currentWordType = word = lastWordUsed = ""
 
   // don't go to the dictionary for the following words - we already know them
@@ -268,7 +267,7 @@ function generateSignature(author) {
 // gets a random key from JSON
 function randomWord(dictionary, lastWordUsed, mood) {
   var isWordAcceptable = false
-  var index = 0
+  var tries = index = 0
   var word = ''
 
   while (!isWordAcceptable) {
@@ -280,6 +279,12 @@ function randomWord(dictionary, lastWordUsed, mood) {
       if (word !== lastWordUsed) {
         isWordAcceptable = true;
       }
+    }
+
+    ++tries;
+
+    if (tries > 20) {
+      isWordAcceptable = true;
     }
   }
 
