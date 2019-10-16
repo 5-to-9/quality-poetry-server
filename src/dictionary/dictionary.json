@@ -1,320 +1,359 @@
 {
-    "default": {
-        "abstract_noun": {
-            "darkness": ["basic", "angst"],
-            "death": ["basic", "angst"],
-            "destiny": ["basic", "love", "angst"],
-            "failure": ["basic"],
-            "intellect": ["basic"],
-            "integrity": ["basic", "love"],
-            "justice": ["basic"],
-            "judgement": ["basic"],
-            "knowledge": ["basic"],
-            "murder": ["basic", "angst"],
-            "music" : ["love"],
-            "mystery": ["basic"],
-            "nature": ["basic"],
-            "passion": ["basic", "love"],
-            "peace": ["basic", "love"],
-            "romance": ["basic", "love"],
-            "shadow": ["basic", "angst"],
-            "struggle": ["basic"],
-            "triumph": ["basic"],
-            "warmth": ["basic", "love"],
-            "wealth": ["basic", "love"],
-            "wisdom": ["basic"]
-        },
-        "adjective": {
-            "clear": ["basic", "love"],
-            "calm": ["basic", "love"],
-            "dark": ["basic", "angst"],
-            "deep": ["basic", "love", "angst"],
-            "empty": ["basic", "angst"],
-            "evil": ["basic", "angst"],
-            "faithful": ["basic", "love", "angst"],
-            "gloomy": ["basic", "angst"],
-            "good": ["basic", "love"],
-            "holy": ["basic"],
-            "light": ["basic", "love"],
-            "proud": ["basic", "angst"],
-            "pure": ["basic", "love"],
-            "quiet": ["basic"],
-            "rotten": ["basic", "angst"],
-            "scattered": ["basic", "angst"],
-            "shallow": ["basic", "angst"],
-            "sheepish": ["basic", "angst"],
-            "strong": ["love"],
-            "tender": ["basic"],
-            "tense": ["basic"],
-            "tough": ["basic"],
-            "vast": ["basic"],
-            "violent": ["angst"],
-            "weak": ["basic", "angst"]
-        },
-        "adv": {
-            "angrily": ["basic", "angst"],
-            "blindly": ["basic", "angst"],
-            "boldly": ["basic"],
-            "cruelly": ["basic", "angst"],
-            "defiantly": ["basic"],
-            "deftly": ["basic"],
-            "effortlessly": ["basic"],
-            "energetically": ["basic"],
-            "fervently": ["basic"],
-            "gently": ["basic", "love"],
-            "gracefully": ["basic", "love"],
-            "helplessly": ["basic"],
-            "jealously": ["angst"],
-            "normally": ["basic"],
-            "perfectly": ["love"],
-            "powerfully": ["basic", "love", "angst"],
-            "quickly": ["basic"],
-            "roughly": ["basic"],
-            "seldom": ["basic"],
-            "silently": ["basic"],
-            "softly": ["basic"],
-            "suddenly": ["basic", "angst"]
-        },
-        "bodypart": {
-            "arm": ["basic", "love", "angst"],
-            "chest": ["basic", "love", "angst"],
-            "eye": ["basic", "angst"],
-            "head": ["love"],
-            "heart": ["basic", "love"],
-            "mind": ["basic", "love"],
-            "soul": ["basic", "love", "angst"]
-        },
-        "color": {
-            "black": ["basic", "angst"],
-            "blue": ["basic"],
-            "green": ["basic"],
-            "orange": ["basic"],
-            "red": ["basic", "love"],
-            "white": ["basic"],
-            "yellow": ["basic"]
-        },
-        "concrete_noun": {
-            "dagger": ["angst"],
-            "frown": ["basic", "angst"],
-            "gun": ["angst"],
-            "poem": ["basic", "love"],
-            "smile": ["basic", "love"],
-            "sound": ["basic", "angst"],
-            "wound": ["basic", "angst"]
-        },
-        "feeling": {
-            "depressed": ["basic", "angst"],
-            "dignified": ["basic"],
-            "envious": ["basic", "angst"],
-            "fearful": ["basic", "angst"],
-            "furious": ["basic", "angst"],
-            "grateful": ["basic"],
-            "hateful": ["basic", "angst"],
-            "happy": ["basic"],
-            "hopeful": ["basic"],
-            "joyful": ["basic", "love"],
-            "kind": ["love"],
-            "loving": ["basic", "love"],
-            "lustful": ["basic", "love"],
-            "sadness": ["basic", "angst"],
-            "sorrow": ["basic", "angst"],
-            "tormented": ["basic", "angst"]
-        },
-        "infinitive_verb": {
-            "break": ["basic", "angst"],
-            "breathe": ["basic"],
-            "burst": ["basic", "angst"],
-            "crack": ["basic", "angst"],
-            "collapse": ["basic"],
-            "conquer": ["basic"],
-            "dance": ["love"],
-            "fall": ["basic"],
-            "fracture": ["basic"],
-            "fragment": ["basic"],
-            "hold": ["basic", "love"],
-            "hug": ["basic", "love"],
-            "ignite": ["basic", "angst"],
-            "kiss": ["love"],
-            "laugh": ["basic"],
-            "live": ["basic", "love"],
-            "love": ["basic", "love"],
-            "sing": ["love"],
-            "smash": ["basic", "angst"],
-            "scream": ["basic", "angst"],
-            "screech": ["basic"],
-            "shriek": ["basic", "angst"],
-            "sink": ["basic"],
-            "snap": ["basic"],
-            "sob": ["basic"],
-            "weep": ["basic", "angst"],
-            "whimper": ["basic"]
-        },
-        "onomatopoeia": {
-            "bump": ["basic", "love"],
-            "clatter": ["basic"],
-            "crack": ["basic", "angst"],
-            "crash": ["basic", "angst"],
-            "gasp": ["basic", "love"],
-            "howl": ["basic", "love", "angst"],
-            "screech": ["basic", "angst"],
-            "smash": ["basic", "love", "angst"],
-            "thud": ["basic", "love"]
-        },
-        "person": {
-            "baby": ["basic"],
-            "child": ["basic"],
-            "king": ["basic", "love"],
-            "man": ["basic", "love", "angst"],
-            "monster": ["angst", "angst"],
-            "soldier": ["basic"],
-            "woman": ["basic", "love", "angst"]
-        },
-        "people": {
-            "angels": ["basic", "love"],
-            "armies": ["basic"],
-            "conquerors": ["basic"],
-            "demons": ["basic", "angst"],
-            "devils": ["basic", "angst"],
-            "emperors": ["basic"],
-            "gods": ["basic", "love", "angst"],
-            "heroes": ["basic"],
-            "kings": ["basic", "love"],
-            "lovers": ["basic", "love"],
-            "men": ["basic", "love", "angst"],
-            "monsters": ["basic", "angst"],
-            "queens": ["basic", "love"],
-            "soldiers": ["basic", "angst"],
-            "villains": ["basic", "angst"],
-            "women": ["basic", "love", "angst"]
-        }
+  "default": {
+    "abstract_noun": {
+      "darkness": ["basic", "angst"],
+      "death": ["basic", "angst"],
+      "destiny": ["basic", "love", "angst"],
+      "failure": ["basic"],
+      "intellect": ["basic"],
+      "integrity": ["basic", "love"],
+      "justice": ["basic"],
+      "judgement": ["basic"],
+      "knowledge": ["basic"],
+      "murder": ["basic", "angst"],
+      "music" : ["love"],
+      "mystery": ["basic"],
+      "nature": ["basic"],
+      "passion": ["basic", "love"],
+      "peace": ["basic", "love"],
+      "romance": ["basic", "love"],
+      "shadow": ["basic", "angst"],
+      "struggle": ["basic", "angst"],
+      "triumph": ["basic"],
+      "warmth": ["basic", "love"],
+      "wealth": ["basic", "love"],
+      "wisdom": ["basic"]
     },
-    "rupiKaur": {
-        "abstract_noun": {
-            "ego": ["basic"]
-        },
-        "adjective": {
-            "bright": ["basic", "love"],
-            "defiant": ["basic", "angst"],
-            "fiery": ["basic", "love", "angst"],
-            "just": ["love"],
-            "profound": ["basic", "love"],
-            "sparkling": ["basic", "love"],
-            "untamed": ["basic", "love"]
-        },
-        "adv": {
-            "deeply": ["basic", "love"],
-            "elegantly": ["basic", "love"],
-            "hungrily": ["basic", "love"],
-            "wildly": ["basic", "love", "angst"]
-        },
-        "bodypart": {
-            "body": ["basic", "love", "angst"]
-        },
-        "color": {
-            "pink": ["basic", "love"]
-        },
-        "concrete_noun": {
-            "honey": ["basic", "love"],
-            "milk": ["basic", "love"],
-            "sugar": ["basic", "love"]
-        },
-        "feeling": {
-            "hungry": ["love"],
-            "loyal": ["basic", "love"]
-        },
-        "infinitive_verb": {
-            "carry": ["love"],
-            "want": ["basic", "love", "angst"],
-            "whisper": ["basic", "love", "angst"]
-        },
-        "onomatopoeia": {
-            "moan": ["basic", "love", "angst"],
-            "whisper": ["basic", "love", "angst"]
-        },
-        "person": {
-            "queen": ["basic", "love", "angst"]
-        },
-        "people": {
-            "goddesses": ["basic", "love"]
-        }
+    "adjective": {
+      "clear": ["basic", "love"],
+      "calm": ["basic", "love"],
+      "dark": ["basic", "angst"],
+      "deep": ["basic", "love", "angst"],
+      "empty": ["basic", "angst"],
+      "evil": ["basic", "angst"],
+      "faithful": ["basic", "love", "angst"],
+      "gloomy": ["basic", "angst"],
+      "good": ["basic", "love"],
+      "holy": ["basic"],
+      "light": ["basic", "love"],
+      "proud": ["basic", "angst"],
+      "pure": ["basic", "love"],
+      "quiet": ["basic"],
+      "rotten": ["basic", "angst"],
+      "scattered": ["basic", "angst"],
+      "shallow": ["basic", "angst"],
+      "sheepish": ["basic", "angst"],
+      "strong": ["love"],
+      "tender": ["basic"],
+      "tense": ["basic"],
+      "tough": ["basic"],
+      "vast": ["basic"],
+      "violent": ["angst"],
+      "weak": ["basic", "angst"]
     },
-    "tumblrPoet": {
-        "abstract_noun": {
-            "crime": ["basic", "angst"],
-            "ego": ["basic"],
-            "foolishness": ["basic"],
-            "history": ["basic"],
-            "light": ["basic", "love"],
-            "ruin": ["basic", "angst"],
-            "toil": ["basic", "angst"],
-            "victory": ["basic"],
-            "violence": ["basic", "angst"],
-            "work": ["basic"]
-        },
-        "adjective": {
-            "colossal": ["angst"],
-            "dim": ["angst"],
-            "faithless": ["basic", "angst"],
-            "fresh": ["basic"],
-            "impure": ["basic", "angst"],
-            "meek": ["basic"],
-            "mysterious": ["basic"],
-            "profound": ["basic"],
-            "puny": ["angst"],
-            "scary": ["angst"],
-            "untamed": ["basic", "love"],
-            "weary": ["basic", "angst"]
-        },
-        "adv": {
-            "lazily": ["basic"],
-            "hungrily": ["basic", "angst"],
-            "promptly": ["basic"],
-            "sheepishly": ["basic", "angst"],
-            "stealthily": ["basic"],
-            "villainously": ["basic", "angst"],
-            "wearily": ["basic"],
-            "wildly": ["basic", "angst"]
-        },
-        "bodypart": {
-            "brain": ["basic", "angst"],
-            "skin": ["basic", "love"]
-        },
-        "color": {
-            "gray": ["basic", "angst"]
-        },
-        "concrete_noun": {
-            "battleground": ["angst"]
-        },
-        "feeling": {
-            "hungry": ["basic", "angst"],
-            "pained": ["angst"],
-            "prideful": ["angst"],
-            "wrathful": ["basic", "angst"]
-        },
-        "infinitive_verb": {
-            "burn": ["basic", "angst"],
-            "clash": ["basic", "angst"],
-            "die": ["basic", "angst"],
-            "fade": ["basic"],
-            "kill": ["basic", "angst"],
-            "shatter": ["basic", "angst"],
-            "splinter": ["basic", "angst"]
-        },
-        "onomatopoeia": {
-            "bang": ["basic", "love"],
-            "boom": ["basic"],
-            "crunch": ["basic", "angst"],
-            "groan": ["basic", "angst"],
-            "wham": ["basic", "angst"]
-        },
-        "person": {
-            "demon": ["angst"],
-            "queen": ["basic", "love"]
-        },
-        "people": {
-            "legends": ["basic"],
-            "nations": ["basic", "angst"],
-            "societies": ["basic", "angst"]
-        }
+    "adv": {
+      "angrily": ["basic", "angst"],
+      "blindly": ["basic", "angst"],
+      "boldly": ["basic"],
+      "cruelly": ["basic", "angst"],
+      "defiantly": ["basic"],
+      "deftly": ["basic"],
+      "effortlessly": ["basic"],
+      "energetically": ["basic"],
+      "fervently": ["basic"],
+      "gently": ["basic", "love"],
+      "gracefully": ["basic", "love"],
+      "helplessly": ["basic"],
+      "jealously": ["angst"],
+      "normally": ["basic"],
+      "perfectly": ["love"],
+      "powerfully": ["basic", "love", "angst"],
+      "quickly": ["basic"],
+      "roughly": ["basic"],
+      "seldom": ["basic"],
+      "silently": ["basic"],
+      "softly": ["basic"],
+      "suddenly": ["basic", "angst"]
+    },
+    "bodypart": {
+      "arm": ["basic", "love", "angst"],
+      "chest": ["basic", "love", "angst"],
+      "eye": ["basic", "angst"],
+      "head": ["love"],
+      "hip": ["basic", "love"],
+      "lips": ["romantic"],
+      "mind": ["basic", "love"],
+      "soul": ["basic", "love", "angst"],
+      "throat": ["love", "angst"]
+    },
+    "color": {
+      "black": ["basic", "angst"],
+      "blue": ["basic"],
+      "green": ["basic"],
+      "orange": ["basic"],
+      "red": ["basic", "love"],
+      "white": ["basic"],
+      "yellow": ["basic"]
+    },
+    "concrete_noun": {
+      "dagger": ["angst"],
+      "earth": ["basic"],
+      "flaw": ["basic", "angst"],
+      "frown": ["basic", "angst"],
+      "ghost": ["basic", "angst"],
+      "gun": ["angst"],
+      "poem": ["basic", "love"],
+      "smile": ["basic", "love"],
+      "sound": ["basic", "angst"],
+      "spice": ["love"],
+      "stars": ["love"],
+      "sun": ["love"],
+      "wound": ["angst"]
+    },
+    "feeling": {
+      "angry": ["basic", "angst"],
+      "depressed": ["basic", "angst"],
+      "dignified": ["basic"],
+      "envious": ["basic", "angst"],
+      "fearful": ["basic", "angst"],
+      "furious": ["basic", "angst"],
+      "grateful": ["basic"],
+      "hateful": ["basic", "angst"],
+      "happy": ["basic"],
+      "hopeful": ["basic"],
+      "joyful": ["basic", "love"],
+      "kind": ["love"],
+      "loving": ["basic", "love"],
+      "lustful": ["basic", "love"],
+      "sadness": ["basic", "angst"],
+      "sorrow": ["basic", "angst"],
+      "tormented": ["basic", "angst"]
+    },
+    "infinitive_verb": {
+      "break": ["basic", "angst"],
+      "breathe": ["basic"],
+      "burst": ["basic", "angst"],
+      "crack": ["basic", "angst"],
+      "crave": ["love"],
+      "crumble": ["angst"],
+      "collapse": ["basic"],
+      "conquer": ["basic"],
+      "dance": ["love"],
+      "exhale": ["basic", "love", "angst"],
+      "fall": ["basic"],
+      "flinch": ["basic", "angst"],
+      "fracture": ["basic"],
+      "fragment": ["basic"],
+      "hold": ["basic", "love"],
+      "hug": ["basic", "love"],
+      "ignite": ["basic", "angst"],
+      "inhale": ["basic", "love", "angst"],
+      "kiss": ["love"],
+      "laugh": ["basic"],
+      "live": ["basic", "love"],
+      "love": ["basic", "love"],
+      "ramble": ["basic", "love"],
+      "sing": ["love"],
+      "smash": ["basic", "angst"],
+      "scream": ["basic", "angst"],
+      "screech": ["basic"],
+      "shriek": ["basic", "angst"],
+      "sleep": ["basic"],
+      "sink": ["basic"],
+      "snap": ["basic"],
+      "sob": ["basic"],
+      "understand": ["basic", "love"],
+      "wake": ["basic", "love"],
+      "weep": ["basic", "angst"],
+      "whimper": ["basic"]
+    },
+    "onomatopoeia": {
+      "bump": ["basic", "love"],
+      "clatter": ["basic"],
+      "crack": ["basic", "angst"],
+      "crash": ["basic", "angst"],
+      "gasp": ["basic", "love"],
+      "howl": ["basic", "love", "angst"],
+      "screech": ["basic", "angst"],
+      "smash": ["basic", "love", "angst"],
+      "thud": ["basic", "love"]
+    },
+    "person": {
+      "baby": ["basic"],
+      "child": ["basic"],
+      "king": ["basic", "love"],
+      "man": ["basic", "love", "angst"],
+      "monster": ["angst", "angst"],
+      "soldier": ["basic"],
+      "woman": ["basic", "love", "angst"]
+    },
+    "people": {
+      "angels": ["basic", "love"],
+      "armies": ["basic"],
+      "conquerors": ["basic"],
+      "devils": ["basic", "angst"],
+      "emperors": ["basic"],
+      "gods": ["basic", "love", "angst"],
+      "heroes": ["basic"],
+      "kings": ["basic", "love"],
+      "lovers": ["basic", "love"],
+      "men": ["basic", "love", "angst"],
+      "monsters": ["basic", "angst"],
+      "queens": ["basic", "love"],
+      "soldiers": ["basic", "angst"],
+      "villains": ["basic", "angst"],
+      "women": ["basic", "love", "angst"]
     }
+  },
+  "rupiKaur": {
+    "abstract_noun": {
+      "ego": ["basic"],
+      "toxicity": ["angst"]
+    },
+    "adjective": {
+      "bright": ["basic", "love"],
+      "defiant": ["basic", "angst"],
+      "fiery": ["basic", "love", "angst"],
+      "just": ["love"],
+      "profound": ["basic", "love"],
+      "sparkling": ["basic", "love"],
+      "untamed": ["basic", "love"]
+    },
+    "adv": {
+      "deeply": ["basic", "love"],
+      "elegantly": ["basic", "love"],
+      "exquisitely": ["basic", "love"],
+      "hungrily": ["basic", "love"],
+      "wildly": ["basic", "love", "angst"]
+    },
+    "bodypart": {
+      "body": ["basic", "love", "angst"],
+      "knee": ["basic", "love", "angst"],
+      "veins": ["basic", "love", "angst"],
+      "voice": ["basic", "love", "angst"]
+    },
+    "color": {
+      "pink": ["basic", "love"]
+    },
+    "concrete_noun": {
+      "confession": ["basic", "love", "angst"],
+      "honey": ["basic", "love"],
+      "jewel": ["basic", "love"],
+      "milk": ["basic", "love"],
+      "sugar": ["basic", "love"]
+    },
+    "feeling": {
+      "hunger": ["love"],
+      "numb": ["basic", "angst"],
+      "loyalty": ["basic", "love"]
+    },
+    "infinitive_verb": {
+      "carry": ["love"],
+      "forget": ["basic", "angst"],
+      "want": ["basic", "love", "angst"],
+      "whisper": ["basic", "love", "angst"],
+      "yell": ["angst"]
+    },
+    "onomatopoeia": {
+      "moan": ["basic", "love", "angst"],
+      "whisper": ["basic", "love", "angst"]
+    },
+    "person": {
+      "father": ["basic", "love", "angst"],
+      "mother": ["basic", "love", "angst"],
+      "queen": ["basic", "love", "angst"]
+    },
+    "people": {
+      "goddesses": ["basic", "love"]
+    }
+  },
+  "tumblrPoet": {
+    "abstract_noun": {
+      "crime": ["basic", "angst"],
+      "ego": ["basic"],
+      "foolishness": ["basic"],
+      "history": ["basic"],
+      "light": ["basic", "love"],
+      "ruin": ["basic", "angst"],
+      "toil": ["basic", "angst"],
+      "victory": ["basic"],
+      "violence": ["basic", "angst"],
+      "work": ["basic"]
+    },
+    "adjective": {
+      "colossal": ["angst"],
+      "dim": ["angst"],
+      "faithless": ["basic", "angst"],
+      "fresh": ["basic"],
+      "impure": ["basic", "angst"],
+      "meek": ["basic"],
+      "mysterious": ["basic"],
+      "profound": ["basic"],
+      "puny": ["angst"],
+      "scary": ["angst"],
+      "untamed": ["basic", "love"],
+      "weary": ["basic", "angst"]
+    },
+    "adv": {
+      "deliberately": ["basic", "love", "angst"],
+      "lazily": ["basic"],
+      "hungrily": ["basic", "angst"],
+      "promptly": ["basic"],
+      "sheepishly": ["basic", "angst"],
+      "stealthily": ["basic"],
+      "villainously": ["basic", "angst"],
+      "wearily": ["basic"],
+      "wildly": ["basic", "angst"]
+    },
+    "bodypart": {
+      "brain": ["basic", "angst"],
+      "skin": ["basic", "love"]
+    },
+    "color": {
+      "gray": ["basic", "angst"]
+    },
+    "concrete_noun": {
+      "battleground": ["angst"],
+      "cigarette": ["basic", "love", "angst"],
+      "turmoil": ["basic", "angst"],
+      "warzone": ["angst"]
+    },
+    "feeling": {
+      "hungry": ["basic", "love", "angst"],
+      "numb": ["basic", "angst"],
+      "pained": ["angst"],
+      "prideful": ["angst"],
+      "stubborn": ["basic", "angst"],
+      "wrathful": ["basic", "angst"]
+    },
+    "infinitive_verb": {
+      "burn": ["basic", "love", "angst"],
+      "clash": ["basic", "angst"],
+      "die": ["basic", "angst"],
+      "fade": ["basic"],
+      "kill": ["basic", "angst"],
+      "shatter": ["basic", "angst"],
+      "splinter": ["basic", "angst"]
+    },
+    "onomatopoeia": {
+      "bang": ["basic", "love"],
+      "boom": ["basic"],
+      "crunch": ["basic", "angst"],
+      "groan": ["basic", "angst"],
+      "grunt": ["love"],
+      "pat": ["basic", "love", "angst"],
+      "scream": ["basic", "angst"],
+      "wham": ["basic", "angst"]
+    },
+    "person": {
+      "demon": ["angst"],
+      "queen": ["basic", "love"]
+    },
+    "people": {
+      "demons": ["basic", "angst"],
+      "legends": ["basic", "love"],
+      "nations": ["basic", "love", "angst"],
+      "societies": ["basic", "love", "angst"]
+    }
+  }
 }
