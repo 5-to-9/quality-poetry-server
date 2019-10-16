@@ -219,7 +219,7 @@
       "sparkling": ["basic", "love"],
       "untamed": ["basic", "love"]
     },
-    "adv": {
+    "adverb": {
       "deeply": ["basic", "love"],
       "elegantly": ["basic", "love"],
       "exquisitely": ["basic", "love"],
@@ -294,7 +294,7 @@
       "untamed": ["basic", "love"],
       "weary": ["basic", "angst"]
     },
-    "adv": {
+    "adverb": {
       "deliberately": ["basic", "love", "angst"],
       "lazily": ["basic"],
       "hungrily": ["basic", "angst"],
@@ -307,6 +307,7 @@
     },
     "bodyPart": {
       "brain": ["basic", "angst"],
+      "gene": ["basic", "love", "angst"],
       "skin": ["basic", "love"]
     },
     "color": {
