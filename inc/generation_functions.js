@@ -99,79 +99,95 @@ function compilePhrases(allPhrases, author) {
 }
 
 function compileDictionary(fullDictionary, author) {
-    dictionary = fullDictionary.default
+  dictionary = fullDictionary.default
 
-    if (author != 'default') {
-        authorDictionary = fullDictionary[author]
+  if (author != 'default') {
+    authorDictionary = fullDictionary[author]
 
-        for (var key in authorDictionary) {
-            Object.assign(dictionary[key], dictionary[key], authorDictionary[key])
-        }
+    for (var key in authorDictionary) {
+      Object.assign(dictionary[key], dictionary[key], authorDictionary[key])
     }
+  }
 
-    pronouns = getPoemTarget()
+  pronouns = getPoemTarget()
 
-    dictionary.pro_subjective = pronouns["pro_subjective"]
-    dictionary.pro_objective = pronouns["pro_objective"]
-    dictionary.pro_possessive = pronouns["pro_possessive"]
-    dictionary.poem_target = pronouns["poem_target"]
-    dictionary.verb_ending = pronouns["verb_ending"]
+  dictionary.subjectivePronoun = pronouns["subjectivePronoun"]
+  dictionary.objectivePronoun = pronouns["objectivePronoun"]
+  dictionary.possessivePronoun = pronouns["possessivePronoun"]
+  dictionary.poemTarget = pronouns["poemTarget"]
+  dictionary.verbEnding = pronouns["verbEnding"]
+  dictionary.toBeConjugation = pronouns["toBeConjugation"]
+  dictionary.possessiveConjugation = pronouns["possessiveConjugation"]
 
-    return dictionary
+  return dictionary
 }
 
 // function to randomly decide who the poem is targetting.
 // the author (I), the reader (you), him, her, us (we), or them (both singular and plural)
 function getPoemTarget() {
-    var target = Math.floor(Math.random() * 6) + 1
+  var target = Math.floor(Math.random() * 6) + 1
 
-    pronouns = [{
-        "poem_target" : "myself",
-        "pro_subjective" : "I",
-        "pro_objective" : "me",
-        "pro_possessive" : "my",
-        "verb_ending" : ""
-    }, {
-        "poem_target" : "the reader",
-        "pro_subjective" : "you",
-        "pro_objective" : "you",
-        "pro_possessive" : "your",
-        "verb_ending" : ""
-    }, {
-        "poem_target" : "the man",
-        "pro_subjective" : "he",
-        "pro_objective" : "him",
-        "pro_possessive" : "his",
-        "verb_ending" : "s"
-    }, {
-        "poem_target" : "the woman",
-        "pro_subjective" : "she",
-        "pro_objective" : "her",
-        "pro_possessive" : "her",
-        "verb_ending" : "s"
-    }, {
-        "poem_target" : "us",
-        "pro_subjective" : "we",
-        "pro_objective" : "us",
-        "pro_possessive" : "our",
-        "verb_ending" : ""
-    }, {
-        // them, singular
-        "poem_target" : "them",
-        "pro_subjective" : "they",
-        "pro_objective" : "them",
-        "pro_possessive" : "their",
-        "verb_ending" : ""
-    }, {
-        // them, plural
-        "poem_target" : "them",
-        "pro_subjective" : "they",
-        "pro_objective" : "them",
-        "pro_possessive" : "their",
-        "verb_ending" : ""
-    }];
+  pronouns = [{
+    "poemTarget" : "myself",
+    "subjectivePronoun" : "I",
+    "objectivePronoun" : "me",
+    "possessivePronoun" : "my",
+    "verbEnding" : "",
+    "toBeConjugation": "am",
+    "possessiveConjugation": "have"
+  }, {
+    "poemTarget" : "the reader",
+    "subjectivePronoun" : "you",
+    "objectivePronoun" : "you",
+    "possessivePronoun" : "your",
+    "verbEnding" : "",
+    "toBeConjugation": "are",
+    "possessiveConjugation": "have"
+  }, {
+    "poemTarget" : "the man",
+    "subjectivePronoun" : "he",
+    "objectivePronoun" : "him",
+    "possessivePronoun" : "his",
+    "verbEnding" : "s",
+    "toBeConjugation": "is",
+    "possessiveConjugation": "has"
+  }, {
+    "poemTarget" : "the woman",
+    "subjectivePronoun" : "she",
+    "objectivePronoun" : "her",
+    "possessivePronoun" : "her",
+    "verbEnding" : "s",
+    "toBeConjugation": "is",
+    "possessiveConjugation": "has"
+  }, {
+    "poemTarget" : "us",
+    "subjectivePronoun" : "we",
+    "objectivePronoun" : "us",
+    "possessivePronoun" : "our",
+    "verbEnding" : "",
+    "toBeConjugation": "are",
+    "possessiveConjugation": "have"
+  }, {
+    // them, singular
+    "poemTarget" : "them",
+    "subjectivePronoun" : "they",
+    "objectivePronoun" : "them",
+    "possessivePronoun" : "their",
+    "verbEnding" : "",
+    "toBeConjugation": "are",
+    "possessiveConjugation": "have"
+  }, {
+    // them, plural
+    "poemTarget" : "them",
+    "subjectivePronoun" : "they",
+    "objectivePronoun" : "them",
+    "possessivePronoun" : "their",
+    "verbEnding" : "",
+    "toBeConjugation": "are",
+    "possessiveConjugation": "have"
+  }]
 
-    return pronouns[target]
+  return pronouns[target]
 }
 
 // uses the phrase to generate a line madlibs-style
@@ -181,11 +197,11 @@ function generateLine(phraseToGet, phrases, dictionary, wordTypes, author, mood)
 
     // don't go to the dictionary for the following words - we already know them
     var fixedWords = [
-        "poem_target",
-        "pro_subjective",
-        "pro_objective",
-        "pro_possessive",
-        "verb_ending"
+        "poemTarget",
+        "subjectivePronoun",
+        "objectivePronoun",
+        "possessivePronoun",
+        "verbEnding"
     ]
 
     while (!isLineGenerated) {
