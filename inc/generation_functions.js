@@ -39,7 +39,7 @@ function generatePoem(author, mood, callback) {
     fs.readFile(phrasesFile, 'utf8', function(phraseErr, phrases) {
         fs.readFile(dictionaryFile, 'utf8', function(dictErr, dictionary) {
             if (typeof phrases == 'undefined' || typeof dictionary == 'undefined') {
-                return callback({ "error" : "could not load JSON." });
+                return callback({ "error" : "could not load JSON." })
             }
 
             var lineCount = getLineCount(Math.floor(Math.random() * 10) + 1)
@@ -192,56 +192,57 @@ function getPoemTarget() {
 
 // uses the phrase to generate a line madlibs-style
 function generateLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
-    var isLineGenerated = false
-    var basePhrase = line = currentWordType = word = lastWordUsed = ""
+  var isLineGenerated = false
+  var basePhrase = line = currentWordType = word = lastWordUsed = ""
 
-    // don't go to the dictionary for the following words - we already know them
-    var fixedWords = [
-        "poemTarget",
-        "subjectivePronoun",
-        "objectivePronoun",
-        "possessivePronoun",
-        "verbEnding",
-        "toBeConjugation",
-        "possessiveConjugation"
-    ]
+  // don't go to the dictionary for the following words - we already know them
+  var fixedWords = [
+    "poemTarget",
+    "subjectivePronoun",
+    "objectivePronoun",
+    "possessivePronoun",
+    "verbEnding",
+    "toBeConjugation",
+    "possessiveConjugation"
+  ]
 
-    while (!isLineGenerated) {
-        // select a phrase at random
-        basePhrase = randomPhrase(phrases)
+  while (!isLineGenerated) {
+    // select a phrase at random
+    basePhrase = randomPhrase(phrases)
 
-        // check if the phrase we randomly selected belongs in the place we're trying to place it
-        if (basePhrase["placement"].includes(phraseToGet)) {
-            line = basePhrase["phrase"]
+    // check if the phrase we randomly selected belongs in the place we're trying to place it
+    if (basePhrase["placement"].includes(phraseToGet)) {
+      line = basePhrase["phrase"]
 
-            // for every type of word, see if the line has that type of word. If so, insert a word of that type.
-            // TODO: instead of looping through every type of word, loop through the line and replace words as they come up.
-            for (var wKey in wordTypes) {
-                currentWordType = wordTypes[wKey]
-                var re = new RegExp(currentWordType, "g")
+      // for every type of word, see if the line has that type of word. If so, insert a word of that type.
+      // TODO: instead of looping through every type of word, loop through the line and replace words as they come up.
+      for (var wKey in wordTypes) {
+        currentWordType = wordTypes[wKey]
+        var re = new RegExp(currentWordType, "g")
 
-                line = line.replace(re, function(res) {
-                    if (!fixedWords.includes(currentWordType)) {
-                        // make sure that the same word isn't returned sequentially.
-                        word = randomWord(dictionary[currentWordType], lastWordUsed, mood);
-                        lastWordUsed = word
-                        return word
-                    } else {
-                        return dictionary[currentWordType]
-                    }
-                });
-            }
+        line = line.replace(re, function(res) {
+          if (!fixedWords.includes(currentWordType)) {
+            // make sure that the same word isn't returned sequentially.
+            word = randomWord(dictionary[currentWordType], lastWordUsed, mood)
+            lastWordUsed = word
 
-            isLineGenerated = true;
-        }
+            return word
+          }
+
+          return dictionary[currentWordType]
+        });
+      }
+
+      isLineGenerated = true
     }
+  }
 
-    // strip punctuation from title
-    if (phraseToGet == "title") {
-        line = line.replace(/[^A-Za-z0-9\'?\s]/g,"");
-    }
+  // strip punctuation from title
+  if (phraseToGet == "title") {
+    line = line.replace(/[^A-Za-z0-9\'?\s]/g,"")
+  }
 
-    return line;
+  return line
 }
 
 function getLineStyle(phrase, author) {
@@ -265,23 +266,29 @@ function generateSignature(author) {
 
 // gets a random key from JSON
 function randomWord(dictionary, lastWordUsed, mood) {
-    var isWordAcceptable = false
-    var index = 0
-    var word = ''
+  var isWordAcceptable = false
+  var tries = index = 0
+  var word = ''
 
-    while (!isWordAcceptable) {
-        // grab a random word from the dictionary
-        index = Math.floor(Math.random() * Object.keys(dictionary).length)
-        word = Object.keys(dictionary)[index]
+  while (!isWordAcceptable) {
+    // grab a random word from the dictionary
+    index = Math.floor(Math.random() * Object.keys(dictionary).length)
+    word = Object.keys(dictionary)[index]
 
-        if (Object.values(dictionary)[index].includes(mood)) {
-            if (word !== lastWordUsed) {
-                isWordAcceptable = true;
-            }
-        }
+    if (Object.values(dictionary)[index].includes(mood)) {
+      if (word !== lastWordUsed) {
+        isWordAcceptable = true;
+      }
     }
 
-    return word
+    ++tries;
+
+    if (tries > 20) {
+      isWordAcceptable = true;
+    }
+  }
+
+  return word
 }
 
 function validatePoemAuthor(author) {
