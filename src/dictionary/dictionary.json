@@ -1,6 +1,6 @@
 {
   "default": {
-    "abstract_noun": {
+    "abstractNoun": {
       "darkness": ["basic", "angst"],
       "death": ["basic", "angst"],
       "destiny": ["basic", "love", "angst"],
@@ -51,7 +51,7 @@
       "violent": ["angst"],
       "weak": ["basic", "angst"]
     },
-    "adv": {
+    "adverb": {
       "angrily": ["basic", "angst"],
       "blindly": ["basic", "angst"],
       "boldly": ["basic"],
@@ -75,7 +75,7 @@
       "softly": ["basic"],
       "suddenly": ["basic", "angst"]
     },
-    "bodypart": {
+    "bodyPart": {
       "arm": ["basic", "love", "angst"],
       "chest": ["basic", "love", "angst"],
       "eye": ["basic", "angst"],
@@ -95,7 +95,7 @@
       "white": ["basic"],
       "yellow": ["basic"]
     },
-    "concrete_noun": {
+    "concreteNoun": {
       "dagger": ["angst"],
       "earth": ["basic"],
       "flaw": ["basic", "angst"],
@@ -125,11 +125,11 @@
       "kind": ["love"],
       "loving": ["basic", "love"],
       "lustful": ["basic", "love"],
-      "sadness": ["basic", "angst"],
-      "sorrow": ["basic", "angst"],
+      "sad": ["basic", "angst"],
+      "sorrowful": ["basic", "angst"],
       "tormented": ["basic", "angst"]
     },
-    "infinitive_verb": {
+    "infinitiveVerb": {
       "break": ["basic", "angst"],
       "breathe": ["basic"],
       "burst": ["basic", "angst"],
@@ -206,7 +206,7 @@
     }
   },
   "rupiKaur": {
-    "abstract_noun": {
+    "abstractNoun": {
       "ego": ["basic"],
       "toxicity": ["angst"]
     },
@@ -219,14 +219,14 @@
       "sparkling": ["basic", "love"],
       "untamed": ["basic", "love"]
     },
-    "adv": {
+    "adverb": {
       "deeply": ["basic", "love"],
       "elegantly": ["basic", "love"],
       "exquisitely": ["basic", "love"],
       "hungrily": ["basic", "love"],
       "wildly": ["basic", "love", "angst"]
     },
-    "bodypart": {
+    "bodyPart": {
       "body": ["basic", "love", "angst"],
       "knee": ["basic", "love", "angst"],
       "veins": ["basic", "love", "angst"],
@@ -235,7 +235,7 @@
     "color": {
       "pink": ["basic", "love"]
     },
-    "concrete_noun": {
+    "concreteNoun": {
       "confession": ["basic", "love", "angst"],
       "honey": ["basic", "love"],
       "jewel": ["basic", "love"],
@@ -243,11 +243,11 @@
       "sugar": ["basic", "love"]
     },
     "feeling": {
-      "hunger": ["love"],
+      "hungry": ["love"],
       "numb": ["basic", "angst"],
       "loyalty": ["basic", "love"]
     },
-    "infinitive_verb": {
+    "infinitiveVerb": {
       "carry": ["love"],
       "forget": ["basic", "angst"],
       "want": ["basic", "love", "angst"],
@@ -268,7 +268,7 @@
     }
   },
   "tumblrPoet": {
-    "abstract_noun": {
+    "abstractNoun": {
       "crime": ["basic", "angst"],
       "ego": ["basic"],
       "foolishness": ["basic"],
@@ -294,7 +294,7 @@
       "untamed": ["basic", "love"],
       "weary": ["basic", "angst"]
     },
-    "adv": {
+    "adverb": {
       "deliberately": ["basic", "love", "angst"],
       "lazily": ["basic"],
       "hungrily": ["basic", "angst"],
@@ -305,14 +305,15 @@
       "wearily": ["basic"],
       "wildly": ["basic", "angst"]
     },
-    "bodypart": {
+    "bodyPart": {
       "brain": ["basic", "angst"],
+      "gene": ["basic", "love", "angst"],
       "skin": ["basic", "love"]
     },
     "color": {
       "gray": ["basic", "angst"]
     },
-    "concrete_noun": {
+    "concreteNoun": {
       "battleground": ["angst"],
       "cigarette": ["basic", "love", "angst"],
       "turmoil": ["basic", "angst"],
@@ -326,7 +327,7 @@
       "stubborn": ["basic", "angst"],
       "wrathful": ["basic", "angst"]
     },
-    "infinitive_verb": {
+    "infinitiveVerb": {
       "burn": ["basic", "love", "angst"],
       "clash": ["basic", "angst"],
       "die": ["basic", "angst"],
