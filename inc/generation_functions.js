@@ -6,7 +6,7 @@ module.exports = {
   returnPoem: function (author, mood, callback) {
     return generatePoem(author, mood, function(data) {
       return callback(data)
-    });
+    })
   },
   returnLine: function (placement, author, mood, callback) {
     return generateOneLine(placement, author, mood, function(data) {
@@ -16,7 +16,7 @@ module.exports = {
   c: function (varToPrint) {
     console.log(varToPrint)
   }
-};
+}
 
 // Generates the poem. Takes in the author and mood of the poem to write,
 // which informs which words are selected from the dictionary.

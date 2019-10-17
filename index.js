@@ -2,10 +2,12 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var generationFunctions = require('./inc/generation_functions.js');
 
-var app = express();
-app.use(bodyParser.json({ type: 'application/json' }));
+var app = express()
 
-var router = express.Router();
+// app.use(bodyParser.json({ type: 'application/json' }))
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var router = express.Router()
 
 // CORS headers
 router.use(function (req, res, next) {
@@ -30,8 +32,8 @@ router.get('/favicon.ico', (req, res) => res.status(204))
 
 // helper function for the /create route.
 function generatePoem(req, res, next) {
-  var author = req.query.author
-  var mood = req.query.mood
+  var author = req.body.author
+  var mood = req.body.mood
 
   var result = generationFunctions.returnPoem(author, mood, function(result) {
     res.send(result);
@@ -40,9 +42,9 @@ function generatePoem(req, res, next) {
 
 // helper function for the /line route.
 function generateLine(req, res, next) {
-  var placement = req.query.placement
-  var author = req.query.author
-  var mood = req.query.mood
+  var placement = req.body.placement
+  var author = req.body.author
+  var mood = req.body.mood
 
   var result = generationFunctions.returnLine(placement, author, mood, function(result) {
     res.send(result)
