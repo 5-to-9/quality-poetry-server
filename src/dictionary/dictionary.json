@@ -5,6 +5,7 @@
       "death": ["basic", "angst"],
       "destiny": ["basic", "love", "angst"],
       "failure": ["basic"],
+      "freedom": ["love"],
       "intellect": ["basic"],
       "integrity": ["basic", "love"],
       "justice": ["basic"],
@@ -13,7 +14,7 @@
       "murder": ["basic", "angst"],
       "music" : ["love"],
       "mystery": ["basic"],
-      "nature": ["basic"],
+      "nature": ["basic", "love"],
       "passion": ["basic", "love"],
       "peace": ["basic", "love"],
       "romance": ["basic", "love"],
@@ -22,7 +23,7 @@
       "triumph": ["basic"],
       "warmth": ["basic", "love"],
       "wealth": ["basic", "love"],
-      "wisdom": ["basic"]
+      "wisdom": ["basic", "love"]
     },
     "adjective": {
       "clear": ["basic", "love"],
@@ -81,6 +82,7 @@
       "eye": ["basic", "angst"],
       "head": ["love"],
       "hip": ["basic", "love"],
+      "jaw": ["basic", "love", "angst"],
       "lips": ["love"],
       "mind": ["basic", "love"],
       "soul": ["basic", "love", "angst"],
@@ -136,9 +138,10 @@
       "crack": ["basic", "angst"],
       "crave": ["love"],
       "crumble": ["angst"],
-      "collapse": ["basic"],
+      "collapse": ["basic", "angst"],
       "conquer": ["basic"],
       "dance": ["love"],
+      "desire": ["love"],
       "exhale": ["basic", "love", "angst"],
       "fall": ["basic"],
       "flinch": ["basic", "angst"],
@@ -158,9 +161,9 @@
       "scream": ["basic", "angst"],
       "screech": ["basic"],
       "shriek": ["basic", "angst"],
-      "sleep": ["basic"],
-      "sink": ["basic"],
-      "snap": ["basic"],
+      "sleep": ["basic", "love"],
+      "sink": ["basic", "angst"],
+      "snap": ["basic", "angst"],
       "sob": ["basic"],
       "understand": ["basic", "love"],
       "wake": ["basic", "love"],
@@ -228,7 +231,9 @@
     },
     "bodyPart": {
       "body": ["basic", "love", "angst"],
+      "goosebumps": ["love"],
       "knee": ["basic", "love", "angst"],
+      "muscle": ["basic", "love"],
       "veins": ["basic", "love", "angst"],
       "voice": ["basic", "love", "angst"]
     },
@@ -250,6 +255,7 @@
     "infinitiveVerb": {
       "carry": ["love"],
       "forget": ["basic", "angst"],
+      "touch": ["basic", "love", "angst"],
       "want": ["basic", "love", "angst"],
       "whisper": ["basic", "love", "angst"],
       "yell": ["angst"]
@@ -308,6 +314,7 @@
     "bodyPart": {
       "brain": ["basic", "angst"],
       "gene": ["basic", "love", "angst"],
+      "muscle": ["angst"],
       "skin": ["basic", "love"]
     },
     "color": {
