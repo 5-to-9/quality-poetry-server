@@ -6,17 +6,17 @@ module.exports = {
   returnPoem: function (author, mood, callback) {
     return generatePoem(author, mood, function(data) {
       return callback(data)
-    });
+    })
   },
-  returnLine: function (author, mood, callback) {
-    // return generatePoem(author, mood, function(data) {
-    //   return callback(data);
-    // });
+  returnLine: function (placement, author, mood, callback) {
+    return generateOneLine(placement, author, mood, function(data) {
+      return callback(data)
+    })
   },
   c: function (varToPrint) {
     console.log(varToPrint)
   }
-};
+}
 
 // Generates the poem. Takes in the author and mood of the poem to write,
 // which informs which words are selected from the dictionary.
@@ -55,7 +55,7 @@ function generatePoem(author, mood, callback) {
                 wordTypes.push(key)
             }
 
-            var poemTitle = generateLine("title", phrases, dictionary, wordTypes, author, mood)
+            var poemTitle = getLine("title", phrases, dictionary, wordTypes, author, mood)
 
             poem["poem"]["title"] = poemTitle
 
@@ -70,8 +70,13 @@ function generatePoem(author, mood, callback) {
                 }
 
                 var newLine = {
-                    "text": generateLine(phraseToGet, phrases, dictionary, wordTypes, author, mood),
-                    "style": getLineStyle(phraseToGet, author)
+                    "text": getLine(phraseToGet, phrases, dictionary, wordTypes, author, mood),
+                }
+
+                lineStyle = getLineStyle(phraseToGet, author);
+
+                if (lineStyle) {
+                    newLine["style"] = lineStyle
                 }
 
                 poem["poem"]["lines"].push(newLine)
@@ -88,14 +93,61 @@ function generatePoem(author, mood, callback) {
     });
 }
 
+function generateOneLine(placement, author, mood, callback) {
+  if (!validateLinePlacement(placement)) {
+    return callback({ "error" : "that placement is not valid"});
+  }
+
+  if (!validatePoemAuthor(author)) {
+    return callback({ "error" : "that author is not valid"});
+  }
+
+  if (!validatePoemMood(mood)) {
+    return callback({ "error" : "that mood is not valid"});
+  }
+
+  // load the dictionary
+  var dirname = path.join(__dirname, '..', 'src', 'dictionary')
+  var phrasesFile = dirname + '/phrases.json'
+  var dictionaryFile = dirname + '/dictionary.json'
+
+  fs.readFile(phrasesFile, 'utf8', function(phraseErr, phrases) {
+    fs.readFile(dictionaryFile, 'utf8', function(dictErr, dictionary) {
+      if (typeof phrases == 'undefined' || typeof dictionary == 'undefined') {
+        return callback({ "error" : "could not load JSON." })
+      }
+
+      var line = { "line" : { "text" : "" } }
+      var genderProb = Math.floor(Math.random() * 2) + 1
+
+      // initialize dictionary and phrasebook
+      phrases = compilePhrases(JSON.parse(phrases), author)
+      dictionary = compileDictionary(JSON.parse(dictionary), author)
+
+      var wordTypes = []
+      for (var key in dictionary) {
+        wordTypes.push(key)
+      }
+
+      line["line"]["text"] = getLine(placement, phrases, dictionary, wordTypes, author, mood)
+
+      if (style = getLineStyle(placement, author)) {
+        line["line"]["style"] = style
+      }
+
+      return callback(line)
+    })
+  })
+}
+
 function compilePhrases(allPhrases, author) {
-    phrases = allPhrases.default
+  phrases = allPhrases.default
 
-    if (author != 'default') {
-        phrases = phrases.concat(allPhrases[author])
-    }
+  if (author != 'default') {
+    phrases = phrases.concat(allPhrases[author])
+  }
 
-    return phrases
+  return phrases
 }
 
 function compileDictionary(fullDictionary, author) {
@@ -191,7 +243,7 @@ function getPoemTarget() {
 }
 
 // uses the phrase to generate a line madlibs-style
-function generateLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
+function getLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
   var isLineGenerated = false
   var basePhrase = line = currentWordType = word = lastWordUsed = ""
 
@@ -250,7 +302,7 @@ function getLineStyle(phrase, author) {
     return 'italic'
   }
 
-  return ''
+  return null
 }
 
 function generateSignature(author) {
@@ -291,29 +343,34 @@ function randomWord(dictionary, lastWordUsed, mood) {
   return word
 }
 
+function validateLinePlacement(placement) {
+  var validLinePlacements = ['title', 'beginning', 'middle', 'end'];
+  return validLinePlacements.includes(placement);
+}
+
 function validatePoemAuthor(author) {
-    var validPoemAuthors = ['default', 'rupiKaur', 'tumblrPoet'];
-    return validPoemAuthors.includes(author);
+  var validPoemAuthors = ['default', 'rupiKaur', 'tumblrPoet'];
+  return validPoemAuthors.includes(author);
 }
 
 function validatePoemMood(mood) {
-    var validPoemMoods = ['basic', 'love', 'angst'];
-    return validPoemMoods.includes(mood);
+  var validPoemMoods = ['basic', 'love', 'angst'];
+  return validPoemMoods.includes(mood);
 }
 
 // gets a random value from JSON
 function randomPhrase(obj) {
-    var keys = Object.keys(obj)
-    return obj[keys[keys.length * Math.random() << 0]];
+  var keys = Object.keys(obj)
+  return obj[keys[keys.length * Math.random() << 0]];
 }
 
 // random number of lines for the poem
 function getLineCount(lineProb) {
-    if (lineProb < 4) {
-        return lineCount = 3
-    } else if (lineProb < 8) {
-        return lineCount = 4
-    } else {
-        return lineCount = 5
-    }
+  if (lineProb < 4) {
+    return lineCount = 3
+  } else if (lineProb < 8) {
+    return lineCount = 4
+  } else {
+    return lineCount = 5
+  }
 }
