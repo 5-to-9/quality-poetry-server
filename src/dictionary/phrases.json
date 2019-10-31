@@ -113,7 +113,7 @@
     { "phrase": "feeling? objectivePronoun?", "placement": ["beginning"] },
     { "phrase": "I am feeling", "placement": ["title", "beginning"] },
     { "phrase": "I am like a concreteNoun", "placement": ["beginning", "middle", "end"] },
-    { "phrase": "I infinitiveVerb a person who infinitiveVerbverbEnding.", "placement": ["beginning", "middle", "end"] },
+    { "phrase": "I infinitiveVerb a person who infinitiveVerbs.", "placement": ["beginning", "middle", "end"] },
     { "phrase": "my heart onomatopoeias adverb", "placement": ["beginning", "middle", "end"] },
     { "phrase": "oh, to infinitiveVerb with people!", "placement": ["beginning"] },
     { "phrase": "onomatopoeias ring out.", "placement": ["beginning", "end"] },
