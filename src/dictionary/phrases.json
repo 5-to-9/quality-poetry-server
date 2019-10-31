@@ -49,7 +49,7 @@
 		{ "phrase": "possessivePronoun bodyPart infinitiveVerbverbEnding concreteNouns.", "placement": ["beginning"] },
 		{ "phrase": "possessivePronoun concreteNoun.", "placement": ["title"] },
 		{ "phrase": "possessivePronoun concreteNoun is adjective.", "placement": ["beginning" , "middle", "end"] },
-		{ "phrase": "subjectivePronoun is feeling.", "placement": ["beginning", "middle"] },
+		{ "phrase": "subjectivePronoun toBeConjugation feeling.", "placement": ["beginning", "middle"] },
 		{ "phrase": "subjectivePronoun infinitiveVerbverbEnding. I infinitiveVerb.", "placement": ["beginning", "middle", "end"] },
     { "phrase": "subjectivePronoun need to infinitiveVerb more.", "placement": ["beginning", "middle", "end"] },
 		{ "phrase": "subjectivePronoun reachverbEnding out with possessivePronoun bodyPart.", "placement": ["beginning", "middle"] },
