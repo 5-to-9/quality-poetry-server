@@ -85,6 +85,7 @@
       "jaw": ["basic", "love", "angst"],
       "lips": ["love"],
       "mind": ["basic", "love"],
+      "mouth": ["basic", "love", "angst"],
       "soul": ["basic", "love", "angst"],
       "throat": ["love", "angst"]
     },
@@ -99,7 +100,6 @@
     },
     "concreteNoun": {
       "dagger": ["angst"],
-      "earth": ["basic"],
       "flaw": ["basic", "angst"],
       "frown": ["basic", "angst"],
       "ghost": ["basic", "angst"],
@@ -110,6 +110,7 @@
       "spice": ["love"],
       "stars": ["love"],
       "sun": ["love"],
+      "toxin": ["angst"],
       "wound": ["angst"]
     },
     "feeling": {
@@ -226,7 +227,9 @@
       "deeply": ["basic", "love"],
       "elegantly": ["basic", "love"],
       "exquisitely": ["basic", "love"],
+      "fluently": ["basic", "love"],
       "hungrily": ["basic", "love"],
+      "vividly": ["basic", "love", "angst"],
       "wildly": ["basic", "love", "angst"]
     },
     "bodyPart": {
@@ -255,6 +258,7 @@
     "infinitiveVerb": {
       "carry": ["love"],
       "forget": ["basic", "angst"],
+      "lick": ["love"],
       "touch": ["basic", "love", "angst"],
       "want": ["basic", "love", "angst"],
       "whisper": ["basic", "love", "angst"],
@@ -323,6 +327,7 @@
     "concreteNoun": {
       "battleground": ["angst"],
       "cigarette": ["basic", "love", "angst"],
+      "quill": ["basic", "love"],
       "turmoil": ["basic", "angst"],
       "warzone": ["angst"]
     },
@@ -339,6 +344,7 @@
       "clash": ["basic", "angst"],
       "die": ["basic", "angst"],
       "fade": ["basic"],
+      "grift": ["angst"],
       "kill": ["basic", "angst"],
       "shatter": ["basic", "angst"],
       "splinter": ["basic", "angst"]
