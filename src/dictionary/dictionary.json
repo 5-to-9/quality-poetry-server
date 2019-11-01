@@ -83,7 +83,7 @@
       "head": ["love"],
       "hip": ["basic", "love"],
       "jaw": ["basic", "love", "angst"],
-      "lips": ["love"],
+      "lip": ["love"],
       "mind": ["basic", "love"],
       "mouth": ["basic", "love", "angst"],
       "soul": ["basic", "love", "angst"],
@@ -111,6 +111,7 @@
       "stars": ["love"],
       "sun": ["love"],
       "toxin": ["angst"],
+      "whiskey": ["basic", "love"],
       "wound": ["angst"]
     },
     "feeling": {
@@ -234,7 +235,7 @@
     },
     "bodyPart": {
       "body": ["basic", "love", "angst"],
-      "goosebumps": ["love"],
+      "flesh": ["love"],
       "knee": ["basic", "love", "angst"],
       "muscle": ["basic", "love"],
       "veins": ["basic", "love", "angst"],
@@ -248,6 +249,7 @@
       "honey": ["basic", "love"],
       "jewel": ["basic", "love"],
       "milk": ["basic", "love"],
+      "river": ["basic", "love", "angst"],
       "sugar": ["basic", "love"]
     },
     "feeling": {
@@ -260,6 +262,7 @@
       "forget": ["basic", "angst"],
       "lick": ["love"],
       "touch": ["basic", "love", "angst"],
+      "quiver": ["love"],
       "want": ["basic", "love", "angst"],
       "whisper": ["basic", "love", "angst"],
       "yell": ["angst"]
@@ -317,6 +320,7 @@
     },
     "bodyPart": {
       "brain": ["basic", "angst"],
+      "flesh": ["basic", "love", "angst"],
       "gene": ["basic", "love", "angst"],
       "muscle": ["angst"],
       "skin": ["basic", "love"]
@@ -329,7 +333,8 @@
       "cigarette": ["basic", "love", "angst"],
       "quill": ["basic", "love"],
       "turmoil": ["basic", "angst"],
-      "warzone": ["angst"]
+      "warzone": ["angst"],
+      "whiskey": ["basic", "love", "angst"]
     },
     "feeling": {
       "hungry": ["basic", "love", "angst"],
@@ -346,6 +351,7 @@
       "fade": ["basic"],
       "grift": ["angst"],
       "kill": ["basic", "angst"],
+      "quiver": ["basic", "love", "angst"],
       "shatter": ["basic", "angst"],
       "splinter": ["basic", "angst"]
     },
