@@ -185,40 +185,40 @@ function getPoemTarget() {
     "objectivePronoun" : "me",
     "possessivePronoun" : "my",
     "verbEnding" : "",
-    "toBeConjugation": "am",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "am",
+    "possessiveConjugation" : "have"
   }, {
     "poemTarget" : "the reader",
     "subjectivePronoun" : "you",
     "objectivePronoun" : "you",
     "possessivePronoun" : "your",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }, {
     "poemTarget" : "the man",
     "subjectivePronoun" : "he",
     "objectivePronoun" : "him",
     "possessivePronoun" : "his",
     "verbEnding" : "s",
-    "toBeConjugation": "is",
-    "possessiveConjugation": "has"
+    "toBeConjugation" : "is",
+    "possessiveConjugation" : "has"
   }, {
     "poemTarget" : "the woman",
     "subjectivePronoun" : "she",
     "objectivePronoun" : "her",
     "possessivePronoun" : "her",
     "verbEnding" : "s",
-    "toBeConjugation": "is",
-    "possessiveConjugation": "has"
+    "toBeConjugation" : "is",
+    "possessiveConjugation" : "has"
   }, {
     "poemTarget" : "us",
     "subjectivePronoun" : "we",
     "objectivePronoun" : "us",
     "possessivePronoun" : "our",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }, {
     // them, singular
     "poemTarget" : "them",
@@ -226,8 +226,8 @@ function getPoemTarget() {
     "objectivePronoun" : "them",
     "possessivePronoun" : "their",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }, {
     // them, plural
     "poemTarget" : "them",
@@ -235,8 +235,8 @@ function getPoemTarget() {
     "objectivePronoun" : "them",
     "possessivePronoun" : "their",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }]
 
   return pronouns[target]

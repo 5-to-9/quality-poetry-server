@@ -1,6 +1,7 @@
 {
   "default": {
     "abstractNoun": {
+      "comedy": ["basic", "love"],
       "darkness": ["basic", "angst"],
       "death": ["basic", "angst"],
       "destiny": ["basic", "love", "angst"],
@@ -74,7 +75,8 @@
       "seldom": ["basic"],
       "silently": ["basic"],
       "softly": ["basic"],
-      "suddenly": ["basic", "angst"]
+      "suddenly": ["basic", "angst"],
+      "sweetly": ["love"]
     },
     "bodyPart": {
       "arm": ["basic", "love", "angst"],
@@ -108,7 +110,7 @@
       "smile": ["basic", "love"],
       "sound": ["basic", "angst"],
       "spice": ["love"],
-      "stars": ["love"],
+      "star": ["love"],
       "sun": ["love"],
       "toxin": ["angst"],
       "whiskey": ["basic", "love"],
@@ -117,20 +119,21 @@
     "feeling": {
       "angry": ["basic", "angst"],
       "depressed": ["basic", "angst"],
-      "dignified": ["basic"],
+      "dignified": ["basic", "love"],
       "envious": ["basic", "angst"],
       "fearful": ["basic", "angst"],
       "furious": ["basic", "angst"],
       "grateful": ["basic"],
       "hateful": ["basic", "angst"],
       "happy": ["basic"],
-      "hopeful": ["basic"],
+      "hopeful": ["basic", "love"],
       "joyful": ["basic", "love"],
       "kind": ["love"],
       "loving": ["basic", "love"],
       "lustful": ["basic", "love"],
       "sad": ["basic", "angst"],
       "sorrowful": ["basic", "angst"],
+      "selfish": ["angst"],
       "tormented": ["basic", "angst"]
     },
     "infinitiveVerb": {
@@ -205,7 +208,7 @@
       "men": ["basic", "love", "angst"],
       "monsters": ["basic", "angst"],
       "queens": ["basic", "love"],
-      "soldiers": ["basic", "angst"],
+      "soldiers": ["angst"],
       "villains": ["basic", "angst"],
       "women": ["basic", "love", "angst"]
     }
