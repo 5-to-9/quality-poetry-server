@@ -188,7 +188,7 @@ function getPoemTarget() {
     "toBeConjugation" : "am",
     "possessiveConjugation" : "have"
   }, {
-    "poemTarget" : "the reader",
+    "poemTarget" : "you",
     "subjectivePronoun" : "you",
     "objectivePronoun" : "you",
     "possessivePronoun" : "your",
@@ -298,8 +298,15 @@ function getLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
 }
 
 function getLineStyle(phrase, author) {
-  if (author == 'rupiKaur' && (Math.floor(Math.random() * 5) + 1) < 3) {
+  if (author === 'rupiKaur' && (Math.floor(Math.random() * 6) + 1) < 3) {
     return 'italic'
+  }
+
+  if (
+    (author === 'tumblrPoet' || author === 'rupiKaur')
+    && (Math.floor(Math.random() * 12) + 1) < 2
+  ) {
+    return 'parentheses'
   }
 
   return null
@@ -308,8 +315,7 @@ function getLineStyle(phrase, author) {
 function generateSignature(author) {
   if (author == 'rupiKaur') {
     return {
-      "text": '- rupi kaur',
-      "style": ''
+      "text": '- rupi kaur'
     }
   }
 
