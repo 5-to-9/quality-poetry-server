@@ -82,6 +82,7 @@
       "arm": ["basic", "love", "angst"],
       "chest": ["basic", "love", "angst"],
       "eye": ["basic", "angst"],
+      "face": ["basic", "love"],
       "head": ["love"],
       "hip": ["basic", "love"],
       "jaw": ["basic", "love", "angst"],
@@ -155,7 +156,6 @@
       "hold": ["basic", "love"],
       "hug": ["basic", "love"],
       "ignite": ["basic", "angst"],
-      "inhale": ["basic", "love", "angst"],
       "kiss": ["love"],
       "laugh": ["basic"],
       "live": ["basic", "love"],
@@ -170,6 +170,7 @@
       "sink": ["basic", "angst"],
       "snap": ["basic", "angst"],
       "sob": ["basic"],
+      "thrust": ["basic"],
       "understand": ["basic", "love"],
       "wake": ["basic", "love"],
       "weep": ["basic", "angst"],
@@ -258,12 +259,13 @@
     "feeling": {
       "hungry": ["love"],
       "numb": ["basic", "angst"],
-      "loyalty": ["basic", "love"]
+      "loyal": ["basic", "love"]
     },
     "infinitiveVerb": {
       "carry": ["love"],
       "forget": ["basic", "angst"],
       "lick": ["love"],
+      "thrust": ["love"],
       "touch": ["basic", "love", "angst"],
       "quiver": ["love"],
       "want": ["basic", "love", "angst"],
@@ -297,6 +299,7 @@
       "work": ["basic"]
     },
     "adjective": {
+      "autumnal": ["basic"],
       "colossal": ["angst"],
       "dim": ["angst"],
       "faithless": ["basic", "angst"],
@@ -335,6 +338,7 @@
       "battleground": ["angst"],
       "cigarette": ["basic", "love", "angst"],
       "quill": ["basic", "love"],
+      "sword": ["basic", "angst"],
       "turmoil": ["basic", "angst"],
       "warzone": ["angst"],
       "whiskey": ["basic", "love", "angst"]
@@ -356,7 +360,8 @@
       "kill": ["basic", "angst"],
       "quiver": ["basic", "love", "angst"],
       "shatter": ["basic", "angst"],
-      "splinter": ["basic", "angst"]
+      "splinter": ["basic", "angst"],
+      "thrust": ["love", "angst"]
     },
     "onomatopoeia": {
       "bang": ["basic", "love"],
