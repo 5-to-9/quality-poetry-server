@@ -13,13 +13,17 @@
       "judgement": ["basic"],
       "knowledge": ["basic"],
       "luck": ["basic", "love", "angst"],
+      "memory": ["basic", "love", "angst"],
       "murder": ["basic", "angst"],
-      "music" : ["love"],
+      "music": ["love"],
       "mystery": ["basic"],
       "nature": ["basic", "love"],
+      "pain": ["angst"],
       "passion": ["basic", "love"],
       "peace": ["basic", "love"],
+      "purity": ["love"],
       "reflection": ["basic", "love", "angst"],
+      "riddle": ["basic", "love", "angst"],
       "romance": ["basic", "love"],
       "scent": ["love"],
       "shadow": ["basic", "angst"],
@@ -37,6 +41,7 @@
       "deep": ["basic", "love", "angst"],
       "empty": ["basic", "angst"],
       "evil": ["basic", "angst"],
+      "extraordinary": ["love"],
       "faithful": ["basic", "love", "angst"],
       "gloomy": ["basic", "angst"],
       "good": ["basic", "love"],
@@ -45,6 +50,7 @@
       "proud": ["basic", "angst"],
       "pure": ["basic", "love"],
       "quiet": ["basic"],
+      "powerful": ["basic", "love"],
       "rotten": ["basic", "angst"],
       "scattered": ["basic", "angst"],
       "shallow": ["basic", "angst"],
@@ -116,6 +122,7 @@
     },
     "concreteNoun": {
       "bed": ["basic", "love", "angst"],
+      "body": ["basic", "love", "angst"],
       "dagger": ["angst"],
       "flaw": ["basic", "angst"],
       "frown": ["basic", "angst"],
@@ -128,11 +135,13 @@
       "star": ["love"],
       "sun": ["love"],
       "toxin": ["angst"],
+      "treasure": ["basic", "love"],
       "whiskey": ["basic", "love"],
       "wound": ["angst"]
     },
     "feeling": {
       "angry": ["basic", "angst"],
+      "bitter": ["angst"],
       "cowardly": ["angst"],
       "depressed": ["basic", "angst"],
       "dignified": ["basic", "love"],
@@ -170,6 +179,8 @@
       "exhale": ["basic", "love", "angst"],
       "fall": ["basic"],
       "flinch": ["basic", "angst"],
+      "flirt": ["love"],
+      "fight": ["angst"],
       "fracture": ["angst"],
       "fragment": ["angst"],
       "hide": ["basic", "angst"],
@@ -195,21 +206,26 @@
       "whimper": ["basic"]
     },
     "onomatopoeia": {
+      "blast": ["angst"],
       "breath": ["basic", "love", "angst"],
       "bump": ["basic", "love"],
+      "clap": ["basic", "angst"],
       "clatter": ["basic"],
       "crack": ["basic", "angst"],
       "crash": ["basic", "angst"],
       "gasp": ["basic", "love"],
       "howl": ["basic", "love", "angst"],
+      "scream": ["basic", "angst"],
       "screech": ["basic", "angst"],
       "shriek": ["basic", "angst"],
       "smash": ["basic", "love", "angst"],
+      "snarl": ["angst"],
       "sob": ["basic"],
       "thud": ["basic", "love"]
     },
     "person": {
       "baby": ["basic"],
+      "brute": ["angst"],
       "child": ["basic"],
       "king": ["basic", "love"],
       "man": ["basic", "love", "angst"],
@@ -220,9 +236,11 @@
     "people": {
       "angels": ["basic", "love"],
       "armies": ["basic"],
+      "brutes": ["angst"],
       "conquerors": ["basic"],
       "devils": ["basic", "angst"],
       "emperors": ["basic"],
+      "friends": ["basic"],
       "gods": ["basic", "love", "angst"],
       "heroes": ["basic"],
       "kings": ["basic", "love"],
@@ -246,6 +264,8 @@
       "fiery": ["basic", "love", "angst"],
       "just": ["love"],
       "profound": ["basic", "love"],
+      "resilient": ["basic", "love"],
+      "soft": ["basic", "love"],
       "sparkling": ["basic", "love"],
       "untamed": ["basic", "love"]
     },
@@ -266,10 +286,12 @@
       "muscle": ["basic", "love"],
       "nethers": ["basic", "love", "angst"],
       "privates": ["basic", "love", "angst"],
+      "thighs": ["basic", "love", "angst"],
       "veins": ["basic", "love", "angst"],
       "voice": ["basic", "love", "angst"]
     },
     "color": {
+      "gold": ["basic", "love"],
       "pink": ["basic", "love"],
       "violet": ["basic", "love"]
     },
@@ -287,6 +309,7 @@
       "loyal": ["basic", "love"]
     },
     "infinitiveVerb": {
+      "beckon": ["basic", "love", "angst"],
       "carry": ["love"],
       "forget": ["basic", "angst"],
       "lick": ["love"],
@@ -303,11 +326,19 @@
     },
     "person": {
       "father": ["basic", "love", "angst"],
+      "girl": ["basic", "love", "angst"],
+      "goddess": ["basic", "love", "angst"],
       "mother": ["basic", "love", "angst"],
-      "queen": ["basic", "love", "angst"]
+      "queen": ["basic", "love", "angst"],
+      "sister": ["basic", "love", "angst"],
+      "soul": ["love"]
     },
     "people": {
-      "goddesses": ["basic", "love"]
+      "ancestors": ["basic", "love", "angst"],
+      "fathers": ["basic", "love", "angst"],
+      "goddesses": ["basic", "love"],
+      "mothers": ["basic", "love", "angst"],
+      "sisters": ["basic", "love", "angst"]
     }
   },
   "tumblrPoet": {
@@ -394,24 +425,41 @@
       "thrust": ["love", "angst"]
     },
     "onomatopoeia": {
-      "bang": ["basic", "love"],
+      "bang": ["basic", "love", "angst"],
       "boom": ["basic"],
       "crunch": ["basic", "angst"],
       "groan": ["basic", "angst"],
       "grunt": ["love"],
+      "gunshot": ["angst"],
       "pat": ["basic", "love", "angst"],
-      "scream": ["basic", "angst"],
+      "pop": ["angst"],
+      "taunt": ["basic", "angst"],
       "wham": ["basic", "angst"]
     },
     "person": {
+      "creature": ["angst"],
       "demon": ["angst"],
-      "queen": ["basic", "love"]
+      "dragon": ["basic", "angst"],
+      "fiend": ["basic", "angst"],
+      "ninja": ["basic"],
+      "pinoeer": ["basic", "love", "angst"],
+      "queen": ["basic", "love"],
+      "saint": ["basic", "love"],
+      "vagabond": ["angst"],
+      "wolf": ["basic", "love", "angst"]
     },
     "people": {
+      "animals": ["love", "angst"],
       "demons": ["basic", "angst"],
+      "dragons": ["basic", "angst"],
+      "fiends": ["basic", "angst"],
       "legends": ["basic", "love"],
       "nations": ["basic", "love", "angst"],
-      "societies": ["basic", "love", "angst"]
+      "pinoeers": ["basic", "love", "angst"],
+      "saints": ["basic", "love"],
+      "societies": ["basic", "love", "angst"],
+      "vagabonds": ["angst"],
+      "wolves": ["basic", "love", "angst"]
     }
   }
 }
