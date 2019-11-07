@@ -298,15 +298,22 @@ function getLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
 }
 
 function getLineStyle(phrase, author) {
-  if (author === 'rupiKaur' && (Math.floor(Math.random() * 6) + 1) < 3) {
+  if (author === 'rupiKaur' && getRandomInt(9) === 0) {
     return 'italic'
   }
 
   if (
     (author === 'tumblrPoet' || author === 'rupiKaur')
-    && (Math.floor(Math.random() * 12) + 1) < 2
+    && getRandomInt(14) === 0
   ) {
     return 'parentheses'
+  }
+
+  if (
+    (author === 'default' || author === 'rupiKaur')
+    && getRandomInt(19) === 0
+  ) {
+    return 'quotation'
   }
 
   return null
@@ -379,4 +386,9 @@ function getLineCount(lineProb) {
   } else {
     return lineCount = 5
   }
+}
+
+// generates a random int between 0 and max
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max))
 }
