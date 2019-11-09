@@ -185,40 +185,40 @@ function getPoemTarget() {
     "objectivePronoun" : "me",
     "possessivePronoun" : "my",
     "verbEnding" : "",
-    "toBeConjugation": "am",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "am",
+    "possessiveConjugation" : "have"
   }, {
-    "poemTarget" : "the reader",
+    "poemTarget" : "you",
     "subjectivePronoun" : "you",
     "objectivePronoun" : "you",
     "possessivePronoun" : "your",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }, {
     "poemTarget" : "the man",
     "subjectivePronoun" : "he",
     "objectivePronoun" : "him",
     "possessivePronoun" : "his",
     "verbEnding" : "s",
-    "toBeConjugation": "is",
-    "possessiveConjugation": "has"
+    "toBeConjugation" : "is",
+    "possessiveConjugation" : "has"
   }, {
     "poemTarget" : "the woman",
     "subjectivePronoun" : "she",
     "objectivePronoun" : "her",
     "possessivePronoun" : "her",
     "verbEnding" : "s",
-    "toBeConjugation": "is",
-    "possessiveConjugation": "has"
+    "toBeConjugation" : "is",
+    "possessiveConjugation" : "has"
   }, {
     "poemTarget" : "us",
     "subjectivePronoun" : "we",
     "objectivePronoun" : "us",
     "possessivePronoun" : "our",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }, {
     // them, singular
     "poemTarget" : "them",
@@ -226,8 +226,8 @@ function getPoemTarget() {
     "objectivePronoun" : "them",
     "possessivePronoun" : "their",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }, {
     // them, plural
     "poemTarget" : "them",
@@ -235,8 +235,8 @@ function getPoemTarget() {
     "objectivePronoun" : "them",
     "possessivePronoun" : "their",
     "verbEnding" : "",
-    "toBeConjugation": "are",
-    "possessiveConjugation": "have"
+    "toBeConjugation" : "are",
+    "possessiveConjugation" : "have"
   }]
 
   return pronouns[target]
@@ -298,8 +298,22 @@ function getLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
 }
 
 function getLineStyle(phrase, author) {
-  if (author == 'rupiKaur' && (Math.floor(Math.random() * 5) + 1) < 3) {
+  if (author === 'rupiKaur' && getRandomInt(9) === 0) {
     return 'italic'
+  }
+
+  if (
+    (author === 'tumblrPoet' || author === 'rupiKaur')
+    && getRandomInt(14) === 0
+  ) {
+    return 'parentheses'
+  }
+
+  if (
+    (author === 'default' || author === 'rupiKaur')
+    && getRandomInt(19) === 0
+  ) {
+    return 'quotation'
   }
 
   return null
@@ -308,8 +322,7 @@ function getLineStyle(phrase, author) {
 function generateSignature(author) {
   if (author == 'rupiKaur') {
     return {
-      "text": '- rupi kaur',
-      "style": ''
+      "text": '- rupi kaur'
     }
   }
 
@@ -373,4 +386,9 @@ function getLineCount(lineProb) {
   } else {
     return lineCount = 5
   }
+}
+
+// generates a random int between 0 and max
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max))
 }
