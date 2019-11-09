@@ -42,7 +42,7 @@
 		{ "phrase": "I infinitiveVerb my bodyPart.", "placement": ["beginning", "middle", "end"] },
     { "phrase": "I infinitiveVerb possessivePronoun concreteNoun.", "placement": ["beginning", "middle", "end"] },
 		{ "phrase": "I infinitiveVerb when subjectivePronoun infinitiveVerbverbEnding.", "placement": ["beginning", "middle", "end"] },
-    { "phrase": "I possessiveConjugation a concreteNoun.", "placement": ["beginning"] },
+    { "phrase": "I have a concreteNoun.", "placement": ["beginning"] },
     { "phrase": "if the abstractNoun comes, so will the abstractNoun.", "placement": ["beginning", "end"] },
     { "phrase": "infinitiveVerb.", "placement": ["title"] },
     { "phrase": "infinitiveVerb with your concreteNoun.", "placement": ["beginning"] },
