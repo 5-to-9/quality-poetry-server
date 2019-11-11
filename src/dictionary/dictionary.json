@@ -27,7 +27,6 @@
       "romance": ["basic", "love"],
       "scent": ["love"],
       "shadow": ["basic", "angst"],
-      "silhouette": ["basic", "love", "angst"],
       "struggle": ["basic", "angst"],
       "triumph": ["basic"],
       "warmth": ["basic", "love"],
@@ -51,7 +50,7 @@
       "pure": ["basic", "love"],
       "quiet": ["basic"],
       "powerful": ["basic", "love"],
-      "rotten": ["basic", "angst"],
+      "rotten": ["angst"],
       "scattered": ["basic", "angst"],
       "shallow": ["basic", "angst"],
       "sheepish": ["basic", "angst"],
@@ -94,10 +93,9 @@
     "bodyPart": {
       "arm": ["basic", "love", "angst"],
       "chest": ["basic", "love", "angst"],
-      "eye": ["basic", "angst"],
+      "eye": ["angst"],
       "face": ["basic", "love"],
       "finger": ["basic", "love", "angst"],
-      "hair": ["basic", "love"],
       "head": ["love"],
       "hip": ["basic", "love"],
       "jaw": ["basic", "love", "angst"],
@@ -112,8 +110,7 @@
       "blue": ["basic", "love"],
       "brown": ["basic"],
       "green": ["basic", "love"],
-      "magenta": ["basic"],
-      "orange": ["basic"],
+      "magenta": ["love"],
       "red": ["basic", "love"],
       "silver": ["basic", "love", "angst"],
       "somber": ["angst"],
@@ -121,14 +118,15 @@
       "yellow": ["basic"]
     },
     "concreteNoun": {
-      "bed": ["basic", "love", "angst"],
+      "bed": ["love"],
       "body": ["basic", "love", "angst"],
       "dagger": ["angst"],
-      "flaw": ["basic", "angst"],
+      "flaw": ["angst"],
       "frown": ["basic", "angst"],
       "ghost": ["basic", "angst"],
       "gun": ["angst"],
       "poem": ["basic", "love"],
+      "silhouette": ["basic", "love", "angst"],
       "smile": ["basic", "love"],
       "sound": ["basic", "angst"],
       "spice": ["love"],
@@ -165,14 +163,14 @@
     },
     "infinitiveVerb": {
       "bloom": ["love"],
-      "break": ["basic", "angst"],
+      "break": ["angst"],
       "breathe": ["basic"],
       "burst": ["basic", "angst"],
       "crack": ["basic", "angst"],
       "crave": ["love"],
       "crumble": ["angst"],
       "collapse": ["basic", "angst"],
-      "conquer": ["basic"],
+      "conquer": ["angst"],
       "dance": ["love"],
       "desire": ["love"],
       "erupt": ["basic", "love", "angst"],
@@ -189,7 +187,6 @@
       "ignite": ["basic", "angst"],
       "kiss": ["love"],
       "laugh": ["basic"],
-      "live": ["basic", "love"],
       "love": ["basic", "love"],
       "ramble": ["basic", "love"],
       "sing": ["love"],
@@ -224,13 +221,13 @@
       "thud": ["basic", "love"]
     },
     "person": {
-      "baby": ["basic"],
+      "baby": ["love"],
       "brute": ["angst"],
-      "child": ["basic"],
+      "child": ["basic", "love"],
       "king": ["basic", "love"],
       "man": ["basic", "love", "angst"],
-      "monster": ["angst", "angst"],
-      "soldier": ["basic"],
+      "monster": ["angst"],
+      "soldier": ["basic", "angst"],
       "woman": ["basic", "love", "angst"]
     },
     "people": {
@@ -255,6 +252,7 @@
   },
   "rupiKaur": {
     "abstractNoun": {
+      "chemistry": ["basic", "love"],
       "ego": ["basic"],
       "toxicity": ["angst"]
     },
@@ -282,12 +280,13 @@
       "body": ["basic", "love", "angst"],
       "flesh": ["basic", "love", "angst"],
       "flower": ["basic", "love", "angst"],
+      "hair": ["love"],
       "knee": ["basic", "love", "angst"],
       "muscle": ["basic", "love"],
       "nethers": ["basic", "love", "angst"],
       "privates": ["basic", "love", "angst"],
-      "thighs": ["basic", "love", "angst"],
-      "veins": ["basic", "love", "angst"],
+      "thigh": ["basic", "love", "angst"],
+      "vein": ["basic", "love", "angst"],
       "voice": ["basic", "love", "angst"]
     },
     "color": {
@@ -371,7 +370,6 @@
       "weary": ["basic", "angst"]
     },
     "adverb": {
-      "deliberately": ["basic", "love", "angst"],
       "lazily": ["basic"],
       "hungrily": ["basic", "angst"],
       "promptly": ["basic"],
