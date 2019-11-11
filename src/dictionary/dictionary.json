@@ -1,7 +1,12 @@
 {
   "default": {
     "abstractNoun": {
+      "ability": ["basic"],
+      "brutality": ["angst"],
       "comedy": ["basic", "love"],
+      "compassion": ["love"],
+      "courage": ["basic", "love"],
+      "curiosity": ["basic", "love"],
       "darkness": ["basic", "angst"],
       "death": ["basic", "angst"],
       "destiny": ["basic", "love", "angst"],
@@ -79,6 +84,7 @@
       "gracefully": ["basic", "love"],
       "helplessly": ["basic"],
       "jealously": ["angst"],
+      "noisily": ["basic"],
       "normally": ["basic"],
       "perfectly": ["love"],
       "powerfully": ["basic", "love", "angst"],
@@ -93,6 +99,7 @@
     "bodyPart": {
       "arm": ["basic", "love", "angst"],
       "chest": ["basic", "love", "angst"],
+      "cheek": ["love"],
       "eye": ["angst"],
       "face": ["basic", "love"],
       "finger": ["basic", "love", "angst"],
@@ -125,6 +132,7 @@
       "frown": ["basic", "angst"],
       "ghost": ["basic", "angst"],
       "gun": ["angst"],
+      "noise": ["basic", "love"],
       "poem": ["basic", "love"],
       "silhouette": ["basic", "love", "angst"],
       "smile": ["basic", "love"],
@@ -139,6 +147,7 @@
     },
     "feeling": {
       "angry": ["basic", "angst"],
+      "anxious": ["angst"],
       "bitter": ["angst"],
       "cowardly": ["angst"],
       "depressed": ["basic", "angst"],
@@ -198,7 +207,7 @@
       "snap": ["angst"],
       "thrust": ["basic"],
       "understand": ["basic", "love"],
-      "wake": ["basic", "love"],
+      "wake": ["love"],
       "weep": ["basic", "angst"],
       "whimper": ["basic"]
     },
@@ -254,6 +263,7 @@
     "abstractNoun": {
       "chemistry": ["basic", "love"],
       "ego": ["basic"],
+      "grace": ["love"],
       "toxicity": ["angst"]
     },
     "adjective": {
@@ -280,7 +290,6 @@
       "body": ["basic", "love", "angst"],
       "flesh": ["basic", "love", "angst"],
       "flower": ["basic", "love", "angst"],
-      "hair": ["love"],
       "knee": ["basic", "love", "angst"],
       "muscle": ["basic", "love"],
       "nethers": ["basic", "love", "angst"],
