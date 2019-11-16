@@ -69,7 +69,7 @@
 		{ "phrase": "possessivePronoun adjective abstractNoun.", "placement": ["title"] },
     { "phrase": "subjectivePronoun adverb infinitiveVerbverbEnding with possessivePronoun bodyPart.", "placement": ["beginning", "middle", "end"] },
 		{ "phrase": "possessivePronoun bodyPart is adjective.", "placement": ["beginning"] },
-    { "phrase": "possessivePronoun bodyPart infinitiveVerbs", "placement": ["beginning", "middle", "end"] },
+    { "phrase": "possessivePronoun bodyPart infinitiveVerbs.", "placement": ["beginning", "middle", "end"] },
 		{ "phrase": "possessivePronoun bodyPart infinitiveVerbs concreteNouns.", "placement": ["beginning", "middle"] },
     { "phrase": "possessivePronoun bodyPart infinitiveVerbs me.", "placement": ["beginning", "end"] },
 		{ "phrase": "possessivePronoun concreteNoun.", "placement": ["title"] },
