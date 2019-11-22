@@ -382,7 +382,6 @@
       "drunk": ["angst"],
       "faithless": ["basic", "angst"],
       "fresh": ["basic"],
-      "humility": ["angst"],
       "impure": ["basic", "angst"],
       "meek": ["basic"],
       "mysterious": ["basic"],
@@ -432,11 +431,13 @@
       "sunflower": ["love"],
       "sword": ["basic", "angst"],
       "tonic": ["angst"],
+      "trash": ["angst"],
       "turmoil": ["basic", "angst"],
       "warzone": ["angst"]
     },
     "feeling": {
       "enamored": ["love"],
+      "humility": ["basic", "angst"],
       "hungry": ["basic", "love", "angst"],
       "melancholic": ["angst"],
       "numb": ["basic", "angst"],
