@@ -2,6 +2,7 @@
   "default": {
     "abstractNoun": {
       "ability": ["basic"],
+      "ambition": ["basic", "love", "angst"],
       "anxiety": ["angst"],
       "brutality": ["angst"],
       "comedy": ["basic", "love"],
@@ -426,8 +427,10 @@
     },
     "color": {
       "crimson": ["basic", "love", "angst"],
+      "maroon": ["basic"],
       "navy": ["basic"],
-      "purple": ["basic", "angst"]
+      "purple": ["basic", "love", "angst"],
+      "turquoise": ["basic", "love"]
     },
     "concreteNoun": {
       "battleground": ["angst"],
@@ -435,6 +438,8 @@
       "candle": ["basic"],
       "cigarette": ["basic", "love", "angst"],
       "dream": ["basic", "love", "angst"],
+      "fire": ["angst"],
+      "ice": ["angst"],
       "moon": ["angst"],
       "nectar": ["love"],
       "photograph": ["basic", "love", "angst"],
@@ -495,6 +500,7 @@
     },
     "person": {
       "ally": ["basic", "love"],
+      "capitalist": ["angst"],
       "creature": ["angst"],
       "demon": ["angst"],
       "dragon": ["basic", "angst"],
@@ -508,7 +514,6 @@
     "people": {
       "animals": ["love", "angst"],
       "demons": ["basic", "angst"],
-      "dragons": ["basic", "angst"],
       "fiends": ["basic", "angst"],
       "legends": ["basic", "love"],
       "nations": ["basic", "love", "angst"],
