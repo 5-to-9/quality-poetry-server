@@ -166,6 +166,7 @@ function compileDictionary(fullDictionary, author) {
   dictionary.subjectivePronoun = pronouns["subjectivePronoun"]
   dictionary.objectivePronoun = pronouns["objectivePronoun"]
   dictionary.possessivePronoun = pronouns["possessivePronoun"]
+  dictionary.reflexivePronoun = pronouns["reflexivePronoun"]
   dictionary.poemTarget = pronouns["poemTarget"]
   dictionary.verbEnding = pronouns["verbEnding"]
   dictionary.toBeConjugation = pronouns["toBeConjugation"]
@@ -184,6 +185,7 @@ function getPoemTarget() {
     "subjectivePronoun" : "I",
     "objectivePronoun" : "me",
     "possessivePronoun" : "my",
+    "reflexivePronoun" : "myself",
     "verbEnding" : "",
     "toBeConjugation" : "am",
     "possessiveConjugation" : "have"
@@ -192,6 +194,7 @@ function getPoemTarget() {
     "subjectivePronoun" : "you",
     "objectivePronoun" : "you",
     "possessivePronoun" : "your",
+    "reflexivePronoun" : "yourself",
     "verbEnding" : "",
     "toBeConjugation" : "are",
     "possessiveConjugation" : "have"
@@ -200,6 +203,7 @@ function getPoemTarget() {
     "subjectivePronoun" : "he",
     "objectivePronoun" : "him",
     "possessivePronoun" : "his",
+    "reflexivePronoun" : "himself",
     "verbEnding" : "s",
     "toBeConjugation" : "is",
     "possessiveConjugation" : "has"
@@ -208,6 +212,7 @@ function getPoemTarget() {
     "subjectivePronoun" : "she",
     "objectivePronoun" : "her",
     "possessivePronoun" : "her",
+    "reflexivePronoun" : "herself",
     "verbEnding" : "s",
     "toBeConjugation" : "is",
     "possessiveConjugation" : "has"
@@ -216,6 +221,7 @@ function getPoemTarget() {
     "subjectivePronoun" : "we",
     "objectivePronoun" : "us",
     "possessivePronoun" : "our",
+    "reflexivePronoun" : "ourselves",
     "verbEnding" : "",
     "toBeConjugation" : "are",
     "possessiveConjugation" : "have"
@@ -225,6 +231,7 @@ function getPoemTarget() {
     "subjectivePronoun" : "they",
     "objectivePronoun" : "them",
     "possessivePronoun" : "their",
+    "reflexivePronoun" : "themself",
     "verbEnding" : "",
     "toBeConjugation" : "are",
     "possessiveConjugation" : "have"
@@ -234,6 +241,7 @@ function getPoemTarget() {
     "subjectivePronoun" : "they",
     "objectivePronoun" : "them",
     "possessivePronoun" : "their",
+    "reflexivePronoun" : "theirselves",
     "verbEnding" : "",
     "toBeConjugation" : "are",
     "possessiveConjugation" : "have"
@@ -253,6 +261,7 @@ function getLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
     "subjectivePronoun",
     "objectivePronoun",
     "possessivePronoun",
+    "reflexivePronoun",
     "verbEnding",
     "toBeConjugation",
     "possessiveConjugation"
