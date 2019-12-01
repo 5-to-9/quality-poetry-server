@@ -227,7 +227,7 @@
     { "phrase": "abstractNoun is abstractNoun.", "placement": ["beginning", "middle", "end"] },
     { "phrase": "abstractNoun without abstractNoun is abstractNoun.", "placement": ["beginning", "end"] },
     { "phrase": "adjective and adjective.", "placement": ["end"] },
-    { "phrase": "adjective and adjective is how subjectivePronoun infinitiveVerb.", "placement": ["beginning", "end"] },
+    { "phrase": "adjective and adjective is how subjectivePronoun infinitiveVerbverbEnding.", "placement": ["beginning", "end"] },
     { "phrase": "ah, abstractNoun!", "placement": ["beginning"] },
     { "phrase": "ah, adjective abstractNoun!", "placement": ["beginning", "end"] },
     { "phrase": "all that's left is abstractNoun.", "placement": ["end"] },
