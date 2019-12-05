@@ -272,6 +272,18 @@
       "soldiers": ["angst"],
       "villains": ["basic", "angst"],
       "women": ["basic", "love", "angst"]
+    },
+    "superlative": {
+      "best": ["basic", "love"],
+      "funniest": ["basic", "love"],
+      "happiest": ["love"],
+      "kindest": ["love"],
+      "oddest": ["basic", "angst"],
+      "rarest": ["basic", "love", "angst"],
+      "saddest": ["angst"],
+      "safest": ["love"],
+      "strangest": ["basic"],
+      "worst": ["basic", "angst"]
     }
   },
   "rupiKaur": {
@@ -371,6 +383,9 @@
       "goddesses": ["basic", "love"],
       "mothers": ["basic", "love", "angst"],
       "sisters": ["basic", "love"]
+    },
+    "superlative": {
+      "deepest": ["love"]
     }
   },
   "tumblrPoet": {
@@ -522,6 +537,12 @@
       "societies": ["basic", "love", "angst"],
       "vagabonds": ["angst"],
       "wolves": ["basic", "love", "angst"]
+    },
+    "superlative": {
+      "bloodiest": ["angst"],
+      "cheapest": ["angst"],
+      "deadliest": ["angst"],
+      "gloomiest": ["angst"]
     }
   }
 }
