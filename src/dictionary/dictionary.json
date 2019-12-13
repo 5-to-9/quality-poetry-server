@@ -5,6 +5,7 @@
       "ambition": ["basic", "love", "angst"],
       "anxiety": ["angst"],
       "brutality": ["angst"],
+      "calamity": ["angst"],
       "comedy": ["basic", "love"],
       "compassion": ["love"],
       "courage": ["basic", "love"],
@@ -21,6 +22,7 @@
       "justice": ["basic"],
       "judgement": ["basic"],
       "knowledge": ["basic"],
+      "life": ["basic", "love", "angst"],
       "love": ["basic", "love"],
       "luck": ["basic", "love", "angst"],
       "memory": ["basic", "love", "angst"],
@@ -137,6 +139,8 @@
     "concreteNoun": {
       "bed": ["love"],
       "body": ["basic", "love", "angst"],
+      "book": ["basic", "love"],
+      "crown": ["basic", "love", "angst"],
       "dagger": ["angst"],
       "flaw": ["angst"],
       "frown": ["basic", "angst"],
@@ -250,6 +254,7 @@
       "king": ["basic", "love"],
       "man": ["basic", "love", "angst"],
       "monster": ["angst"],
+      "poet": ["basic"],
       "soldier": ["basic", "angst"],
       "stranger": ["angst"],
       "woman": ["basic", "love", "angst"]
@@ -268,6 +273,7 @@
       "lovers": ["basic", "love"],
       "men": ["basic", "love", "angst"],
       "monsters": ["basic", "angst"],
+      "poets": ["basic", "love", "angst"],
       "queens": ["basic", "love"],
       "soldiers": ["angst"],
       "villains": ["basic", "angst"],
@@ -385,7 +391,8 @@
       "sisters": ["basic", "love"]
     },
     "superlative": {
-      "deepest": ["love"]
+      "deepest": ["love"],
+      "highest": ["basic", "love"]
     }
   },
   "tumblrPoet": {
@@ -400,6 +407,7 @@
       "prejudice": ["angst"],
       "ruin": ["basic", "angst"],
       "style": ["love"],
+      "theft": ["angst"],
       "toil": ["basic", "angst"],
       "victory": ["basic"],
       "violence": ["basic", "angst"],
@@ -535,6 +543,7 @@
       "pioneers": ["basic", "love", "angst"],
       "saints": ["basic", "love"],
       "societies": ["basic", "love", "angst"],
+      "spirits": ["angst"],
       "vagabonds": ["angst"],
       "wolves": ["basic", "love", "angst"]
     },
