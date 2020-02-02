@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "986ebadd-8e73-4989-a960-c54423b4ad01",
+		"name": "QualityPoetry",
+		"description": "Quality Poetry.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create/poem",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "963f886b-7e8f-44da-a97e-4f2e092a5fe3",
+						"exec": [
+							"pm.environment.set(\"poemAuthor\", \"default\");",
+							"pm.environment.set(\"poemMood\", \"basic\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed9dbd1e-a028-4c87-baa5-1d2490508197",
+						"exec": [
+							"pm.test(\"Response contains a poem\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"poem\");",
+							"});",
+							"",
+							"var responseData = JSON.parse(responseBody);",
+							"var title = responseData.poem.title;",
+							"var lines = responseData.poem.lines;",
+							"",
+							"console.log(title)",
+							"for (var i = 0; i < lines.count(); i++) {",
+							"    console.log(lines[i].text)",
+							"}",
+							"",
+							"serverUrl = pm.variables.get(\"serverUrl\");",
+							"",
+							"authors = ['default', 'rupiKaur', 'tumblrPoet'];",
+							"moods = ['basic', 'love', 'angst'];",
+							"",
+							"// pm.environment.set(\"poemAuthor\", '');",
+							"// pm.environment.set(\"poemMood\", \"love\");",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=default&mood=love\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"});",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=default&mood=angst\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"});",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=rupiKaur&mood=basic\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"});",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=rupiKaur&mood=love\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"",
+							"});",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=rupiKaur&mood=angst\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"",
+							"});",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=tumblrPoet&mood=basic\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"",
+							"});",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=tumblrPoet&mood=love\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"",
+							"});",
+							"",
+							"pm.sendRequest(serverUrl + \"/create/poem?author=tumblrPoet&mood=angst\", function (err, response) {",
+							"    var responseData = JSON.parse(responseBody);",
+							"    var title = responseData.poem.title;",
+							"    var lines = responseData.poem.lines;",
+							"    ",
+							"    console.log(title)",
+							"    for (var i = 0; i < lines.count(); i++) {",
+							"        console.log(lines[i].text)",
+							"    }",
+							"",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{serverUrl}}/create/poem?author={{poemAuthor}}&mood={{poemMood}}",
+					"host": [
+						"{{serverUrl}}"
+					],
+					"path": [
+						"create",
+						"poem"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "{{poemAuthor}}"
+						},
+						{
+							"key": "mood",
+							"value": "{{poemMood}}"
+						}
+					]
+				},
+				"description": "The poem creation endpoint. Set the author and mood in the pre request script. The runner will randomly choose an author and a mood - check that out in the tests."
+			},
+			"response": []
+		},
+		{
+			"name": "create/line",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6d03a5e-ab92-4fb9-a045-895537675fe5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3004/create/line/?placement=middle&author=rupiKaur&mood=basic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"create",
+						"line",
+						""
+					],
+					"query": [
+						{
+							"key": "placement",
+							"value": "middle"
+						},
+						{
+							"key": "author",
+							"value": "rupiKaur"
+						},
+						{
+							"key": "mood",
+							"value": "basic"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "85491a55-7654-4197-9a87-ea27b5af83f1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d2bb1832-c55b-4ab9-bfe8-c44a2ee68448",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

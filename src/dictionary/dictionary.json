@@ -5,6 +5,7 @@
       "ambition": ["basic", "love", "angst"],
       "anxiety": ["angst"],
       "brutality": ["angst"],
+      "calamity": ["angst"],
       "comedy": ["basic", "love"],
       "compassion": ["love"],
       "courage": ["basic", "love"],
@@ -21,6 +22,7 @@
       "justice": ["basic"],
       "judgement": ["basic"],
       "knowledge": ["basic"],
+      "life": ["basic", "love", "angst"],
       "love": ["basic", "love"],
       "luck": ["basic", "love", "angst"],
       "memory": ["basic", "love", "angst"],
@@ -137,6 +139,8 @@
     "concreteNoun": {
       "bed": ["love"],
       "body": ["basic", "love", "angst"],
+      "book": ["basic", "love"],
+      "crown": ["basic", "love", "angst"],
       "dagger": ["angst"],
       "flaw": ["angst"],
       "frown": ["basic", "angst"],
@@ -197,7 +201,6 @@
       "defend": ["love"],
       "desire": ["love"],
       "erupt": ["basic", "love", "angst"],
-      "exhale": ["basic", "love", "angst"],
       "fall": ["basic"],
       "flirt": ["love"],
       "fight": ["angst"],
@@ -250,6 +253,7 @@
       "king": ["basic", "love"],
       "man": ["basic", "love", "angst"],
       "monster": ["angst"],
+      "poet": ["basic"],
       "soldier": ["basic", "angst"],
       "stranger": ["angst"],
       "woman": ["basic", "love", "angst"]
@@ -268,10 +272,23 @@
       "lovers": ["basic", "love"],
       "men": ["basic", "love", "angst"],
       "monsters": ["basic", "angst"],
+      "poets": ["basic", "love", "angst"],
       "queens": ["basic", "love"],
       "soldiers": ["angst"],
       "villains": ["basic", "angst"],
       "women": ["basic", "love", "angst"]
+    },
+    "superlative": {
+      "best": ["basic", "love"],
+      "funniest": ["basic", "love"],
+      "happiest": ["love"],
+      "kindest": ["love"],
+      "oddest": ["basic", "angst"],
+      "rarest": ["basic", "love", "angst"],
+      "saddest": ["angst"],
+      "safest": ["love"],
+      "strangest": ["basic"],
+      "worst": ["basic", "angst"]
     }
   },
   "rupiKaur": {
@@ -371,6 +388,10 @@
       "goddesses": ["basic", "love"],
       "mothers": ["basic", "love", "angst"],
       "sisters": ["basic", "love"]
+    },
+    "superlative": {
+      "deepest": ["love"],
+      "highest": ["basic", "love"]
     }
   },
   "tumblrPoet": {
@@ -385,6 +406,7 @@
       "prejudice": ["angst"],
       "ruin": ["basic", "angst"],
       "style": ["love"],
+      "theft": ["angst"],
       "toil": ["basic", "angst"],
       "victory": ["basic"],
       "violence": ["basic", "angst"],
@@ -475,6 +497,7 @@
       "burn": ["basic", "love", "angst"],
       "clash": ["basic", "angst"],
       "consider": ["basic", "love", "angst"],
+      "exhale": ["basic"],
       "fade": ["basic"],
       "grift": ["angst"],
       "kill": ["basic", "angst"],
@@ -520,8 +543,15 @@
       "pioneers": ["basic", "love", "angst"],
       "saints": ["basic", "love"],
       "societies": ["basic", "love", "angst"],
+      "spirits": ["angst"],
       "vagabonds": ["angst"],
       "wolves": ["basic", "love", "angst"]
+    },
+    "superlative": {
+      "bloodiest": ["angst"],
+      "cheapest": ["angst"],
+      "deadliest": ["angst"],
+      "gloomiest": ["angst"]
     }
   }
 }
