@@ -85,7 +85,7 @@ function generatePoem(author, mood, callback) {
             var signature = generateSignature(author);
 
             if (signature) {
-                poem["poem"]["lines"].push(signature)
+                poem["poem"]["signature"] = signature
             }
 
             return callback(poem)
@@ -330,9 +330,7 @@ function getLineStyle(phrase, author) {
 
 function generateSignature(author) {
   if (author == 'rupiKaur') {
-    return {
-      "text": '- rupi kaur'
-    }
+    return '- rupi kaur'
   }
 
   return null;

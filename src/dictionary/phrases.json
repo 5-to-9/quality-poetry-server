@@ -19,7 +19,7 @@
 		{ "phrase": "adjective concreteNoun.", "placement": ["title"] },
 		{ "phrase": "adjective bodyPart.", "placement": ["title", "beginning", "middle", "end"] },
 		{ "phrase": "adverb and adverb adjective.", "placement": ["middle"] },
-    { "phrase": "adverb and adverb subjectivePronoun infinitiveVerb.", "placement": ["middle"] },
+    { "phrase": "adverb and adverb subjectivePronoun infinitiveVerbverbEnding.", "placement": ["middle"] },
 		{ "phrase": "bodyParts.", "placement": ["title", "beginning"] },
     { "phrase": "bodyParts adverb feeling.", "placement": ["beginning", "middle"] },
 		{ "phrase": "color canvas.", "placement": ["title"] },
