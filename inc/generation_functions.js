@@ -170,6 +170,7 @@ function compileDictionary(fullDictionary, author) {
   dictionary.poemTarget = pronouns["poemTarget"]
   dictionary.verbEnding = pronouns["verbEnding"]
   dictionary.toBeConjugation = pronouns["toBeConjugation"]
+  dictionary.toDoConjugation = pronouns["toDoConjugation"]
   dictionary.possessiveConjugation = pronouns["possessiveConjugation"]
 
   return dictionary
@@ -188,6 +189,7 @@ function getPoemTarget() {
     "reflexivePronoun" : "myself",
     "verbEnding" : "",
     "toBeConjugation" : "am",
+    "toDoConjugation" : "do",
     "possessiveConjugation" : "have"
   }, {
     "poemTarget" : "you",
@@ -197,6 +199,7 @@ function getPoemTarget() {
     "reflexivePronoun" : "yourself",
     "verbEnding" : "",
     "toBeConjugation" : "are",
+    "toDoConjugation" : "do",
     "possessiveConjugation" : "have"
   }, {
     "poemTarget" : "the man",
@@ -206,6 +209,7 @@ function getPoemTarget() {
     "reflexivePronoun" : "himself",
     "verbEnding" : "s",
     "toBeConjugation" : "is",
+    "toDoConjugation" : "does",
     "possessiveConjugation" : "has"
   }, {
     "poemTarget" : "the woman",
@@ -215,6 +219,7 @@ function getPoemTarget() {
     "reflexivePronoun" : "herself",
     "verbEnding" : "s",
     "toBeConjugation" : "is",
+    "toDoConjugation" : "does",
     "possessiveConjugation" : "has"
   }, {
     "poemTarget" : "us",
@@ -224,6 +229,7 @@ function getPoemTarget() {
     "reflexivePronoun" : "ourselves",
     "verbEnding" : "",
     "toBeConjugation" : "are",
+    "toDoConjugation" : "do",
     "possessiveConjugation" : "have"
   }, {
     // them, singular
@@ -234,6 +240,7 @@ function getPoemTarget() {
     "reflexivePronoun" : "themself",
     "verbEnding" : "",
     "toBeConjugation" : "are",
+    "toDoConjugation" : "do",
     "possessiveConjugation" : "have"
   }, {
     // them, plural
@@ -244,6 +251,7 @@ function getPoemTarget() {
     "reflexivePronoun" : "theirselves",
     "verbEnding" : "",
     "toBeConjugation" : "are",
+    "toDoConjugation" : "do",
     "possessiveConjugation" : "have"
   }]
 
@@ -264,6 +272,7 @@ function getLine(phraseToGet, phrases, dictionary, wordTypes, author, mood) {
     "reflexivePronoun",
     "verbEnding",
     "toBeConjugation",
+    "toDoConjugation",
     "possessiveConjugation"
   ]
 

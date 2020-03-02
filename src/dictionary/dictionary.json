@@ -25,6 +25,7 @@
       "life": ["basic", "love", "angst"],
       "love": ["basic", "love"],
       "luck": ["basic", "love", "angst"],
+      "magic": ["basic", "love"],
       "memory": ["basic", "love", "angst"],
       "murder": ["basic", "angst"],
       "music": ["love"],
@@ -207,6 +208,7 @@
       "fight": ["angst"],
       "fracture": ["angst"],
       "fragment": ["angst"],
+      "hear": ["basic", "love"],
       "hold": ["basic", "love"],
       "hug": ["basic", "love"],
       "ignite": ["basic", "angst"],
@@ -251,6 +253,7 @@
     "person": {
       "baby": ["love"],
       "brute": ["angst"],
+      "friend": ["basic", "love"],
       "king": ["basic", "love"],
       "man": ["basic", "love", "angst"],
       "monster": ["angst"],
@@ -300,6 +303,7 @@
       "toxicity": ["angst"]
     },
     "adjective": {
+      "acrid": ["angst"],
       "bright": ["basic", "love"],
       "defiant": ["basic", "angst"],
       "fiery": ["basic", "love", "angst"],
@@ -309,6 +313,7 @@
       "resilient": ["basic", "love"],
       "soft": ["basic", "love"],
       "sparkling": ["basic", "love"],
+      "tart": ["basic", "love", "angst"],
       "untamed": ["basic", "love"]
     },
     "adverb": {
@@ -352,6 +357,7 @@
       "wax": ["angst"]
     },
     "feeling": {
+      "aprehensive": ["angst"],
       "confident": ["love"],
       "hungry": ["love"],
       "numb": ["basic", "angst"],
@@ -418,6 +424,7 @@
       "cute": ["love"],
       "dim": ["angst"],
       "drunk": ["angst"],
+      "ethereal": ["basic"],
       "faithless": ["basic", "angst"],
       "fresh": ["basic"],
       "impure": ["basic", "angst"],
@@ -446,6 +453,7 @@
       "gene": ["basic", "love", "angst"],
       "muscle": ["angst"],
       "skin": ["basic", "love"],
+      "sweat": ["basic", "love", "angst"],
       "wrist": ["angst"]
     },
     "color": {
@@ -470,6 +478,7 @@
       "quill": ["basic", "love"],
       "rain": ["basic", "angst"],
       "rope": ["love", "angst"],
+      "stardust": ["basic", "love"],
       "sunflower": ["love"],
       "sword": ["basic", "angst"],
       "tonic": ["angst"],
@@ -478,6 +487,7 @@
       "warzone": ["angst"]
     },
     "feeling": {
+      "decisive": ["basic", "love"],
       "enamored": ["love"],
       "frozen": ["angst"],
       "humility": ["basic", "angst"],
@@ -504,6 +514,7 @@
       "kill": ["basic", "angst"],
       "melt": ["angst"],
       "quiver": ["basic", "love", "angst"],
+      "rip": ["angst"],
       "shatter": ["basic", "angst"],
       "slit": ["angst"],
       "splinter": ["basic", "angst"],
@@ -528,9 +539,11 @@
       "creature": ["angst"],
       "demon": ["angst"],
       "dragon": ["basic", "angst"],
+      "enemy": ["basic", "angst"],
       "fiend": ["basic", "angst"],
       "pioneer": ["basic", "love", "angst"],
       "queen": ["basic", "love"],
+      "proletariat": ["basic", "angst"],
       "saint": ["basic", "love"],
       "vagabond": ["angst"],
       "wolf": ["basic", "love", "angst"]
