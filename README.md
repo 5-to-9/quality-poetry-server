@@ -22,7 +22,6 @@ Give the repo a download, install your dependancies, and give us a pull request 
 ## Built With
 
 * Node.js
-* Postgres
 * Express
 
 ## Authors
