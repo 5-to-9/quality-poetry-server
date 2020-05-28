@@ -25,6 +25,7 @@
       "life": ["basic", "love", "angst"],
       "love": ["basic", "love"],
       "luck": ["basic", "love", "angst"],
+      "magic": ["basic", "love"],
       "memory": ["basic", "love", "angst"],
       "murder": ["basic", "angst"],
       "music": ["love"],
@@ -111,6 +112,7 @@
       "arm": ["basic", "love", "angst"],
       "chest": ["basic", "love", "angst"],
       "cheek": ["love"],
+      "core": ["basic", "love", "angst"],
       "eye": ["angst"],
       "face": ["basic", "love"],
       "finger": ["basic", "love", "angst"],
@@ -151,6 +153,7 @@
       "moon": ["basic", "love"],
       "noise": ["basic", "love"],
       "poem": ["basic", "love"],
+      "secret": ["basic", "love", "angst"],
       "silhouette": ["basic", "love", "angst"],
       "smile": ["basic", "love"],
       "sound": ["basic", "angst"],
@@ -207,6 +210,7 @@
       "fight": ["angst"],
       "fracture": ["angst"],
       "fragment": ["angst"],
+      "hear": ["basic", "love"],
       "hold": ["basic", "love"],
       "hug": ["basic", "love"],
       "ignite": ["basic", "angst"],
@@ -226,6 +230,7 @@
       "wake": ["love"],
       "want": ["basic", "love", "angst"],
       "weep": ["basic", "angst"],
+      "wish": ["basic", "love"],
       "whimper": ["basic"]
     },
     "onomatopoeia": {
@@ -250,7 +255,9 @@
     },
     "person": {
       "baby": ["love"],
+      "believer": ["basic", "love"],
       "brute": ["angst"],
+      "friend": ["basic", "love"],
       "king": ["basic", "love"],
       "man": ["basic", "love", "angst"],
       "monster": ["angst"],
@@ -262,6 +269,7 @@
     "people": {
       "angels": ["basic", "love"],
       "armies": ["basic"],
+      "believers": ["basic", "love"],
       "brutes": ["angst"],
       "conquerors": ["basic"],
       "devils": ["basic", "angst"],
@@ -300,6 +308,7 @@
       "toxicity": ["angst"]
     },
     "adjective": {
+      "acrid": ["angst"],
       "bright": ["basic", "love"],
       "defiant": ["basic", "angst"],
       "fiery": ["basic", "love", "angst"],
@@ -307,8 +316,10 @@
       "moral": ["love"],
       "profound": ["basic", "love"],
       "resilient": ["basic", "love"],
+      "sacred": ["basic", "love"],
       "soft": ["basic", "love"],
       "sparkling": ["basic", "love"],
+      "tart": ["basic", "love", "angst"],
       "untamed": ["basic", "love"]
     },
     "adverb": {
@@ -316,12 +327,14 @@
       "elegantly": ["basic", "love"],
       "exquisitely": ["basic", "love"],
       "fluently": ["basic", "love"],
+      "horribly": ["angst"],
       "hungrily": ["basic", "love"],
       "vividly": ["basic", "love", "angst"],
       "wildly": ["basic", "love", "angst"]
     },
     "bodyPart": {
       "body": ["basic", "love", "angst"],
+      "fingertip": ["basic", "love", "angst"],
       "fist": ["angst"],
       "flesh": ["love", "angst"],
       "flower": ["love", "angst"],
@@ -340,6 +353,7 @@
       "violet": ["basic", "love"]
     },
     "concreteNoun": {
+      "coffee": ["basic", "angst"],
       "confession": ["basic", "love", "angst"],
       "drug": ["basic", "love", "angst"],
       "fruit": ["love"],
@@ -352,6 +366,7 @@
       "wax": ["angst"]
     },
     "feeling": {
+      "aprehensive": ["angst"],
       "confident": ["love"],
       "hungry": ["love"],
       "numb": ["basic", "angst"],
@@ -418,6 +433,7 @@
       "cute": ["love"],
       "dim": ["angst"],
       "drunk": ["angst"],
+      "ethereal": ["basic"],
       "faithless": ["basic", "angst"],
       "fresh": ["basic"],
       "impure": ["basic", "angst"],
@@ -444,8 +460,10 @@
       "claw": ["angst"],
       "flesh": ["basic", "love", "angst"],
       "gene": ["basic", "love", "angst"],
+      "gut": ["angst"],
       "muscle": ["angst"],
       "skin": ["basic", "love"],
+      "sweat": ["basic", "love", "angst"],
       "wrist": ["angst"]
     },
     "color": {
@@ -462,6 +480,7 @@
       "cigarette": ["basic", "love", "angst"],
       "dream": ["basic", "love", "angst"],
       "fire": ["angst"],
+      "flower": ["basic", "love"],
       "ice": ["angst"],
       "moon": ["angst"],
       "nectar": ["love"],
@@ -470,6 +489,7 @@
       "quill": ["basic", "love"],
       "rain": ["basic", "angst"],
       "rope": ["love", "angst"],
+      "stardust": ["basic", "love"],
       "sunflower": ["love"],
       "sword": ["basic", "angst"],
       "tonic": ["angst"],
@@ -478,6 +498,7 @@
       "warzone": ["angst"]
     },
     "feeling": {
+      "decisive": ["basic", "love"],
       "enamored": ["love"],
       "frozen": ["angst"],
       "humility": ["basic", "angst"],
@@ -489,9 +510,9 @@
       "pensive": ["angst"],
       "pleased": ["basic", "love"],
       "prideful": ["angst"],
+      "sacred": ["basic", "love"],
       "salty": ["angst"],
       "stubborn": ["basic", "angst"],
-      "vernal": ["love"],
       "wrathful": ["basic", "angst"]
     },
     "infinitiveVerb": {
@@ -504,6 +525,7 @@
       "kill": ["basic", "angst"],
       "melt": ["angst"],
       "quiver": ["basic", "love", "angst"],
+      "rip": ["angst"],
       "shatter": ["basic", "angst"],
       "slit": ["angst"],
       "splinter": ["basic", "angst"],
@@ -528,9 +550,12 @@
       "creature": ["angst"],
       "demon": ["angst"],
       "dragon": ["basic", "angst"],
+      "enemy": ["basic", "angst"],
       "fiend": ["basic", "angst"],
+      "knight": ["basic", "angst"],
       "pioneer": ["basic", "love", "angst"],
       "queen": ["basic", "love"],
+      "proletariat": ["basic", "angst"],
       "saint": ["basic", "love"],
       "vagabond": ["angst"],
       "wolf": ["basic", "love", "angst"]
@@ -540,6 +565,7 @@
       "demons": ["basic", "angst"],
       "fiends": ["basic", "angst"],
       "legends": ["basic", "love"],
+      "lunatics": ["angst"],
       "nations": ["basic", "love", "angst"],
       "pioneers": ["basic", "love", "angst"],
       "saints": ["basic", "love"],

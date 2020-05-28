@@ -22,11 +22,10 @@ Give the repo a download, install your dependancies, and give us a pull request 
 ## Built With
 
 * Node.js
-* Postgres
 * Express
 
 ## Authors
 
-* **Daniel Siegel** - *Original site* - [MrDanielMax](https://github.com/mrdanielmax)
+* **Daniel Siegel** - *Original site* - [DanielMaxSiegel](https://github.com/danielmaxsiegel)
 * **Nik Sawtschuk** - *Ideation, code review* - [NikSawtschuk](https://github.com/niksawtschuk)
 * **Vlad Popa** - *Code review* - [Vlardez](https://github.com/vlardez)
