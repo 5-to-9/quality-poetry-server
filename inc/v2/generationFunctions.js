@@ -96,8 +96,6 @@ function compileDictionary(dictionary) {
 }
 
 function getPoemTarget() {
-  var target = Math.floor(Math.random() * 6) + 1
-
   pronouns = [
     {
       "poemTarget" : "myself",
@@ -107,7 +105,6 @@ function getPoemTarget() {
       "reflexivePronoun" : "myself",
       "verbEnding" : "",
       "toBeConjugation" : "am",
-      "toBePastConjugation" : "was",
       "toDoConjugation" : "do",
       "possessiveConjugation" : "have"
     }, {
@@ -118,7 +115,6 @@ function getPoemTarget() {
       "reflexivePronoun" : "yourself",
       "verbEnding" : "",
       "toBeConjugation" : "are",
-      "toBePastConjugation" : "were",
       "toDoConjugation" : "do",
       "possessiveConjugation" : "have"
     }, {
@@ -129,7 +125,6 @@ function getPoemTarget() {
       "reflexivePronoun" : "himself",
       "verbEnding" : "s",
       "toBeConjugation" : "is",
-      "toBePastConjugation" : "was",
       "toDoConjugation" : "does",
       "possessiveConjugation" : "has"
     }, {
@@ -140,7 +135,6 @@ function getPoemTarget() {
       "reflexivePronoun" : "herself",
       "verbEnding" : "s",
       "toBeConjugation" : "is",
-      "toBePastConjugation" : "was",
       "toDoConjugation" : "does",
       "possessiveConjugation" : "has"
     }, {
@@ -151,37 +145,36 @@ function getPoemTarget() {
       "reflexivePronoun" : "ourselves",
       "verbEnding" : "",
       "toBeConjugation" : "are",
-      "toBePastConjugation" : "were",
       "toDoConjugation" : "do",
       "possessiveConjugation" : "have"
-    }, {
-      // them, singular
-      "poemTarget" : "them",
-      "subjectivePronoun" : "they",
-      "objectivePronoun" : "them",
-      "possessivePronoun" : "their",
-      "reflexivePronoun" : "themself",
-      "verbEnding" : "",
-      "toBeConjugation" : "are",
-      "toBePastConjugation" : "were",
-      "toDoConjugation" : "do",
-      "possessiveConjugation" : "have"
-    }, {
+    // }, {
+    //   // them, singular
+    //   "poemTarget" : "them",
+    //   "subjectivePronoun" : "they",
+    //   "objectivePronoun" : "them",
+    //   "possessivePronoun" : "their",
+    //   "reflexivePronoun" : "themself",
+    //   "verbEnding" : "",
+    //   "toBeConjugation" : "are",
+    //   "toBePastConjugation" : "were",
+    //   "toDoConjugation" : "do",
+    //   "possessiveConjugation" : "have"
+    // }, {
       // them, plural
-      "poemTarget" : "them",
-      "subjectivePronoun" : "they",
-      "objectivePronoun" : "them",
-      "possessivePronoun" : "their",
-      "reflexivePronoun" : "theirselves",
-      "verbEnding" : "",
-      "toBeConjugation" : "are",
-      "toBePastConjugation" : "were",
-      "toDoConjugation" : "do",
-      "possessiveConjugation" : "have"
+      // "poemTarget" : "them",
+      // "subjectivePronoun" : "they",
+      // "objectivePronoun" : "them",
+      // "possessivePronoun" : "their",
+      // "reflexivePronoun" : "theirselves",
+      // "verbEnding" : "",
+      // "toBeConjugation" : "are",
+      // "toBePastConjugation" : "were",
+      // "toDoConjugation" : "do",
+      // "possessiveConjugation" : "have"
     }
   ]
 
-  return pronouns[target]
+  return pronouns[getRandomInt(pronouns.length)]
 }
 
 function getLine(phraseToGet, phrases, dictionary, wordTypes) {
@@ -266,4 +259,9 @@ function randomWord(dictionary, lastWordUsed) {
   }
 
   return word
+}
+
+// generates a random int between 0 and max
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max))
 }
