@@ -27,7 +27,7 @@ function generatePoem(callback) {
         return callback({ "error" : "could not load JSON." })
       }
 
-      var lineCount = getLineCount(Math.floor(Math.random() * 10) + 1)
+      var lineCount = getLineCount()
       var genderProb = Math.floor(Math.random() * 2) + 1
       var phraseToGet = ''
 
@@ -68,7 +68,9 @@ function generatePoem(callback) {
 }
 
 // random number of lines for the poem
-function getLineCount(lineProb) {
+function getLineCount() {
+  let lineProb = Math.floor(Math.random() * 10) + 1;
+
   if (lineProb < 4) {
     return lineCount = 3
   } else if (lineProb < 8) {
