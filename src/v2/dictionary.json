@@ -16,6 +16,7 @@
     "death",
     "destiny",
     "ego",
+    "excitement",
     "failure",
     "fear",
     "freedom",
@@ -26,6 +27,7 @@
     "justice",
     "judgement",
     "knowledge",
+    "honor",
     "life",
     "love",
     "luck",
@@ -44,6 +46,7 @@
     "romance",
     "scent",
     "shadow",
+    "silence",
     "skill",
     "sport",
     "struggle",
@@ -194,6 +197,7 @@
     "dream",
     "fire",
     "flaw",
+    "flame",
     "frown",
     "ghost",
     "gun",
@@ -257,7 +261,6 @@
     "tormented"
   ],
   "infinitiveVerb": [
-    "bloom",
     "break",
     "breathe",
     "burn",
@@ -293,6 +296,7 @@
     "smash",
     "scream",
     "screech",
+    "search",
     "see",
     "sleep",
     "sink",
@@ -392,5 +396,12 @@
     "safest",
     "strangest",
     "worst"
+  ],
+  "timeOfDay": [
+    "day",
+    "evening",
+    "morning",
+    "night",
+    "twilight"
   ]
 }
