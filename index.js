@@ -7,6 +7,7 @@ var app = express()
 var router = express.Router()
 
 var v2router = require('./routes/v2');
+var v3router = require('./routes/v3');
 
 // CORS headers
 router.use(function (req, res, next) {
@@ -20,6 +21,7 @@ router.use(function (req, res, next) {
 
 app.use('/', router)
 app.use('/v2', v2router);
+app.use('/v3', v3router);
 
 // Fetches a new poem
 router.get('/create/poem', generatePoem, function (req, res){})
