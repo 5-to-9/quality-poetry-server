@@ -1,7 +1,7 @@
 var fs = require('fs').promises
 var path = require('path')
 const { Configuration, OpenAIApi } = require("openai");
-require('dotenv').config()
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
