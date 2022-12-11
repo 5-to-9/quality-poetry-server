@@ -9,7 +9,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 async function getPoetryResponse(callback) {
-  response = { status_code: 0, gpt_prompt: "", poem: { title: "", raw: "", final: "" } }
+  response = { status_code: 0, gpt: { error_status: "", error_data: "", error_message: ""}, poem: { title: "", raw: "", final: "" } }
 
   response = await generatePoem(response)
   response = await getFinalPoemFromGPT(response)
@@ -258,7 +258,7 @@ function getRandomInt(max) {
 async function getFinalPoemFromGPT(response) {
   try {
     const gptPrompt = `Acting as a poet, please improve the following short poem which is titled "${response.poem.title}": "${response.poem.raw}"`
-    response.gpt_prompt = gptPrompt
+    response.gpt.prompt = gptPrompt
 
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
@@ -267,9 +267,15 @@ async function getFinalPoemFromGPT(response) {
       prompt: gptPrompt,
     });
     response.status_code = 200
+    response.gpt.status = 200
     response.poem.final = completion.data.choices[0].text
   } catch (error) {
-    response.status_code = 503
+    if (error.response) {
+      response.gpt.error_status = error.response.status;
+      response.gpt.error_data = error.response.data;
+    } else {
+      response.gpt.error_message = error.message;
+    }
   }
 
   return response
