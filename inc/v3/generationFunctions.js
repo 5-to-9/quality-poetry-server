@@ -258,6 +258,7 @@ function getRandomInt(max) {
 async function getFinalPoemFromGPT(response) {
   try {
     const gptPrompt = `Acting as a poet, please improve the following short poem which is titled "${response.poem.title}": "${response.poem.raw}"`
+    response.gpt_prompt = gptPrompt
 
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
@@ -265,7 +266,6 @@ async function getFinalPoemFromGPT(response) {
       temperature: 0.8,
       prompt: gptPrompt,
     });
-    response.gpt_prompt = gptPrompt
     response.status_code = 200
     response.poem.final = completion.data.choices[0].text
   } catch (error) {
