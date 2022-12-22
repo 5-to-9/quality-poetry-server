@@ -17,6 +17,7 @@ async function getPoetryResponse(callback) {
   response.timestamp = timestamp
   response = await generatePoem(response)
   response = await getFinalPoemFromGPT(response)
+  await logOutput(response)
 
   return callback(response)
 }
@@ -292,6 +293,22 @@ async function getFinalPoemFromGPT(response) {
   }
 
   return response
+}
+
+async function logOutput(response) {
+  var responseData = JSON.stringify(response);
+
+  let date_ob = new Date();
+
+  let filename = date_ob.getFullYear() + "-" +
+    ("0" + (date_ob.getMonth() + 1)).slice(-2) + "-" +
+    ("0" + date_ob.getDate()).slice(-2) + "-" +
+    date_ob.getHours() + ":" +
+    date_ob.getMinutes() + ":" +
+    date_ob.getSeconds()
+
+
+  fs.writeFile("./output/" + filename + ".csv", responseData);
 }
 
 module.exports.getPoetryResponse = getPoetryResponse;
