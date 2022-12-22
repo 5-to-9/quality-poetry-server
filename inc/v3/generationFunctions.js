@@ -11,6 +11,10 @@ const openai = new OpenAIApi(configuration);
 async function getPoetryResponse(callback) {
   response = { status_code: 0, gpt: { error_status: "", error_data: "", error_message: ""}, poem: { title: "", raw: "", final: "" } }
 
+  const currentDate = new Date();
+  const timestamp = currentDate.getTime();
+
+  response.timestamp = timestamp
   response = await generatePoem(response)
   response = await getFinalPoemFromGPT(response)
 
@@ -256,15 +260,6 @@ function getRandomInt(max) {
 }
 
 function getGptTemperature(){
-  // let tempProb = Math.floor(Math.random() * 10) + 1;
-
-  // if (tempProb == 1 || tempProb == 2) {
-  //   return 0.2
-  // } else if (tempProb == 3) {
-  //   return 0.3
-  // } else {
-  //   return 0.9
-  // }
   var temperature = Math.floor(Math.random() * 100) * .01
   temperature = temperature.toFixed(2)
   temperature = parseFloat(temperature)
