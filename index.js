@@ -1,6 +1,6 @@
 var express = require('express')
 var bodyParser = require('body-parser')
-var generationFunctions = require('./inc/generation_functions.js')
+var generationFunctions = require('./inc/v1/generation_functions.js')
 
 var app = express()
 
