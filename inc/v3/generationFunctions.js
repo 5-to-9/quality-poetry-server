@@ -256,31 +256,37 @@ function getRandomInt(max) {
 }
 
 function getGptTemperature(){
-  let lineProb = Math.floor(Math.random() * 10) + 1;
+  // let tempProb = Math.floor(Math.random() * 10) + 1;
 
-  if (lineProb < 4) {
-    return 0.6
-  } else if (lineProb < 8) {
-    return 0.7
-  } else {
-    return 0.8
-  }
+  // if (tempProb == 1 || tempProb == 2) {
+  //   return 0.2
+  // } else if (tempProb == 3) {
+  //   return 0.3
+  // } else {
+  //   return 0.9
+  // }
+  var temperature = Math.floor(Math.random() * 100) * .01
+  temperature = temperature.toFixed(2)
+  temperature = parseFloat(temperature)
+  return temperature
 }
 
 async function getFinalPoemFromGPT(response) {
   try {
     const gptPrompt = `Acting as a poet, please improve the following short poem which is titled "${response.poem.title}", using no more than 6 lines, and providing a result which does not need to rhyme: "${response.poem.raw}"`
     response.gpt.prompt = gptPrompt
+    const gptTemp = getGptTemperature()
 
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       max_tokens: 1024,
-      temperature: getGptTemperature(),
+      temperature: gptTemp,
       prompt: gptPrompt,
     });
     response.status_code = 200
     response.gpt.status = 200
-    response.poem.final = completion.data.choices[0].text
+    response.gpt.temperature = gptTemp
+    response.poem.final = completion.data.choices[0].text.toLowerCase()
   } catch (error) {
     if (error.response) {
       response.gpt.error_status = error.response.status;
