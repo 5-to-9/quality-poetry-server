@@ -308,7 +308,8 @@ async function logOutput(response) {
     date_ob.getSeconds()
 
 
-  await fs.writeFile("./output/" + filename + ".txt", responseData);
+  // await fs.writeFile("./output/" + filename + ".txt", responseData);
+  fs.writeFile("./output/" + filename + ".txt", responseData);
 }
 
 module.exports.getPoetryResponse = getPoetryResponse;

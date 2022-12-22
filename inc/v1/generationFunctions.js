@@ -32,7 +32,7 @@ function generatePoem(author, mood, callback) {
     var poem = { "poem" : { "author" : author, "mood" : mood, "title" : "", "lines" : [] } }
 
     // load the dictionary
-    var dirname = path.join(__dirname, '..', 'src', 'dictionary')
+    var dirname = path.join(__dirname, '..', '..', 'src', 'v1')
     var phrasesFile = dirname + '/phrases.json'
     var dictionaryFile = dirname + '/dictionary.json'
 
