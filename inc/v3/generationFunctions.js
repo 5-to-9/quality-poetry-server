@@ -1,6 +1,12 @@
 var fs = require('fs').promises
 var path = require('path')
+
 const { Configuration, OpenAIApi } = require("openai");
+const PHRASE_TITLE = 1;
+const PHRASE_BEGINNING = 2;
+const PHRASE_MIDDLE = 3;
+const PHRASE_END = 4;
+
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
 
 const configuration = new Configuration({
@@ -42,16 +48,16 @@ async function generatePoem(response) {
     wordTypes.push(key)
   }
 
-  response.poem.title = getLine("title", phrases, dictionary, wordTypes)
+  response.poem.title = getLine(PHRASE_TITLE, phrases, dictionary, wordTypes)
 
   rawPoem = []
   for (var i = 1; i <= lineCount; ++i) {
     if (i == 1) {
-      phraseToGet = "beginning"
+      phraseToGet = PHRASE_BEGINNING
     } else if (i != lineCount) {
-      phraseToGet = "middle"
+      phraseToGet = PHRASE_MIDDLE
     } else {
-      phraseToGet = "end"
+      phraseToGet = PHRASE_END
     }
 
     rawPoem.push(getLine(phraseToGet, phrases, dictionary, wordTypes))
@@ -206,7 +212,7 @@ function getLine(phraseToGet, phrases, dictionary, wordTypes) {
         currentWordType = wordTypes[wKey]
         var re = new RegExp(currentWordType, "g")
 
-        line = line.replace(re, function(res) {
+        line = line.replace(re, function() {
           if (!fixedWords.includes(currentWordType)) {
             // make sure that the same word isn't returned sequentially.
             word = randomWord(dictionary[currentWordType], lastWordUsed)
@@ -268,6 +274,7 @@ function getGptTemperature(){
 }
 
 async function getFinalPoemFromGPT(response) {
+  /*
   try {
     const gptPrompt = `Acting as a poet, please improve the following short poem which is titled "${response.poem.title}", using no more than 6 lines, and providing a result which does not need to rhyme: "${response.poem.raw}"`
     response.gpt.prompt = gptPrompt
@@ -291,6 +298,7 @@ async function getFinalPoemFromGPT(response) {
       response.gpt.error_message = error.message;
     }
   }
+  */
 
   return response
 }
