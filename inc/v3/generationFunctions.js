@@ -274,9 +274,8 @@ function getGptTemperature(){
 }
 
 async function getFinalPoemFromGPT(response) {
-  /*
   try {
-    const gptPrompt = `Acting as a poet, please improve the following short poem which is titled "${response.poem.title}", using no more than 6 lines, and providing a result which does not need to rhyme: "${response.poem.raw}"`
+    const gptPrompt = getGptPrompt(response)
     response.gpt.prompt = gptPrompt
     const gptTemp = getGptTemperature()
 
@@ -289,7 +288,7 @@ async function getFinalPoemFromGPT(response) {
     response.status_code = 200
     response.gpt.status = 200
     response.gpt.temperature = gptTemp
-    response.poem.final = completion.data.choices[0].text.toLowerCase()
+    response.poem.final = processFinalPoem(completion)
   } catch (error) {
     if (error.response) {
       response.gpt.error_status = error.response.status;
@@ -298,9 +297,58 @@ async function getFinalPoemFromGPT(response) {
       response.gpt.error_message = error.message;
     }
   }
-  */
 
   return response
+}
+
+function getGptPrompt(response) {
+  var poem = response.poem.raw
+  var poemTitle = response.poem.title
+
+  var gptRoleRandomInt = getRandomInt(3)
+  var gptRole = ""
+  
+  if (gptRoleRandomInt < 2) {
+    gptRole = "writer, please improve the spelling and grammar of"
+  } else {
+    gptRole = "poet, please improve"
+  }
+
+  var lineCountRandomInt = getRandomInt(5)
+  var promptLineCount = ""
+
+  if (lineCountRandomInt < 2) {
+    promptLineCount = "using no more than 6 lines"
+  } else if (lineCountRandomInt == 2) {
+    promptLineCount = "using no more than 3 lines"
+  } else if (lineCountRandomInt == 3) {
+    promptLineCount = "using no more than 4 lines"
+  } else {
+    promptLineCount = "using no more than 5 lines"
+  }
+
+  promptTryNotToChange = ""
+  if (getRandomInt(4) == 0) {
+    promptTryNotToChange = "Try not to change it too much! "
+  }
+  
+  var gptPrompt = `Acting as a ${gptRole} the following short poem ${promptLineCount}. ${promptTryNotToChange}` +
+    `It is titled "${poemTitle}", and it goes: "${poem}"`
+
+    return gptPrompt
+}
+
+function processFinalPoem(completion) {
+  var finalPoem = ""
+
+  finalPoem = completion.data.choices[0]
+  finalPoem = finalPoem.text.toLowerCase()
+  finalPoem = finalPoem.replaceAll("i ", "I ")
+  finalPoem = finalPoem.replaceAll("i'm ", "I'm ")
+  finalPoem = finalPoem.replaceAll("i've ", "I've ")
+  finalPoem = finalPoem.replaceAll("i'll ", "I'll ")
+
+  return finalPoem
 }
 
 async function logOutput(response) {
