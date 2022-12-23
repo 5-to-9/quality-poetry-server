@@ -343,10 +343,10 @@ function processFinalPoem(completion) {
 
   finalPoem = completion.data.choices[0]
   finalPoem = finalPoem.text.toLowerCase()
-  finalPoem = finalPoem.replaceAll("i ", "I ")
-  finalPoem = finalPoem.replaceAll("i'm ", "I'm ")
-  finalPoem = finalPoem.replaceAll("i've ", "I've ")
-  finalPoem = finalPoem.replaceAll("i'll ", "I'll ")
+  finalPoem = finalPoem.replace(/i /g, "I ")
+  finalPoem = finalPoem.replace(/i'm /g, "I'm ")
+  finalPoem = finalPoem.replace(/i've /g, "I've ")
+  finalPoem = finalPoem.replace(/i'll /g, "I'll ")
 
   return finalPoem
 }
